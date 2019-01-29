@@ -1,0 +1,101 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页,
+		{
+			"path": "pages/main/main",
+			"style": {
+				"navigationBarTitleText": "工作台"
+			}
+		},
+		{
+			"path": "pages/login/login",
+			"style": {
+				"navigationBarTitleText": "登录"
+			}
+		},
+		{
+			"path": "pages/reg/reg",
+			"style": {
+				"navigationBarTitleText": "注册"
+			}
+		}, {
+			"path": "pages/pwd/pwd",
+			"style": {
+				"navigationBarTitleText": "找回密码"
+			}
+		}, {
+			"path": "pages/user/user",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		}, {
+			"path": "pages/wfengine/wftaskmain",
+			"style": {
+				"navigationBarTitleText": "详细信息"
+			}
+		}, {
+			"path": "pages/wfengine/downloadfile",
+			"style": {
+				"navigationBarTitleText": "下载文件"
+			}
+		}, {
+			"path": "pages/contents/contents",
+			"style": {
+				"navigationBarTitleText": "目录页"
+			}
+		}, {
+			"path": "pages/user/repwd",
+			"style": {
+				"navigationBarTitleText": "修改密码"
+			}
+		}, {
+			"path": "pages/user/remsg",
+			"style": {
+				"navigationBarTitleText": "修改个人资料"
+			}
+		}, {
+			"path": "pages/txl/txl",
+			"style": {
+				"navigationBarTitleText": "通讯录"
+			}
+		}, {
+			"path": "pages/txl/txlRY",
+			"style": {
+				"navigationBarTitleText": "通讯录人员"
+			}
+		}
+	],
+	"tabBar": {
+		"color": "#7a7e83",
+		"selectedColor": "#1A9EFF",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/main/main",
+			"text": "首页",
+			"iconPath": "static/img/home.png",
+			"selectedIconPath": "static/img/homeHL.png"
+		}, {
+			"pagePath": "pages/user/user",
+			"text": "我的",
+			"iconPath": "static/img/user.png",
+			"selectedIconPath": "static/img/userHL.png"
+		}]
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "white",
+        "navigationBarTitleText": "演示",
+        "navigationBarBackgroundColor": "#1A9EFF",
+        "backgroundColor": "#fbf9fe"
+	},
+	"condition" : { //模式配置，仅开发期间生效
+		"current": 0, //当前激活的模式(list 的索引项)
+		"list": [
+			{
+				"name": "", //模式名称
+				"path": "", //启动页面，必选
+				"query": "" //启动参数，在页面的onLoad函数里面得到
+			}
+		]
+	}
+}
