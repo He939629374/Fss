@@ -12,9 +12,9 @@
 		</view>
 		<view class="HeadContente">
 			<uni-list>
-				<uni-list-item title="个人资料"></uni-list-item>
-				<uni-list-item title="绑定手机"></uni-list-item>
-				<uni-list-item title="修改密码"></uni-list-item>
+				<uni-list-item title="个人资料"  @click="tabonclick('../user/remsg?read=1&userid=')"></uni-list-item>
+				<uni-list-item title="绑定手机"  @click="tabonclick('../user/user?read=0&userid=')"></uni-list-item>
+				<uni-list-item title="修改密码"  @click="tabonclick('../user/repwd?read=0&userid=')"></uni-list-item>
 			</uni-list>
 		</view>
 	</view>
@@ -36,12 +36,15 @@
 		},
 		onLoad() {
 			this.userInfo = service.getUsers();
+			console.log(this.userInfo );
 		},
 		methods: {
-			goLogin() {
-				if (!this.login) {
-					console.log("点击前往登录")
-				}
+			tabonclick(_path) {//点击跳转
+			console.log(_path);
+				var self = this;
+				uni.navigateTo({
+					url: _path+this.userInfo.userid
+				});
 			},
 			logout() {
 				uni.removeStorageSync('USERS_KEY');

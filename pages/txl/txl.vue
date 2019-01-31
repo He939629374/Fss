@@ -1,5 +1,12 @@
 <template>
     <view class="page">
+<!-- 		<view class="uni-form-item uni-column" style="padding: 0px;flex-direction:row;align-items:center;">
+			<input class="uni-input" confirm-type="search" placeholder="请输入关键字搜索..." style="padding: 5upx 30upx;"/>
+			<view>
+				<uni-icon type="search" size="24"></uni-icon>
+			</view>
+		</view> -->
+		<mSearch :show="false" @search="search($event,3)"></mSearch>
         <view class="uni-card">
             <view class="uni-list">
                 <view class="uni-list-cell uni-collapse" v-for="(list,index) in lists" :key="index" :class="index === lists.length - 1 ? 'uni-list-cell-last' : ''">
@@ -34,12 +41,15 @@
 
 <script>
 	import service from '../../service.js';
+	import mSearch from  "@/components/mehaotian-search/mehaotian-search.vue";
+	import uniIcon from "@/components/uni-icon/uni-icon.vue";
     export default {
 		components: {
-			service
+			service,uniIcon,mSearch
 		},
         data() {
             return {
+				val3:'',
                 title: 'list-with-collapses',
                 lists: [{
                         title: "佛山市国土资源和城乡规划局",
@@ -69,6 +79,10 @@
             }
         },
         methods: {
+			search(e, val) {
+            console.log(e, val);
+            this['val'+val] = e;
+			},
             trigerCollapse(e) {
                 for (let i = 0, len = this.lists.length; i < len; ++i) {
                     if (e === i) {
@@ -83,9 +97,6 @@
 					url: '../txl/txlRY'
 				});
 				console.log(index);
-// 				const result = service.getTxlRy(index, '', function() {
-// 					console.log(result);
-// 				});
 			}
         }
     }

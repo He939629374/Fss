@@ -1,0 +1,32 @@
+
+.title {
+	margin-left: 20rpx;
+}
+.v_left {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.v_left ._img{
+}
+.img {
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+}
+.phone {
+	margin-right: 60rpx;
+}
+.page {
+	width: 100%;
+}
+.uni-card {
+	margin: 0rpx;
+}
+

@@ -31,9 +31,10 @@ const checkLogin = function(userInfo,forcedLogin,callback) {
 			}
 		});
 	}else{
-						uni.reLaunch({
-							url: '../txl/txl'
-						});
+		callback();
+// 						uni.reLaunch({
+// 							url: '../main/main'
+// 						});
 	}
 	
 }

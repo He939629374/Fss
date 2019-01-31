@@ -8,8 +8,8 @@
 			<view class="BLView"><image class="BL" src="../../static/img/loginBL.png"></image></view>
 		</view>
 		<view class="HeadContente">
-			<view class="input-group">
-				<view class="input-row border">
+			<view class="input-group2 input-box">
+				<view class="input-row ">
 					<image class="acc" src="../../static/img/acc.png"></image>
 					<text class="title">账号：</text>
 					<m-input
@@ -119,12 +119,23 @@ export default {
 </script>
 
 <style>
+	.input-group2 {
+		margin-top: 40upx;
+		position: relative;
+	}
+	.input-box {
+		width: 80%;
+		margin-left: 10%;
+	}
 .input-row {
+	border-bottom-style:solid;
+	border-bottom-width:1rpx;
+	border-color: #B3B3B3;
 	align-items:center;
 	margin-left:20upx;
 }
 .input-row .title{
-	width: 15%;
+
 	padding-left: 20upx;
 }
 .acc,.psw{
@@ -147,7 +158,7 @@ export default {
 .BL {
 	position: absolute;
 	bottom: 0upx;
-	width: 101%;
+	width: 100%;
 	height: 80upx;
 }
 .content {
@@ -199,9 +210,10 @@ export default {
 }
 
 .btn-row {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 120upx;
-	width: 90%;
+	width: 80%;
+	margin-left: 10%;
 }
 .input-group {
 }

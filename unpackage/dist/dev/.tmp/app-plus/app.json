@@ -6,22 +6,42 @@
     "pages/pwd/pwd",
     "pages/user/user",
     "pages/wfengine/wftaskmain",
-    "pages/wfengine/downloadfile"
+    "pages/wfengine/downloadfile",
+    "pages/contents/contents",
+    "pages/user/repwd",
+    "pages/user/remsg",
+    "pages/txl/txl",
+    "pages/txl/txlRY",
+    "pages/msgcenter/msgcenter"
   ],
   "subPackages": [],
   "window": {
     "navigationBarTextStyle": "white",
-    "navigationBarBackgroundColor": "#0faeff",
+    "navigationBarTitleText": "演示",
+    "navigationBarBackgroundColor": "#1A9EFF",
     "backgroundColor": "#fbf9fe"
   },
+  "usingComponents": {},
   "tabBar": {
     "color": "#7a7e83",
-    "selectedColor": "#0faeff",
+    "selectedColor": "#1A9EFF",
     "backgroundColor": "#ffffff",
     "list": [
       {
         "pagePath": "pages/main/main",
         "text": "首页",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "static/img/homeHL.png"
+      },
+      {
+        "pagePath": "pages/contents/contents",
+        "text": "目录",
+        "iconPath": "static/img/home.png",
+        "selectedIconPath": "static/img/homeHL.png"
+      },
+      {
+        "pagePath": "pages/txl/txl",
+        "text": "通讯录",
         "iconPath": "static/img/home.png",
         "selectedIconPath": "static/img/homeHL.png"
       },

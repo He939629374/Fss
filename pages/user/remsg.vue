@@ -8,9 +8,11 @@
 		<view class="uni-form-item uni-column v_view" v-for="item in list" :key="item.name">
 				<view class="title">{{item.name}}</view>
 				<text class="">|</text>
-				<view class="text">{{item.text}}</view>
+				<input class="text" v-if="read!=1">{{item.text}}</input>
+				<view class="text" v-else>{{item.text}}</view>
+				
 		</view>	
-		<view class="btn-row">
+		<view class="btn-row" v-if="read!=1">
 			<button type="primary" class="primary" @tap="submitPwd">保存</button>
 		</view>
 	</view>
@@ -22,6 +24,8 @@
 		components: {Global},
 		data() {
 			return {
+				read:0,
+				userid:'',
 				list: [{'name':'姓名','text':'陈姗姗'},
 				{'name':'单位','text':'佛山市测绘地理信息研究院'},
 				{'name':'电话','text':'0757-66861234'},
@@ -30,6 +34,12 @@
 				],
 				avatarUrl: Global.avatarUrl,
 			}
+		},
+		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
+			console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
+			console.log(option);
+			this.read = option.read;
+			this.userid = option.userid;
 		},
 		methods: {
 			onKeyInputO: function(event) {
@@ -85,6 +95,7 @@
 	}
 	.text{
 		margin-left: 40upx;
+		width: 65%;
 	}
 	.LogoView {
 		text-align: center;

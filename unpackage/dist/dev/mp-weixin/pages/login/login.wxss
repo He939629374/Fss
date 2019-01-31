@@ -1,5 +1,16 @@
 
+.input-group2 {
+		margin-top: 40rpx;
+		position: relative;
+}
+.input-box {
+		width: 80%;
+		margin-left: 10%;
+}
 .input-row {
+	border-bottom-style:solid;
+	border-bottom-width:1rpx;
+	border-color: #B3B3B3;
 	-webkit-box-align:center;
 	-webkit-align-items:center;
 	    -ms-flex-align:center;
@@ -7,7 +18,7 @@
 	margin-left:20rpx;
 }
 .input-row .title{
-	width: 15%;
+
 	padding-left: 20rpx;
 }
 .acc,.psw{
@@ -35,7 +46,7 @@
 .BL {
 	position: absolute;
 	bottom: 0rpx;
-	width: 101%;
+	width: 100%;
 	height: 80rpx;
 }
 .content {
@@ -102,9 +113,10 @@
 	margin: 20rpx;
 }
 .btn-row {
-	position: absolute;
+	/* position: absolute; */
 	bottom: 120rpx;
-	width: 90%;
+	width: 80%;
+	margin-left: 10%;
 }
 .input-group {
 }

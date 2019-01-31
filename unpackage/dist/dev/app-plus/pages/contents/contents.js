@@ -1,0 +1,13 @@
+
+      !(function(){
+        var uniAppViewReadyCallback = function(){
+          setCssToHead([".",[1],"v_row_v_img { width: 100%; height: ",[0,80],"; margin-top: ",[0,10],"; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: centerc; -webkit-align-items: centerc; -ms-flex-align: centerc; align-items: centerc; }\n.",[1],"v_col .",[1],"_img { width: ",[0,80],"; height: ",[0,80],"; }\n.",[1],"v_row_block { background-color:#FFFFFF; width:",[0,160],"; height:",[0,160],"; display:-webkit-box; display:-webkit-flex; display:-ms-flexbox; display:flex; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; border-radius:8%; -webkit-box-shadow:",[0,0]," ",[0,5]," ",[0,30]," #2D97F1; box-shadow:",[0,0]," ",[0,5]," ",[0,30]," #2D97F1; border:",[0,1]," solid #FFFFFF; }\n.",[1],"v_row { color:black; display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; -webkit-box-pack:justify; -webkit-justify-content:space-between; -ms-flex-pack:justify; justify-content:space-between; padding: ",[0,20],"; }\n.",[1],"v_col { width: ",[0,120],"; text-align:center; }\n.",[1],"t_view { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; display: flex; width: 100%; -webkit-box-pack: center; -webkit-justify-content: center; -ms-flex-pack: center; justify-content: center; -webkit-box-align: center; -webkit-align-items: center; -ms-flex-align: center; align-items: center; -webkit-box-align: ; -webkit-align-items: ; -ms-flex-align: ; align-items: ; }\n.",[1],"content { height: 100vh; overflow: hidden; background: -webkit-gradient(linear, left top, left bottom, from(#1A9EFF), to(#80C9FC)); background: -o-linear-gradient(#1A9EFF, #80C9FC); background: linear-gradient(#1A9EFF, #80C9FC); padding: ",[0,0],"; }\n.",[1],"LogoView wx-text{ color: #FFFFFF; font-size: ",[0,40],"; letter-spacing:",[0,5],"; }\n.",[1],"LogoView { text-align: center; }\n.",[1],"LOGO { width: ",[0,250],"; height: ",[0,220],"; }\n.",[1],"HeadTitle { position: relative; }\n.",[1],"HeadContente { margin-top: ",[0,20],"; padding: ",[0,65],"; }\n",],undefined,{path:"./pages/contents/contents.wxss"})();
+document.dispatchEvent(new CustomEvent("generateFuncReady", { detail: { generateFunc: $gwx('./pages/contents/contents.wxml') } }));
+        }
+        if(window.__uniAppViewReady__){
+          uniAppViewReadyCallback()
+        }else{
+          document.addEventListener('uniAppViewReady',uniAppViewReadyCallback)
+        }
+      })();
+      

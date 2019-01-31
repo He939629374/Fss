@@ -1,0 +1,102 @@
+
+.v_row_v_img {
+	width: 100%;
+	height: 80rpx;
+	margin-top: 10rpx;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: centerc;
+	-webkit-align-items: centerc;
+	    -ms-flex-align: centerc;
+	        align-items: centerc;
+}
+.v_col ._img {
+	width: 80rpx;
+	height: 80rpx;
+}
+.v_row_block {
+	background-color:#FFFFFF;
+	width:160rpx;
+	height:160rpx;
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	border-radius:8%;
+	-webkit-box-shadow:0rpx 5rpx 30rpx #2D97F1;
+	        box-shadow:0rpx 5rpx 30rpx #2D97F1;
+	border:1rpx solid #FFFFFF;
+}
+.v_row {
+	color:black;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+	padding: 20rpx;
+}
+.v_col {
+	width: 120rpx;
+	text-align:center;
+}
+.t_view {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	width: 100%;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	    -ms-flex-pack: center;
+	        justify-content: center;
+	-webkit-box-align: center;
+	-webkit-align-items: center;
+	    -ms-flex-align: center;
+	        align-items: center;
+	-webkit-box-align: ;
+	-webkit-align-items: ;
+	    -ms-flex-align: ;
+	        align-items: ;
+}
+.content {
+	height: 100vh;
+	overflow: hidden;
+	background: -webkit-gradient(linear, left top, left bottom, from(#1A9EFF), to(#80C9FC));
+	background: -o-linear-gradient(#1A9EFF, #80C9FC);
+	background: linear-gradient(#1A9EFF, #80C9FC); /* 标准的语法 */
+	padding: 0rpx;
+}
+.LogoView text{
+	color: #FFFFFF;
+	font-size: 40rpx;
+	letter-spacing:5rpx;
+}
+.LogoView {
+	text-align: center;
+}
+.LOGO {
+	width: 250rpx;
+	height: 220rpx;
+}
+.HeadTitle {
+	position: relative;
+}
+.HeadContente {
+	margin-top: 20rpx;
+	padding: 65rpx;
+}
+

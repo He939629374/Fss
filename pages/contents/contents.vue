@@ -9,7 +9,7 @@
 		<view class="HeadContente">
 			<view v-for="(row,i) in listTemp" :key="row.id" class="v_row">
 				<view :id="j" v-for="(cell,key,j) in row" :key="cell.id" class="v_row_block">
-					<view class="v_col">
+					<view class="v_col" @click="tabonclick(cell.name,cell._path)">
 						<view class="v_row_v_img">
 						<img :src="cell.url"></img>
 						</view>
@@ -30,15 +30,15 @@
 			return {
 				systeam: Global.sysname,
 				list:[
-					{"url":'../../static/img/conZL.png',"name":'我的资料'},
-					{"url":'../../static/img/conRC.png',"name":'日程'},
-					{"url":'../../static/img/conZX.png',"name":'信息中心'},
-					{"url":'../../static/img/conSP.png',"name":'审批'},
-					{"url":'../../static/img/conTX.png',"name":'提醒'},
-					{"url":'../../static/img/conGZ.png',"name":'工作'},
-					{"url":'../../static/img/conYJ.png',"name":'邮件'},
-					{"url":'../../static/img/conFJ.png',"name":'附件'},
-					{"url":'../../static/img/conQT.png',"name":'其他'},
+					{"url":'../../static/img/conZL.png',"name":'我的资料',_path:"../user/user"},
+					{"url":'../../static/img/conRC.png',"name":'日程',_path:"../scheduling/scheduling"},
+					{"url":'../../static/img/conZX.png',"name":'信息中心',_path:"../msgcenter/msgcenter"},
+					{"url":'../../static/img/conSP.png',"name":'审批',_path:"../record/record"},
+					{"url":'../../static/img/conTX.png',"name":'提醒',_path:"../tips/tips"},
+					{"url":'../../static/img/conGZ.png',"name":'工作',_path:"../work/work"},
+					{"url":'../../static/img/conYJ.png',"name":'邮件',_path:"../email/email"},
+					{"url":'../../static/img/conFJ.png',"name":'附件',_path:"../file/file"},
+					{"url":'../../static/img/conQT.png',"name":'其他',_path:"../other/other"},
 				]
 			};
 		},
@@ -74,6 +74,22 @@
 // 						title: '登录成功'
 // 					});
 				});
+			},
+			tabonclick(_name,_path) {//点击跳转
+			console.log(_path);
+				var self = this;
+				if(_name=="我的资料")
+				{
+					uni.reLaunch({
+						url: '../user/user'
+					});
+				}else{
+					uni.navigateTo({
+						url: _path
+					});
+				}
+
+
 			},
 		}
 	};

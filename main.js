@@ -9,7 +9,6 @@ Vue.prototype.$store = store
 Vue.prototype.$global = Global
 
 App.mpType = 'app'
-const g = '1'
 const app = new Vue({
 	global,
     store,
@@ -17,6 +16,5 @@ const app = new Vue({
 })
 export default
 {
-  g
 }
 app.$mount()

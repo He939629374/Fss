@@ -1,5 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页,
+
 		{
 			"path": "pages/main/main",
 			"style": {
@@ -25,9 +26,7 @@
 		}, {
 			"path": "pages/user/user",
 			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
+				"navigationBarTitleText": "我的资料"
 			}
 		}, {
 			"path": "pages/wfengine/wftaskmain",
@@ -64,6 +63,16 @@
 			"style": {
 				"navigationBarTitleText": "通讯录人员"
 			}
+		}, {
+			"path": "pages/msgcenter/msgcenter",
+			"style": {
+				"navigationBarTitleText": "信息中心"
+			}
+		}, {
+			"path": "pages/search/search",
+			"style": {
+				"navigationBarTitleText": "查询"
+			}
 		}
 	],
 	"tabBar": {
@@ -76,6 +85,21 @@
 			"iconPath": "static/img/home.png",
 			"selectedIconPath": "static/img/homeHL.png"
 		}, {
+			"pagePath": "pages/contents/contents",
+			"text": "目录",
+			"iconPath": "static/img/home.png",
+			"selectedIconPath": "static/img/homeHL.png"
+		}, {
+			"pagePath": "pages/txl/txl",
+			"text": "通讯录",
+			"iconPath": "static/img/home.png",
+			"selectedIconPath": "static/img/homeHL.png"
+		},{
+			"pagePath": "pages/search/search",
+			"text": "查询",
+			"iconPath": "static/img/user.png",
+			"selectedIconPath": "static/img/userHL.png"
+		},{
 			"pagePath": "pages/user/user",
 			"text": "我的",
 			"iconPath": "static/img/user.png",
