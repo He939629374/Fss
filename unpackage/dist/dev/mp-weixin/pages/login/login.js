@@ -190,20 +190,6 @@ var _mInput = _interopRequireDefault(__webpack_require__(/*! ../../components/m-
   (0, _vuex.mapMutations)(['login']), {
     bindLogin: function bindLogin() {
       var self = this;
-      // 				if (this.account.length < 5) {
-      // 					uni.showToast({
-      // 						icon: 'none',
-      // 						title: '账号最短为 5 个字符'
-      // 					});
-      // 					return;
-      // 				}
-      // 				if (this.password.length < 6) {
-      // 					uni.showToast({
-      // 						icon: 'none',
-      // 						title: '密码最短为 6 个字符'
-      // 					});
-      // 					return;
-      // 				}
       uni.showLoading({
         title: '正在登录' });
 
@@ -223,7 +209,7 @@ var _mInput = _interopRequireDefault(__webpack_require__(/*! ../../components/m-
                              */
       if (this.forcedLogin) {
         uni.reLaunch({
-          url: '../main/main' });
+          url: '../contents/contents' });
 
       } else {
         uni.navigateBack();

@@ -91,13 +91,15 @@ _vue.default.prototype.$store = _store.default;
 _vue.default.prototype.$global = _Global.default;
 
 _App.default.mpType = 'app';
+var g = '1';
 var app = new _vue.default(_objectSpread({
   global: global,
   store: _store.default },
 _App.default));var _default =
 
 
-{};exports.default = _default;
+{
+  g: g };exports.default = _default;
 
 app.$mount();
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))

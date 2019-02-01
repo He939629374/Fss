@@ -9,7 +9,7 @@
 				<view class="title">{{item.name}}</view>
 				<text class="">|</text>
 				<input class="text" v-if="read!=1">{{item.text}}</input>
-				<view class="text" v-else>{{item.text}}</view>
+				<view class="text" else>{{item.text}}</view>
 				
 		</view>	
 		<view class="btn-row" v-if="read!=1">

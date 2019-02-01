@@ -132,6 +132,10 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
 var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
 
 
@@ -205,6 +209,11 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
       uni.navigateTo({
         url: "../wfengine/wftaskmain?insid=" + insid });
 
+    },
+    tabS: function tabS(insid) {
+      uni.navigateTo({
+        url: "../search/search" });
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -242,6 +251,22 @@ var render = function() {
     [
       _c(
         "view",
+        { staticClass: "cover_v" },
+        [
+          _c("cover-image", {
+            staticClass: "controls-play img",
+            attrs: {
+              src: "../../static/img//fdj.png",
+              eventid: "6ea5fdc2-0",
+              mpcomid: "6ea5fdc2-0"
+            },
+            on: { click: _vm.tabS }
+          })
+        ],
+        1
+      ),
+      _c(
+        "view",
         { staticClass: "uni-swiper-tab", attrs: { id: "tab-bar" } },
         _vm._l(_vm.tabBars, function(tab, index) {
           return _c(
@@ -256,7 +281,7 @@ var render = function() {
               attrs: {
                 id: tab.id,
                 "data-current": index,
-                eventid: "6ea5fdc2-0-" + index
+                eventid: "6ea5fdc2-1-" + index
               },
               on: {
                 click: function($event) {
@@ -275,14 +300,14 @@ var render = function() {
           attrs: {
             current: _vm.tabIndex,
             duration: "300",
-            eventid: "6ea5fdc2-2"
+            eventid: "6ea5fdc2-3"
           },
           on: { change: _vm.changeTab }
         },
         _vm._l(_vm.tabItems, function(itemList, index) {
           return _c(
             "swiper-item",
-            { key: index, attrs: { mpcomid: "6ea5fdc2-1-" + index } },
+            { key: index, attrs: { mpcomid: "6ea5fdc2-2-" + index } },
             [
               _c(
                 "scroll-view",
@@ -297,8 +322,8 @@ var render = function() {
                       thumbnail:
                         "http://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png",
                       note: "点击打开",
-                      eventid: "6ea5fdc2-1-" + index + "-" + index1,
-                      mpcomid: "6ea5fdc2-0-" + index + "-" + index1
+                      eventid: "6ea5fdc2-2-" + index + "-" + index1,
+                      mpcomid: "6ea5fdc2-1-" + index + "-" + index1
                     },
                     on: {
                       click: function($event) {

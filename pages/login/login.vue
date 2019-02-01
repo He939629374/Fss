@@ -74,21 +74,7 @@ export default {
 	methods: {
 		...mapMutations(['login']),
 		bindLogin() {
-			var self = this;
-			// 				if (this.account.length < 5) {
-			// 					uni.showToast({
-			// 						icon: 'none',
-			// 						title: '账号最短为 5 个字符'
-			// 					});
-			// 					return;
-			// 				}
-			// 				if (this.password.length < 6) {
-			// 					uni.showToast({
-			// 						icon: 'none',
-			// 						title: '密码最短为 6 个字符'
-			// 					});
-			// 					return;
-			// 				}
+			var self = this;		
 			uni.showLoading({
 				title: '正在登录'
 			});
@@ -108,7 +94,7 @@ export default {
 			 */
 			if (this.forcedLogin) {
 				uni.reLaunch({
-					url: '../main/main'
+					url: '../contents/contents'
 				});
 			} else {
 				uni.navigateBack();
@@ -135,7 +121,7 @@ export default {
 	margin-left:20upx;
 }
 .input-row .title{
-
+	width: 20%;
 	padding-left: 20upx;
 }
 .acc,.psw{

@@ -17,6 +17,9 @@
 				<uni-list-item title="修改密码"  @click="tabonclick('../user/repwd?read=0&userid=')"></uni-list-item>
 			</uni-list>
 		</view>
+		<view class="btn-row">
+			<button type="primary" class="primary" @tap="logout">注销</button>
+		</view>
 	</view>
 </template>
 

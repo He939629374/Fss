@@ -573,6 +573,9 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+
+
 var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));
 var _uniList = _interopRequireDefault(__webpack_require__(/*! @/components/uni-list/uni-list.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-list/uni-list.vue"));
 var _uniListItem = _interopRequireDefault(__webpack_require__(/*! @/components/uni-list-item/uni-list-item.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-list-item/uni-list-item.vue"));
@@ -940,6 +943,22 @@ var render = function() {
             })
           ],
           1
+        )
+      ],
+      1
+    ),
+    _c(
+      "view",
+      { staticClass: "btn-row" },
+      [
+        _c(
+          "button",
+          {
+            staticClass: "primary",
+            attrs: { type: "primary", eventid: "dc460dfc-4" },
+            on: { tap: _vm.logout }
+          },
+          [_vm._v("注销")]
         )
       ],
       1

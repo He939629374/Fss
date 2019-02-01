@@ -1,5 +1,5 @@
 {
-    "name" : "Fssgdev",
+    "name" : "Fssgdev_hjp",
     "appid" : "__UNI__69DAF2D",
     "description" : "登录模板",
     "versionName" : "1.0.0",
@@ -50,7 +50,7 @@
         /* 小程序特有相关 */
         "appid" : "wx800c91d9b65ce576",
         "setting" : {
-            "urlCheck" : true
+            "urlCheck" : false
         },
         "permission" : {}
     }

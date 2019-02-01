@@ -1,10 +1,14 @@
 <template>
 	<view class="content">
+		<view class="cover_v">
+		<cover-image class="controls-play img" @click="tabS" src="../../static/img//fdj.png"></cover-image>
+		</view>
 		<view id="tab-bar" class="uni-swiper-tab">
 			<view v-for="(tab,index) in tabBars" :key="tab.id" :class="['tab-item','swiper-tab-list',tabIndex==index ? 'active' : '']"
 			 :id="tab.id" :data-current="index" @click="tapTab(index)">{{tab.name}}</view>
 		</view>
 		<swiper :current="tabIndex" class="swiper-box" duration="300" @change="changeTab">
+			
 			<swiper-item v-for="(itemList,index) in tabItems" :key="index">
 				<scroll-view class="list" scroll-y="true">
 					<uniCard v-for="(itemInfo,index1) in itemList" :key="index1" is-full="true" :title="itemInfo.Title" :itemInfo="itemInfo"
@@ -90,6 +94,11 @@
 				uni.navigateTo({
 					url:"../wfengine/wftaskmain?insid="+insid
 				})
+			},
+			tabS(insid){
+				uni.navigateTo({
+					url:"../search/search"
+				})
 			}
 		}
 
@@ -97,6 +106,23 @@
 </script>
 
 <style>
+	page {
+		position:absolute;
+	}
+	.cover_v {
+		height:60rpx;
+		width:60rpx;
+		background-color:#189FFF;
+		border-radius:50%;
+		display:flex;
+		justify-content:center;
+		align-items:center;
+		position: relative;
+		top:80%;
+		z-index:999;
+		left:90%;
+
+	}
 	.uni-swiper-tab {
 		background-color: #fff;
 	}
@@ -118,5 +144,13 @@
 
 	.list {
 		height: 100%;
+	}
+	cover-image {
+		
+		
+	}
+	.img {
+		height:40rpx;
+		width:40rpx;
 	}
 </style>

@@ -141,13 +141,13 @@ var _mehaotianSearch = _interopRequireDefault(__webpack_require__(/*! @/componen
   data: function data() {
     return {
       val0: '',
-      list: [
-      { "text": '../../static/img/conZL.png', "name": '编号', bz: "../user/user" },
-      { "text": '../../static/img/conRC.png', "name": '时间', bz: "../scheduling/scheduling" },
-      { "text": '../../static/img/conZX.png', "name": '单位', bz: "../msgcenter/msgcenter" },
-      { "text": '../../static/img/conSP.png', "name": '项目', bz: "../record/record" },
-      { "text": '../../static/img/conTX.png', "name": '类别', bz: "../tips/tips" },
-      { "text": '../../static/img/conGZ.png', "name": '地址', bz: "../work/work" }] };
+      list: [//目前只用到  name
+      { "bz": '../../static/img/conZL.png', "name": '编号', url: "../user/user" },
+      { "bz": '../../static/img/conRC.png', "name": '时间', url: "../scheduling/scheduling" },
+      { "bz": '../../static/img/conZX.png', "name": '单位', url: "../msgcenter/msgcenter" },
+      { "bz": '../../static/img/conSP.png', "name": '项目', url: "../record/record" },
+      { "bz": '../../static/img/conTX.png', "name": '类别', url: "../tips/tips" },
+      { "bz": '../../static/img/conGZ.png', "name": '地址', url: "../work/work" }] };
 
 
   },
@@ -169,13 +169,14 @@ var _mehaotianSearch = _interopRequireDefault(__webpack_require__(/*! @/componen
     } },
 
   methods: {
-    search: function search(e, val) {
-      console.log(e, val);
-      this['val' + val] = e;
+    search: function search(e) {
+      console.log(e);
+      //this['val'+val] = e;
+      this.val0 = e;
     },
     tabonclick: function tabonclick(e, val) {
       console.log(e, val);
-      this['val' + val] = e;
+      this.$set(val0, e);
     } } };exports.default = _default;
 
 /***/ }),
@@ -214,7 +215,7 @@ var render = function() {
         attrs: { show: false, eventid: "3e2ec3e2-0", mpcomid: "3e2ec3e2-0" },
         on: {
           search: function($event) {
-            _vm.search($event, 0)
+            _vm.search($event)
           }
         }
       }),

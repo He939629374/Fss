@@ -208,8 +208,61 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
 __webpack_require__.r(__webpack_exports__);
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "render", function() { return render; });
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "staticRenderFns", function() { return staticRenderFns; });
-var render = function () {}
+var render = function() {
+  var _vm = this
+  var _h = _vm.$createElement
+  var _c = _vm._self._c || _h
+  return _c(
+    "view",
+    { staticClass: "content" },
+    [
+      _c("view", { staticClass: "HeadTitle" }, [
+        _c("view", { staticClass: "LogoView" }, [
+          _c("image", {
+            staticClass: "LOGO",
+            attrs: { src: _vm.login ? _vm.avatarUrl : _vm.avatarUrl }
+          })
+        ])
+      ]),
+      _vm._l(_vm.list, function(item, index) {
+        return _c(
+          "view",
+          { key: item.name, staticClass: "uni-form-item uni-column v_view" },
+          [
+            _c("view", { staticClass: "title" }, [_vm._v(_vm._s(item.name))]),
+            _c("text", {}, [_vm._v("|")]),
+            _vm.read != 1 ? _c("input", { staticClass: "text" }) : _vm._e(),
+            _vm._v(_vm._s(item.text)),
+            _c("view", { staticClass: "text", attrs: { else: "" } }, [
+              _vm._v(_vm._s(item.text))
+            ])
+          ]
+        )
+      }),
+      _vm.read != 1
+        ? _c(
+            "view",
+            { staticClass: "btn-row" },
+            [
+              _c(
+                "button",
+                {
+                  staticClass: "primary",
+                  attrs: { type: "primary", eventid: "acdcbbd2-0" },
+                  on: { tap: _vm.submitPwd }
+                },
+                [_vm._v("保存")]
+              )
+            ],
+            1
+          )
+        : _vm._e()
+    ],
+    2
+  )
+}
 var staticRenderFns = []
+render._withStripped = true
 
 
 

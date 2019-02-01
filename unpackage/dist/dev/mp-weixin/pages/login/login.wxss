@@ -18,7 +18,7 @@
 	margin-left:20rpx;
 }
 .input-row .title{
-
+	width: 20%;
 	padding-left: 20rpx;
 }
 .acc,.psw{
