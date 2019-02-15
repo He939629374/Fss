@@ -166,32 +166,40 @@ var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-i
     return {
       val3: '',
       title: 'list-with-collapses',
-      lists: [{
-        title: "佛山市国土资源和城乡规划局",
+      lists: [],
+      lists_by: [{
+        DEPTNAME: "佛山市国土资源和城乡规划局",
         show: false,
         count: 158,
-        item: [{ "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" }] },
+        item: [{ "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" }] },
 
       {
-        title: "佛山市城市规划设计研究院",
+        DEPTNAME: "佛山市城市规划设计研究院",
         show: false,
         count: 3,
-        item: [{ "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" }] },
+        item: [{ "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" }] },
 
       {
-        title: "佛山市测绘地理信息研究院",
+        DEPTNAME: "佛山市测绘地理信息研究院",
         show: false,
         count: 2,
-        item: [{ "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" },
-        { "title": "科长1", "userid": "1" }] }] };
+        item: [{ "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" },
+        { "DEPTNAME": "科长1", "DEPARTMENTBH": "1" }] }] };
 
 
 
+  },
+  created: function created() {
+    var self = this;
+    var result = _service.default.getTxl(this.accoun, function (res) {
+      console.log(res.sonXMText);
+      self.lists = res.sonXMText;
+    });
   },
   methods: {
     search: function search(e, val) {
@@ -208,9 +216,12 @@ var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-i
       }
     },
     tabonclick: function tabonclick(index) {
-      uni.navigateTo({
-        url: '../txl/txlRY' });
+      var result = _service.default.getTxlRy(index, function (res) {
+        console.log(res);
+        uni.navigateTo({
+          url: '../txl/txlRY?res=' + JSON.stringify(res) });
 
+      });
       console.log(index);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
@@ -288,11 +299,11 @@ var render = function() {
                     _c("view", { staticClass: "v_left" }, [
                       _vm._m(0, true),
                       _c("view", { staticClass: "title" }, [
-                        _vm._v(_vm._s(list.title))
+                        _vm._v(_vm._s(list.DEPTNAME))
                       ])
                     ]),
                     _c("view", { staticClass: "count" }, [
-                      _vm._v("(" + _vm._s(list.count) + "人)")
+                      _vm._v("(" + _vm._s(list.count) + ")")
                     ])
                   ]
                 ),
@@ -318,7 +329,7 @@ var render = function() {
                         },
                         on: {
                           click: function($event) {
-                            _vm.tabonclick(item.userid)
+                            _vm.tabonclick(item.DEPARTMENTBH)
                           }
                         }
                       },
@@ -329,7 +340,7 @@ var render = function() {
                             staticClass:
                               "uni-list-cell-navigate uni-navigate-right"
                           },
-                          [_vm._v(_vm._s(item.title))]
+                          [_vm._v(_vm._s(item.DEPTNAME))]
                         )
                       ]
                     )

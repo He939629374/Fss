@@ -19,7 +19,7 @@ page {
 	-webkit-align-items:center;
 	    -ms-flex-align:center;
 	        align-items:center;
-	position: relative;
+	position: absolute;
 	top:80%;
 	z-index:999;
 	left:90%;

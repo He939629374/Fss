@@ -4,18 +4,18 @@
             <view class="">
                 <view class="v_for" v-for="(list,index) in lists" :key="index" :class="index === lists.length - 1 ? 'uni-list-cell-last' : ''">
                     <view class="uni-list-cell-navigate  uni-navigate-right" hover-class="uni-list-cell-hover" 
-                        @click="tabonclick(list.userid)">
+                        @click="tabonclick(list.DEPARTMENTID,list.USERID)">
 						<view class="v_left">
-							<view class="img">
-								<image class="img" :src="list.img"></image>
+							<view class="IMG">
+								<image class="IMG" :src="list.IMG"></image>
 								
 							</view>
 							<view class="title">
-								{{list.username}}
+								{{list.USERNAME}}
 							</view>
 						</view>
-						<view class="phone">
-							{{list.phone}}					
+						<view class="PHONE">
+							{{list.PHONE}}					
 						</view>	
 						
                     </view>
@@ -36,40 +36,27 @@
             return {
                 title: 'list-with-collapses',
                 lists: [{
-                        username: "佛山市",
-                        userid: 1,
-						phone:13266390572,
-						img:"https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
-						},
-						{
-                        username: "国土",
-                        userid: 1,
-						phone:"0757-86566318",
-						img:"https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
-						},
-						{
-                        username: "资源",
-                        userid: 1,
-						phone:123268,
-						img:"https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
-						},
-						{
-                        username: "城乡规划局",
-                        userid: 1,
-						phone:123269,
-						img:"https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
+					    DEPARTMENTID:"1",
+						USERNAME: "佛山市",
+						USERID: "佛山市",
+                        DEPTNAME: "佛山市",
+                        DEPTUSERBH: 1,
+						PHONE:13266390572,
+						IMG:"https://IMG-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png"
 						}]
             }
         },
+		onLoad: function (option) { //option为object类型，会序列化上个页面传递的参数
+			console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
+			console.log(option);
+			this.lists = JSON.parse(option.res);
+		},
         methods: {
-			tabonclick(index) {
-				console.log(index);
+			tabonclick(departmentid,userid) {
 				uni.navigateTo({
-					url: '../user/remsg?read=1&userid='+index
+					url: '../user/remsg?read=1&departmentid='+departmentid+'&userid='+userid
 				});
-// 				const result = service.getTxlRy(index, '', function() {
-// 					console.log(result);
-// 				});
+
 			}
         }
     }
@@ -96,15 +83,15 @@
 		display: flex;
 		flex-direction: row;
 	}
-	.v_left img{
+	.v_left IMG{
 		
 	}
-	.img {
+	.IMG {
 		width: 50upx;
 		height: 50upx;
 		border-radius: 50%;
 	}
-	.phone {
+	.PHONE {
 		margin-right: 60upx;
 	}
 	.page {

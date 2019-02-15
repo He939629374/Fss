@@ -27,14 +27,14 @@
 	    -ms-flex-direction: row;
 	        flex-direction: row;
 }
-.v_left ._img{
+.v_left IMG{
 }
-.img {
+.IMG {
 	width: 50rpx;
 	height: 50rpx;
 	border-radius: 50%;
 }
-.phone {
+.PHONE {
 	margin-right: 60rpx;
 }
 .page {

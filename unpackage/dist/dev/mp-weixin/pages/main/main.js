@@ -175,7 +175,8 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
   computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']),
   onLoad: function onLoad() {
     var self = this;
-    this.userInfo = _service.default.getUsers();
+    this.userInfo = _service.default.getUsers(function () {
+    });
     _Global.default.checkLogin(self.userInfo, self.forcedLogin, function () {
       self.getData(0);
     });
@@ -207,7 +208,8 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
     },
     ToDetail: function ToDetail(insid) {
       uni.navigateTo({
-        url: "../wfengine/wftaskmain?insid=" + insid });
+        //url:"../wfengine/wftaskmain?insid="+insid,
+        url: "../pick/pickRY?insid=" + insid });
 
     },
     tabS: function tabS(insid) {

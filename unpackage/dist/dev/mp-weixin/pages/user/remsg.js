@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -133,15 +133,16 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));
+var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
-  components: { Global: _Global.default },
+  components: { Global: _Global.default, service: _service.default },
   data: function data() {
     return {
       read: 0,
-      userid: '',
-      list: [{ 'name': '姓名', 'text': '陈姗姗' },
+      res: '',
+      list: [],
+      list_by: [{ 'name': '姓名', 'text': '陈姗姗' },
       { 'name': '单位', 'text': '佛山市测绘地理信息研究院' },
       { 'name': '电话', 'text': '0757-66861234' },
       { 'name': '手机', 'text': '13768971234' },
@@ -151,10 +152,30 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
 
   },
   onLoad: function onLoad(option) {//option为object类型，会序列化上个页面传递的参数
+    var self = this;
     console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
     console.log(option);
     this.read = option.read;
-    this.userid = option.userid;
+    //根据传过来的部门ID和用户ID查询个人信息
+    var result = _service.default.getTxlRyMessage(option.departmentid, option.userid, 0, function (res) {
+      console.log(res[0]);
+      if (res[0] == "" || res[0] == undefined)
+      {
+        self.list.push({ 'name': '姓名', 'text': "" });
+        self.list.push({ 'name': '单位', 'text': "" });
+        self.list.push({ 'name': '电话', 'text': "" });
+        self.list.push({ 'name': '邮箱', 'text': "" });
+
+      } else
+      {
+        var list = res[0];
+        self.list.push({ 'name': '姓名', 'text': list.USERNAME });
+        self.list.push({ 'name': '单位', 'text': list.DEPTUSERBH });
+        self.list.push({ 'name': '电话', 'text': list.PHONE });
+        self.list.push({ 'name': '邮箱', 'text': list.EMAIL });
+      }
+
+    });
   },
   methods: {
     onKeyInputO: function onKeyInputO(event) {
@@ -167,22 +188,8 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
       this.napwd = event.target.value;
     },
     submitPwd: function submitPwd() {
-      if (this.npwd.length < 6)
-      {
-        uni.showToast({
-          icon: 'none',
-          title: '密码最短为 6 个字符' });
 
-        return;
-      } else if (this.napwd != this.npwd)
-      {
-        uni.showToast({
-          icon: 'none',
-          title: '两次输入的密码不一致' });
-
-      }
     } } };exports.default = _default;
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -231,11 +238,12 @@ var render = function() {
           [
             _c("view", { staticClass: "title" }, [_vm._v(_vm._s(item.name))]),
             _c("text", {}, [_vm._v("|")]),
-            _vm.read != 1 ? _c("input", { staticClass: "text" }) : _vm._e(),
-            _vm._v(_vm._s(item.text)),
-            _c("view", { staticClass: "text", attrs: { else: "" } }, [
-              _vm._v(_vm._s(item.text))
-            ])
+            _vm.read != 1
+              ? _c("input", {
+                  staticClass: "text",
+                  attrs: { value: item.text }
+                })
+              : _c("view", { staticClass: "text" }, [_vm._v(_vm._s(item.text))])
           ]
         )
       }),

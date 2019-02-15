@@ -17,20 +17,20 @@
 								<image class="img" src="../../static/img/txlZZJG.png"></image>
 							</view>
 							<view class="title">
-								{{list.title}}
+								{{list.DEPTNAME}}
 							</view>
 						</view>
                         
 						<view class="count">
-							({{list.count}}人)
+							({{list.count}})
 						</view>
                     </view>
 
                     <view class="uni-list uni-collapse" :class="list.show ? 'uni-active' : ''">
                         <view class="uni-list-cell" hover-class="uni-list-cell-hover" 
 						v-for="(item,key) in list.item" :key="key" :class="key === list.item.length - 1 ? 'uni-list-cell-last' : ''"
-						@click="tabonclick(item.userid)">
-                            <view class="uni-list-cell-navigate uni-navigate-right"> {{item.title}} </view>
+						@click="tabonclick(item.DEPARTMENTBH)">
+                            <view class="uni-list-cell-navigate uni-navigate-right"> {{item.DEPTNAME}} </view>
                         </view>
                     </view>
                 </view>
@@ -51,33 +51,41 @@
             return {
 				val3:'',
                 title: 'list-with-collapses',
-                lists: [{
-                        title: "佛山市国土资源和城乡规划局",
+				lists:[],
+                lists_by: [{
+                        DEPTNAME: "佛山市国土资源和城乡规划局",
                         show: false,
 						count: 158,
-                        item: [{"title":"科长1","userid":"1"} ,
-						{"title":"科长1","userid":"1"},
-						{"title":"科长1","userid":"1"}]
+                        item: [{"DEPTNAME":"科长1","DEPARTMENTBH":"1"} ,
+						{"DEPTNAME":"科长1","DEPARTMENTBH":"1"},
+						{"DEPTNAME":"科长1","DEPARTMENTBH":"1"}]
                     },
                     {
-                        title: "佛山市城市规划设计研究院",
+                        DEPTNAME: "佛山市城市规划设计研究院",
                         show: false,
 						count: 3,
-                        item: [{"title":"科长1","userid":"1"} ,
-                        {"title":"科长1","userid":"1"},
-                        {"title":"科长1","userid":"1"}]
+                        item: [{"DEPTNAME":"科长1","DEPARTMENTBH":"1"} ,
+                        {"DEPTNAME":"科长1","DEPARTMENTBH":"1"},
+                        {"DEPTNAME":"科长1","DEPARTMENTBH":"1"}]
                     },
                     {
-                        title: "佛山市测绘地理信息研究院",
+                        DEPTNAME: "佛山市测绘地理信息研究院",
                         show: false,
 						count: 2,
-                        item: [{"title":"科长1","userid":"1"} ,
-                        {"title":"科长1","userid":"1"},
-                        {"title":"科长1","userid":"1"}]
+                        item: [{"DEPTNAME":"科长1","DEPARTMENTBH":"1"} ,
+                        {"DEPTNAME":"科长1","DEPARTMENTBH":"1"},
+                        {"DEPTNAME":"科长1","DEPARTMENTBH":"1"}]
                     }
                 ]
             }
         },
+		created() {
+			var self = this;
+			var result = service.getTxl(this.accoun, function(res) {				
+					console.log(res.sonXMText);
+					self.lists = res.sonXMText;
+				});	
+		},
         methods: {
 			search(e, val) {
             console.log(e, val);
@@ -93,9 +101,12 @@
                 }
             },
 			tabonclick(index) {
-				uni.navigateTo({
-					url: '../txl/txlRY'
-				});
+				var result = service.getTxlRy(index, function(res) {				
+					console.log(res);
+					uni.navigateTo({
+						url: '../txl/txlRY?res='+JSON.stringify(res)
+					});
+				});	
 				console.log(index);
 			}
         }

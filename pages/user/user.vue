@@ -17,7 +17,7 @@
 				<uni-list-item title="修改密码"  @click="tabonclick('../user/repwd?read=0&userid=')"></uni-list-item>
 			</uni-list>
 		</view>
-		<view class="btn-row">
+		<view class="btn-row" style="margin-top: 300rpx;">
 			<button type="primary" class="primary" @tap="logout">注销</button>
 		</view>
 	</view>
@@ -38,15 +38,19 @@
 			}
 		},
 		onLoad() {
-			this.userInfo = service.getUsers();
-			console.log(this.userInfo );
+			this.userInfo = service.getUsers(function(res) {
+				console.log('已有的用户信息');
+				console.log(res);
+				return res;
+			});
+			
 		},
 		methods: {
 			tabonclick(_path) {//点击跳转
 			console.log(_path);
 				var self = this;
 				uni.navigateTo({
-					url: _path+this.userInfo.userid
+					url: _path+this.userInfo.userid+'&departmentid='
 				});
 			},
 			logout() {

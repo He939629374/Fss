@@ -590,15 +590,19 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
 
   },
   onLoad: function onLoad() {
-    this.userInfo = _service.default.getUsers();
-    console.log(this.userInfo);
+    this.userInfo = _service.default.getUsers(function (res) {
+      console.log('已有的用户信息');
+      console.log(res);
+      return res;
+    });
+
   },
   methods: {
     tabonclick: function tabonclick(_path) {//点击跳转
       console.log(_path);
       var self = this;
       uni.navigateTo({
-        url: _path + this.userInfo.userid });
+        url: _path + this.userInfo.userid + '&departmentid=' });
 
     },
     logout: function logout() {
@@ -949,7 +953,7 @@ var render = function() {
     ),
     _c(
       "view",
-      { staticClass: "btn-row" },
+      { staticClass: "btn-row", staticStyle: { "margin-top": "300rpx" } },
       [
         _c(
           "button",

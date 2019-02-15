@@ -1,0 +1,2 @@
+<import src="./pickRY.vue.wxml" />
+    <template is="1265a089" data="{{ ...$root['0'], $root }}"/>

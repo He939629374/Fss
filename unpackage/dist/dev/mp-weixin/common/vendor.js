@@ -476,7 +476,7 @@ __webpack_require__.r(__webpack_exports__);
 var USERS_KEY = 'USERS_KEY';
 var STATE_KEY = 'STATE_KEY';
 
-var getUsers = function getUsers() {
+var getUsers = function getUsers(callback) {
   var ret = '';
   console.log(uni.getStorageSync(USERS_KEY));
   ret = uni.getStorageSync(USERS_KEY);
@@ -486,6 +486,7 @@ var getUsers = function getUsers() {
       userid: '' });
 
   }
+  callback(JSON.parse(ret));
   return JSON.parse(ret);
 };
 
@@ -617,19 +618,100 @@ var getContents = function getContents(username, password, callback) {
 
 };
 //通讯录目录
-//通讯录人员目录
-var getTxlRy = function getTxlRy(userid, type, callback) {
-  console.log(_Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList');
+var getTxl = function getTxl(userid, callback) {
+  uni.showLoading();
   uni.request({
-    url: _Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList',
+    url: _Global.default.serviceUrl + 'User/TXL',
     method: 'POST',
     data: {
-      userid: userid,
-      type: type },
+      userid: userid },
 
     success: function success(res) {
       uni.hideLoading();
-      if (res.data.code == 0) {
+      console.log(res);
+      if (res.data.code == 10000) {
+        callback(res.data.rs);
+      } else {
+        uni.showToast({
+          icon: 'none',
+          title: res.data.msg });
+
+      }
+    },
+    fail: function fail() {
+      uni.hideLoading();
+    } });
+
+};
+//通讯录人员目录
+var getTxlRy = function getTxlRy(DEPARTMENTBH, callback) {
+  uni.showLoading();
+  uni.request({
+    url: _Global.default.serviceUrl + 'User/TXLRY',
+    method: 'POST',
+    data: {
+      DEPARTMENTBH: DEPARTMENTBH },
+
+    success: function success(res) {
+      uni.hideLoading();
+      console.log(res);
+      if (res.data.code == 10000) {
+        callback(res.data.rs);
+      } else {
+        uni.showToast({
+          icon: 'none',
+          title: res.data.msg });
+
+      }
+    },
+    fail: function fail() {
+      uni.hideLoading();
+    } });
+
+};
+//通讯录人员信息页
+var getTxlRyMessage = function getTxlRyMessage(departmentid, userid, _type, callback) {
+  uni.showLoading();
+  uni.request({
+    url: _Global.default.serviceUrl + 'User/RYMessage',
+    method: 'POST',
+    data: {
+      departmentid: departmentid,
+      userid: userid,
+      _type: _type },
+
+    success: function success(res) {
+      uni.hideLoading();
+      console.log(res);
+      if (res.data.code == 10000) {
+        callback(res.data.rs);
+      } else {
+        uni.showToast({
+          icon: 'none',
+          title: res.data.msg });
+
+      }
+    },
+    fail: function fail() {
+      uni.hideLoading();
+    } });
+
+};
+//修改密码
+var resMsg = function resMsg(userid, opsd, npsd, callback) {
+  uni.showLoading();
+  uni.request({
+    url: _Global.default.serviceUrl + 'User/resMsg',
+    method: 'POST',
+    data: {
+      userid: userid,
+      opsd: opsd,
+      npsd: npsd },
+
+    success: function success(res) {
+      uni.hideLoading();
+      console.log(res);
+      if (res.data.code == 10000) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -643,7 +725,6 @@ var getTxlRy = function getTxlRy(userid, type, callback) {
     } });
 
 };var _default =
-
 {
   getUsers: getUsers,
   addUser: addUser,
@@ -651,7 +732,9 @@ var getTxlRy = function getTxlRy(userid, type, callback) {
   getWorkFlowList: getWorkFlowList,
   downLoadFileByWorkFlow: downLoadFileByWorkFlow,
   getContents: getContents, //目录面板信息
-  getTxlRy: getTxlRy //通讯录人员目录
+  getTxlRy: getTxlRy, //通讯录人员目录
+  getTxl: getTxl, //通讯录目录
+  getTxlRyMessage: getTxlRyMessage //通讯录人员信息页
 };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -665,7 +748,8 @@ var getTxlRy = function getTxlRy(userid, type, callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
+var serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
 var fileHost = 'http://172.16.5.94/MisFileDisk';
 
 var sysname = '信息管理系统';

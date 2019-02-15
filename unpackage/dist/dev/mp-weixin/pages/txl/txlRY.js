@@ -151,40 +151,27 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
     return {
       title: 'list-with-collapses',
       lists: [{
-        username: "佛山市",
-        userid: 1,
-        phone: 13266390572,
-        img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" },
-
-      {
-        username: "国土",
-        userid: 1,
-        phone: "0757-86566318",
-        img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" },
-
-      {
-        username: "资源",
-        userid: 1,
-        phone: 123268,
-        img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" },
-
-      {
-        username: "城乡规划局",
-        userid: 1,
-        phone: 123269,
-        img: "https://img-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" }] };
+        DEPARTMENTID: "1",
+        USERNAME: "佛山市",
+        USERID: "佛山市",
+        DEPTNAME: "佛山市",
+        DEPTUSERBH: 1,
+        PHONE: 13266390572,
+        IMG: "https://IMG-cdn-qiniu.dcloud.net.cn/uniapp/images/uni@2x.png" }] };
 
 
   },
+  onLoad: function onLoad(option) {//option为object类型，会序列化上个页面传递的参数
+    console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
+    console.log(option);
+    this.lists = JSON.parse(option.res);
+  },
   methods: {
-    tabonclick: function tabonclick(index) {
-      console.log(index);
+    tabonclick: function tabonclick(departmentid, userid) {
       uni.navigateTo({
-        url: '../user/remsg?read=1&userid=' + index });
+        url: '../user/remsg?read=1&departmentid=' + departmentid + '&userid=' + userid });
 
-      // 				const result = service.getTxlRy(index, '', function() {
-      // 					console.log(result);
-      // 				});
+
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -240,24 +227,24 @@ var render = function() {
                   },
                   on: {
                     click: function($event) {
-                      _vm.tabonclick(list.userid)
+                      _vm.tabonclick(list.DEPARTMENTID, list.USERID)
                     }
                   }
                 },
                 [
                   _c("view", { staticClass: "v_left" }, [
-                    _c("view", { staticClass: "img" }, [
+                    _c("view", { staticClass: "IMG" }, [
                       _c("image", {
-                        staticClass: "img",
-                        attrs: { src: list.img }
+                        staticClass: "IMG",
+                        attrs: { src: list.IMG }
                       })
                     ]),
                     _c("view", { staticClass: "title" }, [
-                      _vm._v(_vm._s(list.username))
+                      _vm._v(_vm._s(list.USERNAME))
                     ])
                   ]),
-                  _c("view", { staticClass: "phone" }, [
-                    _vm._v(_vm._s(list.phone))
+                  _c("view", { staticClass: "PHONE" }, [
+                    _vm._v(_vm._s(list.PHONE))
                   ])
                 ]
               )

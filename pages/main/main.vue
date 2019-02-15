@@ -60,7 +60,8 @@
 		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 		onLoad() {
 			var self = this;
-			this.userInfo = service.getUsers();
+			this.userInfo = service.getUsers(function() {
+			});
 			global.checkLogin(self.userInfo, self.forcedLogin, function() {
 				self.getData(0);
 			});
@@ -92,7 +93,8 @@
 			},
 			ToDetail(insid){
 				uni.navigateTo({
-					url:"../wfengine/wftaskmain?insid="+insid
+					//url:"../wfengine/wftaskmain?insid="+insid,
+					url:"../pick/pickRY?insid="+insid
 				})
 			},
 			tabS(insid){
@@ -117,7 +119,7 @@
 		display:flex;
 		justify-content:center;
 		align-items:center;
-		position: relative;
+		position: absolute;
 		top:80%;
 		z-index:999;
 		left:90%;
