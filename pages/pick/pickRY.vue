@@ -1,9 +1,9 @@
 <template>
 	<view class="content">
-		<view class="content_s">
+		<view  class="content_s">
 			<view v-for="(item,index) in list" :key="index" class="pick_vfor">
 						<view class="pick_vfor_title" @click="item.issel==1?item.issel=0:item.issel=1">
-							<view class="wfnodename">{{item.wfnodename}}</view>
+							<view class="rolename">{{item.rolename}}</view>
 							<view class="pick_vfor_title_r" >
 								<uni-icon type="arrowright" size="30" v-if="item.issel==0"></uni-icon>
 								<uni-icon type="arrowdown" size="30" v-else></uni-icon>
@@ -18,7 +18,7 @@
 											<view class="pick_vfor_vfor_l_title">{{items.username}}</view>
 										</view>
 									</view>
-									<view class="pick_vfor_vfor_r " @click="gclick(items.userid,item.wfnodecode)"><image class="del" :src="items.issel==1 ? '../../static/img/issel.png' : '../../static/img/nosel.png'" /></view>
+									<view class="pick_vfor_vfor_r " @click="gclick(items.userid,item.rolename)"><image class="del" :src="items.issel==1 ? '../../static/img/issel.png' : '../../static/img/nosel.png'" /></view>
 								</view>
 							</view>
 			</view>
@@ -39,32 +39,119 @@ export default {
 	components: {uniIcon,service,Global},
 	data() {
 		return {
+			scrollTop: 0,
+			Backwfnodecode:"",
 			useridlist: [], 
 			list:[
 				{
-					wfnodecode:123,
-					wfnodename:"(南海)科长1",
+					rolename:"(南海)科长1",
 					userlist:[
-						{userid:1,username:"A科长",issel:1},
+						{userid:1,username:"A科长",issel:0},
 						{userid:2,username:"B科长",issel:0}
 					],
 					issel:0,
 				},
 				{
-					wfnodecode:1232,
-					wfnodename:"(南海)科长2",
+					rolename:"(南海)科长2",
 					userlist:[
-						{userid:3,username:"A科长2",issel:1},
+						{userid:3,username:"A科长2",issel:0},
 						{userid:4,username:"B科长2",issel:0}
 					],
 					issel:1,
 				},
-				]
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				},
+				{
+					rolename:"(南海)科长2",
+					userlist:[
+						{userid:3,username:"A科长2",issel:0},
+						{userid:4,username:"B科长2",issel:0}
+					],
+					issel:1,
+				}
+				],
+			list2:[{rolename:'角色1',userlist:[{userid:1,username:"人员1"},{userid:2,username:"人员2"}]},
+			{rolename:'角色2',userlist:[{userid:3,username:"人员3"},{userid:4,username:"人员4"}]}]
 		}
 	},
-	onLoad() {
+	onLoad(option) {
+
+		var self = this;
+		console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
+		console.log(option);
+		this.Backwfnodecode = option.wfnodecode;
+		for(let i =0;i<self.list.length;i++)
+		{
+			for(let j =0;j<self.list[i].userlist.length;j++)
+			{
+				
+				if(option.userid.indexOf(","+self.list[i].userlist[j].userid+",")!=-1 || option.userid.indexOf(","+self.list[i].userlist[j].userid+",")!=-1)
+				{
+					self.list[i].userlist[j].issel = 1;
+				}
+				
+			}
+		}
 	},
 	methods: {
+		IsInArray (arr,val){
+		　　
+		　　return ;
+		},
 		BaorCo(_type) {
 			var self = this;
 			if(_type=="back"){
@@ -77,18 +164,19 @@ export default {
 				var prevPage = pages[pages.length - 2]; //上一个页面
 				//直接调用上一个页面的setData()方法，把数据存到上一个页面中去
 				prevPage.setData({
-				        BackUserid:self.useridlist
+				        BackUserid:self.useridlist,
+						Backwfnodecode:self.Backwfnodecode
 				})
 				uni.navigateBack();
 			}
 		},
-		gclick(userid,wfnodecode) {//删除已选人员
+		gclick(userid,rolename) {//删除已选人员
 			var self = this;
 			self.useridlist = [];
 			console.log(userid)	;
 			for(let i =0;i<self.list.length;i++)
 			{
-				if(wfnodecode==self.list[i].wfnodecode)
+				if(rolename==self.list[i].rolename)
 				{
 					for(let j =0;j<self.list[i].userlist.length;j++)
 					{
@@ -107,7 +195,8 @@ export default {
 				for(let j =0;j<self.list[i].userlist.length;j++)
 				{
 					if(self.list[i].userlist[j].issel=="1")
-					self.useridlist.push(self.list[i].userlist[j].userid);
+					self.useridlist.push(self.list[i].userlist[j]);
+					
 				}
 				
 			}
@@ -155,13 +244,17 @@ export default {
 	}
 	.content 
 	{
+		
+		height: 100vh;
 		padding: 0px;
 	}
 	.content_s
 	{
-		height: 95%;
+		height: 100%;
+		overflow-y: scroll;
+		position: relative;
 	}
-	.wfnodename
+	.rolename
 	{
 		margin-left: 20rpx;
 	}

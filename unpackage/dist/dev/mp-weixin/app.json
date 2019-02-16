@@ -1,8 +1,8 @@
 {
   "pages": [
+    "pages/contents/contents",
     "pages/pick/pick",
     "pages/pick/pickRY",
-    "pages/contents/contents",
     "pages/main/main",
     "pages/login/login",
     "pages/reg/reg",
@@ -30,12 +30,6 @@
     "selectedColor": "#1A9EFF",
     "backgroundColor": "#ffffff",
     "list": [
-      {
-        "pagePath": "pages/pick/pick",
-        "text": "首页",
-        "iconPath": "static/img/home.png",
-        "selectedIconPath": "static/img/homeHL.png"
-      },
       {
         "pagePath": "pages/contents/contents",
         "text": "首页",

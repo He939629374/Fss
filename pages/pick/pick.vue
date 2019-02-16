@@ -1,10 +1,12 @@
 <template>
 	<view class="content">
+		<view class="content_s">
 		<view v-for="(item,index) in list" :key="index" class="pick_vfor">
 			<view>
 				<view class="pick_vfor_title">
 					<view class="pick_vfor_title_l" @click="item.issel==1?item.issel=0:item.issel=1"><view class="issel"><image class="issel" :src="item.issel==1 ? '../../static/img/issel.png' : '../../static/img/nosel.png'"/></view>
-					<view class="wfnodename">{{item.wfnodename}}</view></view>
+					<view class="wfnodename">{{item.wfnodename}}</view>
+					</view>
 					<view class="pick_vfor_title_r" @click="tabonclick(item.wfnodecode)"><uni-icon type="plus" size="30"></uni-icon></view>
 					
 				</view>
@@ -19,9 +21,14 @@
 							</view>
 							<view class="pick_vfor_vfor_r "><image class="del" src="../../static/img/-.png" @click="delclick(items.userid,item.wfnodecode)"/></view>
 						</view>
-					</view>
 				</view>
 			</view>
+		</view>
+		</view>
+
+		<view class="bottom_text">
+			<view class="bottom_l" @click="BaorCo('back')">返回</view>
+			<view class="bottom_r" @click="BaorCo('confirm')">提交</view>
 		</view>
 	</view>
 </template>
@@ -34,14 +41,15 @@ export default {
 	components: {uniIcon,service,Global},
 	data() {
 		return {
+			Backwfnodecode:"",
 			BackUserid: [], 
 			list:[
 				{
 					wfnodecode:123,
 					wfnodename:"科长审核",
 					userlist:[
-						{userid:123,username:"A科长"},
-						{userid:1234,username:"B科长"}
+						{userid:1,username:"A科长"},
+						{userid:2,username:"B科长"}
 					],
 					issel:0,
 				},
@@ -49,23 +57,86 @@ export default {
 					wfnodecode:1232,
 					wfnodename:"科长审核2",
 					userlist:[
-						{userid:1232,username:"A科长2"},
-						{userid:12342,username:"B科长2"}
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
 					],
 					issel:1,
 				},
+				{
+					wfnodecode:1234,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				},
+				{
+					wfnodecode:1232,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				},
+				{
+					wfnodecode:1232,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				},
+				{
+					wfnodecode:1232,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				},
+				{
+					wfnodecode:1232,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				},
+				{
+					wfnodecode:1232,
+					wfnodename:"科长审核2",
+					userlist:[
+						{userid:3,username:"A科长2"},
+						{userid:4,username:"B科长2"}
+					],
+					issel:1,
+				}
 				]
 		}
 	},
 	onLoad() {
 	},
-	onShow(e) {
+	onShow(e) {//页面显示前的操作
 		var self =this;
 		let pages = getCurrentPages();
 		let currPage = pages[pages.length-1];
 		if (currPage.data.BackUserid==""||currPage.data.BackUserid==undefined){
 		}else{
-			this.BackUserid = currPage.data.BackUserid;
+			self.BackUserid = currPage.data.BackUserid;//回传的已选人员列表
+			self.Backwfnodecode = currPage.data.Backwfnodecode;//回传的节点编号
+			console.log(this.BackUserid);
+			for(let i =0;i<self.list.length;i++)
+			{
+				if(self.Backwfnodecode==self.list[i].wfnodecode)//替换已选人员列表
+				{
+					self.list[i].userlist = self.BackUserid;
+				}
+			}
 		}
 	 },
 	methods: {
@@ -83,7 +154,7 @@ export default {
 				}
 			}
 			uni.navigateTo({
-				url: '../pick/pickRY?wfnodecode=' + wfnodecode+'&userid=' + userid
+				url: '../pick/pickRY?wfnodecode=' + wfnodecode+'&userid=' + ","+userid+","
 			});
 		},
 		delclick(userid,wfnodecode) {//删除已选人员
@@ -111,6 +182,30 @@ export default {
 
 
 <style>
+	.bottom_text
+	{
+		bottom: 0%;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: center;
+		height:100rpx;
+		background-color:#ffffff;
+
+	}
+	.bottom_l
+	{
+		width: 50%;
+		border-right: #E1E1E1 1rpx solid;
+		text-align:center;
+
+	}
+	.bottom_r
+	{
+		width: 50%;
+		text-align:center;
+
+	}
 	.issel
 	{
 		width: 50rpx;
@@ -124,7 +219,16 @@ export default {
 	}
 	.content 
 	{
+		display:flex;
 		background-color: #EEEEF0;
+		height: 100vh;
+		padding: 0px;
+	}
+	.content_s
+	{
+		height: 100%;
+		overflow-y: scroll;
+		position: relative;
 	}
 	.wfnodename
 	{
@@ -142,12 +246,13 @@ export default {
 		height:100rpx;
 		border-bottom:solid 1rpx #ECECEE;
 		align-items:center;
+		
 
 	}
 	.pick_vfor_content
 	{
 		display: flex;
-		justify-content:flex-start;
+		flex-flow:row wrap;
 	}
 	.pick_vfor_title_l
 	{

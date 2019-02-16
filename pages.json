@@ -1,7 +1,12 @@
 {
     "pages" : [
         //pages数组中第一项表示应用启动页,
-		
+        {
+            "path" : "pages/contents/contents",
+            "style" : {
+                "navigationBarTitleText" : ""
+            }
+        },
 		{
 		    "path" : "pages/pick/pick",
 		    "style" : {
@@ -14,12 +19,7 @@
 		        "navigationBarTitleText" : "我的待办"
 		    }
 		},
-        {
-            "path" : "pages/contents/contents",
-            "style" : {
-                "navigationBarTitleText" : ""
-            }
-        },
+
         {
             "path" : "pages/main/main",
             "style" : {
@@ -104,12 +104,6 @@
         "selectedColor" : "#1A9EFF",
         "backgroundColor" : "#ffffff",
         "list" : [
-			{
-			    "pagePath" : "pages/pick/pick",
-			    "text" : "首页",
-			    "iconPath" : "static/img/home.png",
-			    "selectedIconPath" : "static/img/homeHL.png"
-			},
             {
                 "pagePath" : "pages/contents/contents",
                 "text" : "首页",

@@ -150,7 +150,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
       { "url": '../../static/img/conZX.png', "name": '信息中心', _path: "../msgcenter/msgcenter" },
       { "url": '../../static/img/conSP.png', "name": '审批', _path: "../record/record" },
       { "url": '../../static/img/conTX.png', "name": '提醒', _path: "../tips/tips" },
-      { "url": '../../static/img/conGZ.png', "name": '工作', _path: "../work/work" },
+      { "url": '../../static/img/conGZ.png', "name": '工作', _path: "../pick/pick" },
       { "url": '../../static/img/conYJ.png', "name": '邮件', _path: "../email/email" },
       { "url": '../../static/img/conFJ.png', "name": '附件', _path: "../file/file" },
       { "url": '../../static/img/conQT.png', "name": '其他', _path: "../other/other" }] };

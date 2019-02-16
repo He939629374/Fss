@@ -142,6 +142,13 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+
+
+
+
+
+
 var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue"));
 var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));
 var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
@@ -149,14 +156,15 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
   components: { uniIcon: _uniIcon.default, service: _service.default, Global: _Global.default },
   data: function data() {
     return {
+      Backwfnodecode: "",
       BackUserid: [],
       list: [
       {
         wfnodecode: 123,
         wfnodename: "科长审核",
         userlist: [
-        { userid: 123, username: "A科长" },
-        { userid: 1234, username: "B科长" }],
+        { userid: 1, username: "A科长" },
+        { userid: 2, username: "B科长" }],
 
         issel: 0 },
 
@@ -164,8 +172,62 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         wfnodecode: 1232,
         wfnodename: "科长审核2",
         userlist: [
-        { userid: 1232, username: "A科长2" },
-        { userid: 12342, username: "B科长2" }],
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1234,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1232,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1232,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1232,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1232,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
+
+        issel: 1 },
+
+      {
+        wfnodecode: 1232,
+        wfnodename: "科长审核2",
+        userlist: [
+        { userid: 3, username: "A科长2" },
+        { userid: 4, username: "B科长2" }],
 
         issel: 1 }] };
 
@@ -174,13 +236,22 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
   },
   onLoad: function onLoad() {
   },
-  onShow: function onShow(e) {
+  onShow: function onShow(e) {//页面显示前的操作
     var self = this;
     var pages = getCurrentPages();
     var currPage = pages[pages.length - 1];
     if (currPage.data.BackUserid == "" || currPage.data.BackUserid == undefined) {
     } else {
-      this.BackUserid = currPage.data.BackUserid;
+      self.BackUserid = currPage.data.BackUserid; //回传的已选人员列表
+      self.Backwfnodecode = currPage.data.Backwfnodecode; //回传的节点编号
+      console.log(this.BackUserid);
+      for (var i = 0; i < self.list.length; i++)
+      {
+        if (self.Backwfnodecode == self.list[i].wfnodecode) //替换已选人员列表
+          {
+            self.list[i].userlist = self.BackUserid;
+          }
+      }
     }
   },
   methods: {
@@ -198,7 +269,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         }
       }
       uni.navigateTo({
-        url: '../pick/pickRY?wfnodecode=' + wfnodecode + '&userid=' + userid });
+        url: '../pick/pickRY?wfnodecode=' + wfnodecode + '&userid=' + "," + userid + "," });
 
     },
     delclick: function delclick(userid, wfnodecode) {//删除已选人员
@@ -250,100 +321,130 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c(
-    "view",
-    { staticClass: "content" },
-    _vm._l(_vm.list, function(item, index) {
-      return _c("view", { key: index, staticClass: "pick_vfor" }, [
-        _c("view", [
-          _c("view", { staticClass: "pick_vfor_title" }, [
-            _c(
-              "view",
-              {
-                staticClass: "pick_vfor_title_l",
-                attrs: { eventid: "27fa3ec2-0-" + index },
-                on: {
-                  click: function($event) {
-                    item.issel == 1 ? (item.issel = 0) : (item.issel = 1)
-                  }
-                }
-              },
-              [
-                _c("view", { staticClass: "issel" }, [
-                  _c("image", {
-                    staticClass: "issel",
-                    attrs: {
-                      src:
-                        item.issel == 1
-                          ? "../../static/img/issel.png"
-                          : "../../static/img/nosel.png"
-                    }
-                  })
-                ]),
-                _c("view", { staticClass: "wfnodename" }, [
-                  _vm._v(_vm._s(item.wfnodename))
-                ])
-              ]
-            ),
-            _c(
-              "view",
-              {
-                staticClass: "pick_vfor_title_r",
-                attrs: { eventid: "27fa3ec2-1-" + index },
-                on: {
-                  click: function($event) {
-                    _vm.tabonclick(item.wfnodecode)
-                  }
-                }
-              },
-              [
-                _c("uni-icon", {
-                  attrs: {
-                    type: "plus",
-                    size: "30",
-                    mpcomid: "27fa3ec2-0-" + index
-                  }
-                })
-              ],
-              1
-            )
-          ]),
-          _c(
-            "view",
-            { staticClass: "pick_vfor_content" },
-            _vm._l(item.userlist, function(items, indexs) {
-              return _c(
+  return _c("view", { staticClass: "content" }, [
+    _c(
+      "view",
+      { staticClass: "content_s" },
+      _vm._l(_vm.list, function(item, index) {
+        return _c("view", { key: index, staticClass: "pick_vfor" }, [
+          _c("view", [
+            _c("view", { staticClass: "pick_vfor_title" }, [
+              _c(
                 "view",
-                { key: indexs, staticClass: "pick_vfor_vfor" },
+                {
+                  staticClass: "pick_vfor_title_l",
+                  attrs: { eventid: "27fa3ec2-0-" + index },
+                  on: {
+                    click: function($event) {
+                      item.issel == 1 ? (item.issel = 0) : (item.issel = 1)
+                    }
+                  }
+                },
                 [
-                  _c("view", { staticClass: "pick_vfor_vfor_block" }, [
-                    _c("view", { staticClass: "pick_vfor_vfor_l" }, [
-                      _vm._m(0, true),
-                      _c("view", [_vm._v(_vm._s(items.username))])
-                    ])
-                  ]),
-                  _c("view", { staticClass: "pick_vfor_vfor_r " }, [
+                  _c("view", { staticClass: "issel" }, [
                     _c("image", {
-                      staticClass: "del",
+                      staticClass: "issel",
                       attrs: {
-                        src: "../../static/img/-.png",
-                        eventid: "27fa3ec2-2-" + index + "-" + indexs
-                      },
-                      on: {
-                        click: function($event) {
-                          _vm.delclick(items.userid, item.wfnodecode)
-                        }
+                        src:
+                          item.issel == 1
+                            ? "../../static/img/issel.png"
+                            : "../../static/img/nosel.png"
                       }
                     })
+                  ]),
+                  _c("view", { staticClass: "wfnodename" }, [
+                    _vm._v(_vm._s(item.wfnodename))
                   ])
                 ]
+              ),
+              _c(
+                "view",
+                {
+                  staticClass: "pick_vfor_title_r",
+                  attrs: { eventid: "27fa3ec2-1-" + index },
+                  on: {
+                    click: function($event) {
+                      _vm.tabonclick(item.wfnodecode)
+                    }
+                  }
+                },
+                [
+                  _c("uni-icon", {
+                    attrs: {
+                      type: "plus",
+                      size: "30",
+                      mpcomid: "27fa3ec2-0-" + index
+                    }
+                  })
+                ],
+                1
               )
-            })
-          )
+            ]),
+            _c(
+              "view",
+              { staticClass: "pick_vfor_content" },
+              _vm._l(item.userlist, function(items, indexs) {
+                return _c(
+                  "view",
+                  { key: indexs, staticClass: "pick_vfor_vfor" },
+                  [
+                    _c("view", { staticClass: "pick_vfor_vfor_block" }, [
+                      _c("view", { staticClass: "pick_vfor_vfor_l" }, [
+                        _vm._m(0, true),
+                        _c("view", [_vm._v(_vm._s(items.username))])
+                      ])
+                    ]),
+                    _c("view", { staticClass: "pick_vfor_vfor_r " }, [
+                      _c("image", {
+                        staticClass: "del",
+                        attrs: {
+                          src: "../../static/img/-.png",
+                          eventid: "27fa3ec2-2-" + index + "-" + indexs
+                        },
+                        on: {
+                          click: function($event) {
+                            _vm.delclick(items.userid, item.wfnodecode)
+                          }
+                        }
+                      })
+                    ])
+                  ]
+                )
+              })
+            )
+          ])
         ])
-      ])
-    })
-  )
+      })
+    ),
+    _c("view", { staticClass: "bottom_text" }, [
+      _c(
+        "view",
+        {
+          staticClass: "bottom_l",
+          attrs: { eventid: "27fa3ec2-3" },
+          on: {
+            click: function($event) {
+              _vm.BaorCo("back")
+            }
+          }
+        },
+        [_vm._v("返回")]
+      ),
+      _c(
+        "view",
+        {
+          staticClass: "bottom_r",
+          attrs: { eventid: "27fa3ec2-4" },
+          on: {
+            click: function($event) {
+              _vm.BaorCo("confirm")
+            }
+          }
+        },
+        [_vm._v("提交")]
+      )
+    ])
+  ])
 }
 var staticRenderFns = [
   function() {
