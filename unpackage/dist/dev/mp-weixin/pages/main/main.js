@@ -253,16 +253,15 @@ var render = function() {
     [
       _c(
         "view",
-        { staticClass: "cover_v" },
+        {
+          staticClass: "cover_v",
+          attrs: { eventid: "6ea5fdc2-0" },
+          on: { click: _vm.tabS }
+        },
         [
           _c("cover-image", {
             staticClass: "controls-play img",
-            attrs: {
-              src: "../../static/img//fdj.png",
-              eventid: "6ea5fdc2-0",
-              mpcomid: "6ea5fdc2-0"
-            },
-            on: { click: _vm.tabS }
+            attrs: { src: "../../static/img//fdj.png", mpcomid: "6ea5fdc2-0" }
           })
         ],
         1

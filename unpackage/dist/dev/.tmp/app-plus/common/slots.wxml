@@ -1,6 +1,5 @@
 <import src="/components/uni-list/uni-list.vue.wxml" />
 <import src="/components/uni-list-item/uni-list-item.vue.wxml" />
-<import src="/components/uni-icon/uni-icon.vue.wxml" />
 
 <template name="dc460dfc-default-dc460dfc-3"><template title="个人资料" bindtap="handleProxy" data-eventid="{{'dc460dfc-1'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'dc460dfc-0'],$root}}" is="6b684cc4"></template><template title="绑定手机" bindtap="handleProxy" data-eventid="{{'dc460dfc-2'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'dc460dfc-1'],$root}}" is="6b684cc4"></template><template title="修改密码" bindtap="handleProxy" data-eventid="{{'dc460dfc-3'}}" data-comkey="{{$k}}" data="{{...$root['0'], ...$root[$kk+'dc460dfc-2'],$root}}" is="6b684cc4"></template></template>
 

@@ -27,8 +27,8 @@
 		</view>
 
 		<view class="bottom_text">
-			<view class="bottom_l" @click="BaorCo('back')">返回</view>
-			<view class="bottom_r" @click="BaorCo('confirm')">提交</view>
+			<view class="bottom_l" @click="bottom_l('back')">返回</view>
+			<view class="bottom_r" @click="bottom_r('confirm')">提交</view>
 		</view>
 	</view>
 </template>
@@ -64,33 +64,6 @@ export default {
 				},
 				{
 					wfnodecode:1234,
-					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1232,
-					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1232,
-					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1232,
 					wfnodename:"科长审核2",
 					userlist:[
 						{userid:3,username:"A科长2"},
@@ -175,6 +148,36 @@ export default {
 				}
 			}
 			
+		},
+		bottom_l(e) {//删除已选人员
+			var self = this;
+			var pages = getCurrentPages();
+			var currPage = pages[pages.length - 1]; //当前页面
+			var prevPage = pages[pages.length - 2]; //上一个页面
+			uni.navigateBack();
+			
+		},
+		bottom_r(e) {//删除已选人员
+			var self = this;
+			var thislist = [];
+			var count = 0;
+			for(let i =0;i<self.list.length;i++)
+			{
+				if(self.list[i].issel==1)
+				{
+					count++;
+					thislist.push(self.list[i]);
+				}
+			}
+			if(count==0)
+			{
+				uni.showToast({
+					title: '未选择提交内容',
+					duration: 1000,
+					icon: 'none'
+				});
+			}
+			console.log(thislist)
 		}
 	}
 }

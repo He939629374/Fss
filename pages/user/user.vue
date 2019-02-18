@@ -107,6 +107,7 @@
 .content {
 	padding: 0px;
 	background-color:#ffffff;
+	overflow: hidden;
 }
 .HeadTitle {
 	position: relative;

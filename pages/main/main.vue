@@ -1,7 +1,7 @@
 <template>
 	<view class="content">
-		<view class="cover_v">
-		<cover-image class="controls-play img" @click="tabS" src="../../static/img//fdj.png"></cover-image>
+		<view class="cover_v" @click="tabS">
+		<cover-image class="controls-play img"  src="../../static/img//fdj.png"></cover-image>
 		</view>
 		<view id="tab-bar" class="uni-swiper-tab">
 			<view v-for="(tab,index) in tabBars" :key="tab.id" :class="['tab-item','swiper-tab-list',tabIndex==index ? 'active' : '']"

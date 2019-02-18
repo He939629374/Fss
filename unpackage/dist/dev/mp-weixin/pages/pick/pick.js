@@ -202,33 +202,6 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         { userid: 3, username: "A科长2" },
         { userid: 4, username: "B科长2" }],
 
-        issel: 1 },
-
-      {
-        wfnodecode: 1232,
-        wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
-        issel: 1 },
-
-      {
-        wfnodecode: 1232,
-        wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
-        issel: 1 },
-
-      {
-        wfnodecode: 1232,
-        wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
         issel: 1 }] };
 
 
@@ -290,6 +263,36 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         }
       }
 
+    },
+    bottom_l: function bottom_l(e) {//删除已选人员
+      var self = this;
+      var pages = getCurrentPages();
+      var currPage = pages[pages.length - 1]; //当前页面
+      var prevPage = pages[pages.length - 2]; //上一个页面
+      uni.navigateBack();
+
+    },
+    bottom_r: function bottom_r(e) {//删除已选人员
+      var self = this;
+      var thislist = [];
+      var count = 0;
+      for (var i = 0; i < self.list.length; i++)
+      {
+        if (self.list[i].issel == 1)
+        {
+          count++;
+          thislist.push(self.list[i]);
+        }
+      }
+      if (count == 0)
+      {
+        uni.showToast({
+          title: '未选择提交内容',
+          duration: 1000,
+          icon: 'none' });
+
+      }
+      console.log(thislist);
     } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
@@ -424,7 +427,7 @@ var render = function() {
           attrs: { eventid: "27fa3ec2-3" },
           on: {
             click: function($event) {
-              _vm.BaorCo("back")
+              _vm.bottom_l("back")
             }
           }
         },
@@ -437,7 +440,7 @@ var render = function() {
           attrs: { eventid: "27fa3ec2-4" },
           on: {
             click: function($event) {
-              _vm.BaorCo("confirm")
+              _vm.bottom_r("confirm")
             }
           }
         },
