@@ -235,6 +235,7 @@ export default {
 	{
 		width: 100%;
 		background-color: #FFFFFF;
+		margin-top:25rpx;
 	}
 	.pick_vfor_title
 	{
