@@ -318,6 +318,130 @@
 .m-input-icon{
 }
 
+.serach.data-v-f19fb1f8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  border-bottom: 1rpx #f5f5f5 solid;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 15rpx;
+  font-size: 28rpx;
+  background: #fff;
+}
+.serach .content.data-v-f19fb1f8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    width: 100%;
+    height: 30rpx;
+    border: 1rpx #ccc solid;
+    background: #fff;
+    overflow: hidden;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    border-radius: 30rpx;
+}
+.serach .content .content-box.data-v-f19fb1f8 {
+      width: 100%;
+      display: -webkit-box;
+      display: -webkit-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+      -webkit-align-items: center;
+          -ms-flex-align: center;
+              align-items: center;
+}
+.serach .content .content-box.center.data-v-f19fb1f8 {
+        -webkit-box-pack: center;
+        -webkit-justify-content: center;
+            -ms-flex-pack: center;
+                justify-content: center;
+}
+.serach .content .content-box .icon.data-v-f19fb1f8 {
+        padding: 0 15rpx;
+}
+.serach .content .content-box .icon.icon-del.data-v-f19fb1f8 {
+          font-size: 38rpx;
+}
+.serach .content .content-box .input.data-v-f19fb1f8 {
+        width: 100%;
+        max-width: 100%;
+        line-height: 30rpx;
+        height: 30rpx;
+        -webkit-transition: all 0.2s linear;
+        -o-transition: all 0.2s linear;
+        transition: all 0.2s linear;
+}
+.serach .content .content-box .input.center.data-v-f19fb1f8 {
+          width: 200rpx;
+}
+.serach .content .content-box .input.sub.data-v-f19fb1f8 {
+          width: auto;
+          color: grey;
+}
+.serach .content .serachBtn.data-v-f19fb1f8 {
+      height: 100%;
+      -webkit-flex-shrink: 0;
+          -ms-flex-negative: 0;
+              flex-shrink: 0;
+      padding: 0 30rpx;
+      background: #4cd964;
+      line-height: 60rpx;
+      color: #fff;
+      border-left: 1rpx #ccc solid;
+      -webkit-transition: all 0.3s;
+      -o-transition: all 0.3s;
+      transition: all 0.3s;
+}
+.serach .button.data-v-f19fb1f8 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    position: relative;
+    -webkit-flex-shrink: 0;
+        -ms-flex-negative: 0;
+            flex-shrink: 0;
+    width: 0;
+    -webkit-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
+    transition: all 0.2s linear;
+    white-space: nowrap;
+    overflow: hidden;
+}
+.serach .button.active.data-v-f19fb1f8 {
+      padding-left: 15rpx;
+      width: 100rpx;
+}
+@font-face {
+  font-family: 'iconfont';
+  src: url("//at.alicdn.com/t/font_989023_efq0mtli526.ttf") format("truetype");
+}
+.icon.data-v-f19fb1f8 {
+  font-family: iconfont;
+  font-size: 32rpx;
+  font-style: normal;
+  color: #999;
+}
+
 
 @font-face {
 	font-family: uniicons;

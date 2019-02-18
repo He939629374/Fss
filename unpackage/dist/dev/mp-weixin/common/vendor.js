@@ -486,7 +486,6 @@ var getUsers = function getUsers(callback) {
       userid: '' });
 
   }
-  callback(JSON.parse(ret));
   return JSON.parse(ret);
 };
 
@@ -629,7 +628,7 @@ var getTxl = function getTxl(userid, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 10000) {
+      if (res.data.code == 0) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -655,7 +654,7 @@ var getTxlRy = function getTxlRy(DEPARTMENTBH, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 10000) {
+      if (res.data.code == 0) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -683,7 +682,7 @@ var getTxlRyMessage = function getTxlRyMessage(departmentid, userid, _type, call
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 10000) {
+      if (res.data.code == 0) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -711,7 +710,7 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 10000) {
+      if (res.data.code == 0) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -748,9 +747,13 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; // const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
-var serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
 var fileHost = 'http://172.16.5.94/MisFileDisk';
+var ReturnCode = {
+  success: 0,
+  fail: 1,
+  datanull: 2 };
+
 
 var sysname = '信息管理系统';
 var avatarUrl = '../../static/uni-center/logo.png';
@@ -794,8 +797,8 @@ var checkLogin = function checkLogin(userInfo, forcedLogin, callback) {
   checkLogin: checkLogin,
   fileHost: fileHost, //文件服务器地址
   sysname: sysname, //系统名称
-  avatarUrl: avatarUrl //默认头像
-};exports.default = _default;
+  avatarUrl: avatarUrl, //默认头像
+  ReturnCode: ReturnCode };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),

@@ -4,7 +4,7 @@
 		<view v-for="(item,index) in list" :key="index" class="pick_vfor">
 			<view>
 				<view class="pick_vfor_title">
-					<view class="pick_vfor_title_l" @click="item.issel==1?item.issel=0:item.issel=1"><view class="issel"><image class="issel" :src="item.issel==1 ? '../../static/img/issel.png' : '../../static/img/nosel.png'"/></view>
+					<view class="pick_vfor_title_l"  @click="gclick(item.wfnodecode)"><view class="issel"><image class="issel" :src="item.issel==1 ? '../../static/img/issel.png' : '../../static/img/nosel.png'"/></view>
 					<view class="wfnodename">{{item.wfnodename}}</view>
 					</view>
 					<view class="pick_vfor_title_r" @click="tabonclick(item.wfnodecode)"><uni-icon type="plus" size="30"></uni-icon></view>
@@ -43,10 +43,12 @@ export default {
 		return {
 			Backwfnodecode:"",
 			BackUserid: [], 
+			issingel:0,
 			list:[
 				{
 					wfnodecode:123,
 					wfnodename:"科长审核",
+					issingel:1,
 					userlist:[
 						{userid:1,username:"A科长"},
 						{userid:2,username:"B科长"}
@@ -56,33 +58,7 @@ export default {
 				{
 					wfnodecode:1232,
 					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1234,
-					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1232,
-					wfnodename:"科长审核2",
-					userlist:[
-						{userid:3,username:"A科长2"},
-						{userid:4,username:"B科长2"}
-					],
-					issel:1,
-				},
-				{
-					wfnodecode:1232,
-					wfnodename:"科长审核2",
+					issingel:0,
 					userlist:[
 						{userid:3,username:"A科长2"},
 						{userid:4,username:"B科长2"}
@@ -116,21 +92,26 @@ export default {
 		tabonclick(wfnodecode) {//点击跳转
 			var self = this;
 			var userid = [];
+			var issingel = null;
 			for(let i =0;i<self.list.length;i++)
 			{
 				if(wfnodecode==self.list[i].wfnodecode)
 				{
+					issingel = self.list[i].issingel;
 					for(let j =0;j<self.list[i].userlist.length;j++)
 					{
 						userid.push(self.list[i].userlist[j].userid);
 					}
 				}
 			}
+			uni.showLoading({
+				title: '加载中'
+			});
 			uni.navigateTo({
-				url: '../pick/pickRY?wfnodecode=' + wfnodecode+'&userid=' + ","+userid+","
+				url: '../pick/pickRY?wfnodecode=' + wfnodecode+'&issingel='+issingel +'&userid=' + ","+userid+","
 			});
 		},
-		delclick(userid,wfnodecode) {//删除已选人员
+		delclick(userid,wfnodecode) {//删除选人员
 			var self = this;
 			for(let i =0;i<self.list.length;i++)
 			{
@@ -143,11 +124,24 @@ export default {
 							self.list[i].userlist.splice(j,1);
 							console.log(self.list);
 						}
-						
 					}
 				}
 			}
 			
+		},
+		gclick(wfnodecode) {//选人员
+			var self = this;
+			for(let i =0;i<self.list.length;i++)
+			{
+				if(wfnodecode==self.list[i].wfnodecode)
+				{
+					self.list[i].issel = self.list[i].issel==1?0:1;
+				}
+				else if(self.issingel==1 && wfnodecode!=self.list[i].wfnodecod)
+				{
+					self.list[i].issel = 0;
+				}
+			}	
 		},
 		bottom_l(e) {//删除已选人员
 			var self = this;

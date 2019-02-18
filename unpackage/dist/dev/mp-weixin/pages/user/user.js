@@ -590,12 +590,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
 
   },
   onLoad: function onLoad() {
-    this.userInfo = _service.default.getUsers(function (res) {
-      console.log('已有的用户信息');
-      console.log(res);
-      return res;
-    });
-
+    this.userInfo = _service.default.getUsers();
   },
   methods: {
     tabonclick: function tabonclick(_path) {//点击跳转

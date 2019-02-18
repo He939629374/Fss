@@ -157,6 +157,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
       scrollTop: 0,
       Backwfnodecode: "",
       useridlist: [],
+      issingel: 0,
       list: [
       {
         rolename: "(南海)科长1",
@@ -180,62 +181,6 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         { userid: 3, username: "A科长2", issel: 0 },
         { userid: 4, username: "B科长2", issel: 0 }],
 
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
-        issel: 1 },
-
-      {
-        rolename: "(南海)科长2",
-        userlist: [
-        { userid: 3, username: "A科长2", issel: 0 },
-        { userid: 4, username: "B科长2", issel: 0 }],
-
         issel: 1 }],
 
 
@@ -244,11 +189,12 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
 
   },
   onLoad: function onLoad(option) {
-
+    uni.hideLoading();
     var self = this;
     console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
     console.log(option);
     this.Backwfnodecode = option.wfnodecode;
+    this.issingel = option.issingel;
     for (var i = 0; i < self.list.length; i++)
     {
       for (var j = 0; j < self.list[i].userlist.length; j++)
@@ -285,32 +231,48 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
         uni.navigateBack();
       }
     },
-    gclick: function gclick(userid, rolename) {//删除已选人员
+    gclick: function gclick(userid, rolename) {//选人员
       var self = this;
       self.useridlist = [];
       console.log(userid);
+      //选择人员后处理图标显示
       for (var i = 0; i < self.list.length; i++)
       {
-        if (rolename == self.list[i].rolename)
-        {
-          for (var j = 0; j < self.list[i].userlist.length; j++)
+        if (self.issingel == 1) //单选时处理
           {
-            if (userid == self.list[i].userlist[j].userid)
+            for (var j = 0; j < self.list[i].userlist.length; j++)
             {
-
-              self.list[i].userlist[j].issel = self.list[i].userlist[j].issel == 1 ? 0 : 1;
+              if (userid != self.list[i].userlist[j].userid) //其他选项置0
+                {
+                  self.list[i].userlist[j].issel = 0;
+                } else
+              {
+                self.list[i].userlist[j].issel = self.list[i].userlist[j].issel == 1 ? 0 : 1;
+              }
             }
-
+          } else
+          //多选时处理
+          {
+            if (rolename == self.list[i].rolename)
+            {
+              for (var _j = 0; _j < self.list[i].userlist.length; _j++)
+              {
+                if (userid == self.list[i].userlist[_j].userid)
+                {
+                  self.list[i].userlist[_j].issel = self.list[i].userlist[_j].issel == 1 ? 0 : 1;
+                }
+              }
+            }
           }
-        }
       }
 
+      //保存选择的人员
       for (var _i = 0; _i < self.list.length; _i++)
       {
-        for (var _j = 0; _j < self.list[_i].userlist.length; _j++)
+        for (var _j2 = 0; _j2 < self.list[_i].userlist.length; _j2++)
         {
-          if (self.list[_i].userlist[_j].issel == "1")
-          self.useridlist.push(self.list[_i].userlist[_j]);
+          if (self.list[_i].userlist[_j2].issel == "1")
+          self.useridlist.push(self.list[_i].userlist[_j2]);
 
         }
 

@@ -1,6 +1,10 @@
-// const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
-const serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
+const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
 const fileHost='http://172.16.5.94/MisFileDisk';
+const ReturnCode={
+	success:0,
+	fail:1,
+	datanull:2
+};
 
 const sysname='信息管理系统';
 const avatarUrl = '../../static/uni-center/logo.png';
@@ -45,4 +49,5 @@ export default {
 	fileHost,//文件服务器地址
 	sysname,//系统名称
 	avatarUrl,//默认头像
+	ReturnCode
 }

@@ -1,0 +1,41 @@
+
+page {
+	 display: block;
+}
+.content {
+	 background-color: #FFFFFF;
+}
+.v_row_block {
+	display:-webkit-box;
+	display:-webkit-flex;
+	display:-ms-flexbox;
+	display:flex;
+}
+.v_row {
+	color:black;
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-pack:justify;
+	-webkit-justify-content:space-between;
+	    -ms-flex-pack:justify;
+	        justify-content:space-between;
+	padding: 20rpx;
+}
+.v_col {
+	width: 120rpx;
+	text-align:center;
+}
+.HeadContente view  {
+	text-align: center;
+	color: #1C78C0;
+}
+.HeadContente view  text{
+	color: #E1E1E1;
+}
+.HeadContente {
+	padding: 65rpx;
+	padding-top: 25rpx;
+}
+

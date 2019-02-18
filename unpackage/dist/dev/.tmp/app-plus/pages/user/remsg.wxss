@@ -33,6 +33,7 @@
 }
 .text{
 	margin-left: 40rpx;
+	width: 65%;
 }
 .LogoView {
 	text-align: center;

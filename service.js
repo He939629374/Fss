@@ -14,7 +14,6 @@ const getUsers = function(callback) {
 			userid: ''
 		});
 	}
-	callback(JSON.parse(ret));
 	return JSON.parse(ret);
 }
 
@@ -157,7 +156,7 @@ const getTxl = function(userid, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 10000) {
+			if (res.data.code == 0) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -183,7 +182,7 @@ const getTxlRy = function(DEPARTMENTBH, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 10000) {
+			if (res.data.code == 0) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -211,7 +210,7 @@ const getTxlRyMessage = function(departmentid,userid,_type, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 10000) {
+			if (res.data.code == 0) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -239,7 +238,7 @@ uni.showLoading();
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 10000) {
+			if (res.data.code == 0) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({

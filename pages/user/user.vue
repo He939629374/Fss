@@ -38,12 +38,7 @@
 			}
 		},
 		onLoad() {
-			this.userInfo = service.getUsers(function(res) {
-				console.log('已有的用户信息');
-				console.log(res);
-				return res;
-			});
-			
+			this.userInfo = service.getUsers();	
 		},
 		methods: {
 			tabonclick(_path) {//点击跳转

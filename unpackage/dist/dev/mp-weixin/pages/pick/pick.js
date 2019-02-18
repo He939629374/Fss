@@ -158,10 +158,12 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
     return {
       Backwfnodecode: "",
       BackUserid: [],
+      issingel: 0,
       list: [
       {
         wfnodecode: 123,
         wfnodename: "科长审核",
+        issingel: 1,
         userlist: [
         { userid: 1, username: "A科长" },
         { userid: 2, username: "B科长" }],
@@ -171,33 +173,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
       {
         wfnodecode: 1232,
         wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
-        issel: 1 },
-
-      {
-        wfnodecode: 1234,
-        wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
-        issel: 1 },
-
-      {
-        wfnodecode: 1232,
-        wfnodename: "科长审核2",
-        userlist: [
-        { userid: 3, username: "A科长2" },
-        { userid: 4, username: "B科长2" }],
-
-        issel: 1 },
-
-      {
-        wfnodecode: 1232,
-        wfnodename: "科长审核2",
+        issingel: 0,
         userlist: [
         { userid: 3, username: "A科长2" },
         { userid: 4, username: "B科长2" }],
@@ -231,21 +207,26 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
     tabonclick: function tabonclick(wfnodecode) {//点击跳转
       var self = this;
       var userid = [];
+      var issingel = null;
       for (var i = 0; i < self.list.length; i++)
       {
         if (wfnodecode == self.list[i].wfnodecode)
         {
+          issingel = self.list[i].issingel;
           for (var j = 0; j < self.list[i].userlist.length; j++)
           {
             userid.push(self.list[i].userlist[j].userid);
           }
         }
       }
+      uni.showLoading({
+        title: '加载中' });
+
       uni.navigateTo({
-        url: '../pick/pickRY?wfnodecode=' + wfnodecode + '&userid=' + "," + userid + "," });
+        url: '../pick/pickRY?wfnodecode=' + wfnodecode + '&issingel=' + issingel + '&userid=' + "," + userid + "," });
 
     },
-    delclick: function delclick(userid, wfnodecode) {//删除已选人员
+    delclick: function delclick(userid, wfnodecode) {//删除选人员
       var self = this;
       for (var i = 0; i < self.list.length; i++)
       {
@@ -258,11 +239,24 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
               self.list[i].userlist.splice(j, 1);
               console.log(self.list);
             }
-
           }
         }
       }
 
+    },
+    gclick: function gclick(wfnodecode) {//选人员
+      var self = this;
+      for (var i = 0; i < self.list.length; i++)
+      {
+        if (wfnodecode == self.list[i].wfnodecode)
+        {
+          self.list[i].issel = self.list[i].issel == 1 ? 0 : 1;
+        } else
+        if (self.issingel == 1 && wfnodecode != self.list[i].wfnodecod)
+        {
+          self.list[i].issel = 0;
+        }
+      }
     },
     bottom_l: function bottom_l(e) {//删除已选人员
       var self = this;
@@ -339,7 +333,7 @@ var render = function() {
                   attrs: { eventid: "27fa3ec2-0-" + index },
                   on: {
                     click: function($event) {
-                      item.issel == 1 ? (item.issel = 0) : (item.issel = 1)
+                      _vm.gclick(item.wfnodecode)
                     }
                   }
                 },

@@ -42,6 +42,7 @@ export default {
 			scrollTop: 0,
 			Backwfnodecode:"",
 			useridlist: [], 
+			issingel:0,
 			list:[
 				{
 					rolename:"(南海)科长1",
@@ -66,62 +67,6 @@ export default {
 						{userid:4,username:"B科长2",issel:0}
 					],
 					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
-				},
-				{
-					rolename:"(南海)科长2",
-					userlist:[
-						{userid:3,username:"A科长2",issel:0},
-						{userid:4,username:"B科长2",issel:0}
-					],
-					issel:1,
 				}
 				],
 			list2:[{rolename:'角色1',userlist:[{userid:1,username:"人员1"},{userid:2,username:"人员2"}]},
@@ -129,11 +74,12 @@ export default {
 		}
 	},
 	onLoad(option) {
-
+		uni.hideLoading();
 		var self = this;
 		console.log("打印出上个页面传递的参数"); //打印出上个页面传递的参数。
 		console.log(option);
 		this.Backwfnodecode = option.wfnodecode;
+		this.issingel = option.issingel;
 		for(let i =0;i<self.list.length;i++)
 		{
 			for(let j =0;j<self.list[i].userlist.length;j++)
@@ -170,26 +116,42 @@ export default {
 				uni.navigateBack();
 			}
 		},
-		gclick(userid,rolename) {//删除已选人员
+		gclick(userid,rolename) {//选人员
 			var self = this;
 			self.useridlist = [];
-			console.log(userid)	;
+			console.log(userid)	;	
+			//选择人员后处理图标显示
 			for(let i =0;i<self.list.length;i++)
 			{
-				if(rolename==self.list[i].rolename)
+				if(self.issingel ==1)//单选时处理
 				{
 					for(let j =0;j<self.list[i].userlist.length;j++)
 					{
-						if(userid==self.list[i].userlist[j].userid)
+						if(userid!=self.list[i].userlist[j].userid)//其他选项置0
 						{
-							
+							self.list[i].userlist[j].issel = 0;
+						}else
+						{
 							self.list[i].userlist[j].issel = self.list[i].userlist[j].issel==1?0:1;
 						}
-						
-					}
-				}	
+					}	
+				}
+				else//多选时处理
+				{
+					if(rolename==self.list[i].rolename)
+					{
+						for(let j =0;j<self.list[i].userlist.length;j++)
+						{
+							if(userid==self.list[i].userlist[j].userid)
+							{
+								self.list[i].userlist[j].issel = self.list[i].userlist[j].issel==1?0:1;
+							}
+						}
+					}	
+				}				
 			}
 
+			//保存选择的人员
 			for(let i =0;i<self.list.length;i++)
 			{
 				for(let j =0;j<self.list[i].userlist.length;j++)
