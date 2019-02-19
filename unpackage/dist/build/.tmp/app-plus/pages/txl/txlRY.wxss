@@ -1,0 +1,46 @@
+
+.uni-list-cell-navigate {
+	padding: 10rpx 30rpx;
+}
+.v_for {
+	border: #ffffff solid 1rpx;
+	-webkit-box-shadow:0rpx 0rpx 20rpx #E1E1E1;
+	        box-shadow:0rpx 0rpx 20rpx #E1E1E1;
+	margin-bottom: 10rpx;
+	border-radius: 8rpx;
+}
+.content {
+	padding: 20rpx;
+	background-color:#ffffff;
+}
+.title {
+	margin-left: 20rpx;
+}
+.v_left {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: horizontal;
+	-webkit-box-direction: normal;
+	-webkit-flex-direction: row;
+	    -ms-flex-direction: row;
+	        flex-direction: row;
+}
+.v_left IMG{
+}
+.IMG {
+	width: 50rpx;
+	height: 50rpx;
+	border-radius: 50%;
+}
+.PHONE {
+	margin-right: 60rpx;
+}
+.page {
+	width: 100%;
+}
+.uni-card {
+	margin: 20rpx;
+}
+

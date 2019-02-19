@@ -2,7 +2,8 @@
 	<view class="serach">
 		<view class="content" :style="{'border-radius':radius+'px'}">
 			<view class="content-box" :class="{'center':mode === 2}">
-				<text class="icon icon-serach">&#xe61c;</text>
+				<!-- <text class="icon icon-serach">&#xe61c;</text> -->
+				<uni-icon type="search" size="20"></uni-icon>
 				<input class="input" :class="{'center':!active && mode === 2}" :focus="isFocus" placeholder="请输入搜索内容" v-model="inputVal" @focus="focus" @blur="blur"/>
 				<!-- <view v-if="!active && mode === 2" class="input sub" @click="getFocus">请输入搜索内容</view> -->
 				<text v-if="isDelShow" class="icon icon-del" @click="clear">&#xe644;</text>
@@ -18,7 +19,9 @@
 </template>
 
 <script>
+import uniIcon from "@/components/uni-icon/uni-icon.vue";
 export default {
+	 components: {uniIcon},
 	props: {
 		mode: {
 			value: Number,

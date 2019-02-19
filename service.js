@@ -33,7 +33,7 @@ const loginFromNet = function(username, password, callback) {
 		},
 		success: (res) => {
 			console.log(res.data.userInfo);
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				addUser(res.data.userInfo);
 				callback();
 			} else {
@@ -60,7 +60,7 @@ const getWorkFlowList = function(userid, type, callback) {
 		},
 		success: (res) => {
 			uni.hideLoading();
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -85,7 +85,7 @@ const downLoadFileByWorkFlow = function(fileid) {
 		},
 		success: (res) => {
 			uni.hideLoading();
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				//callback(res.data.filePath);
 				uni.downloadFile({
 					url: Global.fileHost + res.data.filePath,
@@ -118,20 +118,46 @@ const downLoadFileByWorkFlow = function(fileid) {
 }
 
 //目录面板信息
-const getContents = function(username, password, callback) {
-	console.log(Global.serviceUrl + 'User/Login');
+const getContents = function(callback) {
+	console.log(Global.serviceUrl + 'User/MENU');
 	uni.request({
-		url: Global.serviceUrl + 'User/Login',
+		url: Global.serviceUrl + 'User/MENU',
 		method: 'POST',
 		data: {
-			username: username,
-			password: password
 		},
 		success: (res) => {
-			console.log(res.data.userInfo);
-			if (res.data.code == 0) {
+			console.log(res.data.rs);
+			if (res.data.code == Global.ReturnCode.success) {
 				uni.hideLoading();
-				callback();
+				callback(res.data.rs);
+			} else {
+				uni.showToast({
+					icon: 'none',
+					title: res.data.msg
+				})
+			}
+		},
+		fail: () => {
+			uni.hideLoading();
+		}
+	});
+}
+//信息中心通用卡片信息
+const getMsgContent = function(callback) {
+	uni.showLoading();
+	console.log(Global.serviceUrl + 'User/MsgContent');
+	uni.request({
+		url: Global.serviceUrl + 'User/MsgContent',
+		method: 'POST',
+		data: {
+			GRIDID:'Grid20181205093110',
+			USERID:'admin'
+		},
+		success: (res) => {
+			console.log(res.data.rs);
+			if (res.data.code == Global.ReturnCode.success) {
+				uni.hideLoading();
+				callback(res.data.rs);
 			} else {
 				uni.showToast({
 					icon: 'none',
@@ -156,7 +182,7 @@ const getTxl = function(userid, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -182,7 +208,7 @@ const getTxlRy = function(DEPARTMENTBH, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -210,7 +236,7 @@ const getTxlRyMessage = function(departmentid,userid,_type, callback) {
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -238,7 +264,7 @@ uni.showLoading();
 		success: (res) => {
 			uni.hideLoading();
 			console.log(res);
-			if (res.data.code == 0) {
+			if (res.data.code == Global.ReturnCode.success) {
 				callback(res.data.rs);
 			} else {
 				uni.showToast({
@@ -259,6 +285,7 @@ export default {
 	getWorkFlowList,
 	downLoadFileByWorkFlow,
 	getContents,//目录面板信息
+	getMsgContent,//信息中心卡片信息
 	getTxlRy,//通讯录人员目录
 	getTxl,//通讯录目录
 	getTxlRyMessage//通讯录人员信息页

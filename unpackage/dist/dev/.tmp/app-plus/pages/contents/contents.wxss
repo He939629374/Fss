@@ -1,4 +1,8 @@
 
+.v_margin
+{
+	margin-right: 25rpx;
+}
 .v_row_v_img {
 	width: 100%;
 	height: 80rpx;
@@ -43,10 +47,11 @@
 	display: -webkit-flex;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack:justify;
-	-webkit-justify-content:space-between;
-	    -ms-flex-pack:justify;
-	        justify-content:space-between;
+	/* flex-flow:row wrap; */
+	-webkit-box-pack: justify;
+	-webkit-justify-content: space-between;
+	    -ms-flex-pack: justify;
+	        justify-content: space-between;
 	padding: 20rpx;
 }
 .v_col {
@@ -98,5 +103,19 @@
 .HeadContente {
 	margin-top: 20rpx;
 	padding: 65rpx;
+	overflow-y: scroll;
+}
+::-webkit-scrollbar {
+	width: 0rpx;
+	height: 1rpx;
+}
+::-webkit-scrollbar-thumb {
+	border-radius: 5rpx;
+	-webkit-box-shadow: inset 0 0 5rpx rgba(0, 0, 0, 0.2);
+	background: rgba(0, 0, 0, 0.2);
+}
+.v_display
+{
+	opacity: 0;
 }
 

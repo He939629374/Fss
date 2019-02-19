@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -142,24 +142,36 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue"));
-var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue"));
+var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));
+var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
-  components: { uniCard: _uniCard.default, uniIcon: _uniIcon.default },
+  components: { uniCard: _uniCard.default, uniIcon: _uniIcon.default, Global: _Global.default, service: _service.default },
   data: function data() {
     return {
       title: 'list-triplex-row',
       lists: [
-      { title: '1',
-        item: [{ name: '编号', text: '4406' }, { name: '时间', text: '4406' }, { name: '单位', text: '4406' }] },
-      { title: '2',
-        item: [{ name: '编号', text: '4406' }, { name: '时间', text: '4406' }, { name: '单位', text: '4406' }] },
-      { title: '3',
-        item: [{ name: '编号', text: '4406' }, { name: '时间', text: '4406' }, { name: '单位', text: '4406' }] }] };
-
+        // 					{title:'1',
+        // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
+        // 					{title:'2',
+        // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
+        // 					{title:'3',
+        // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]}
+      ] };
 
   },
-  onLoad: function onLoad() {
+  onLoad: function onLoad(option) {
+    var self = this;
+    console.log(option);
+    uni.setNavigationBarTitle({
+      title: option.BarTitle });
+
+    var result = _service.default.getMsgContent(function (res) {
+      console.log(res);
+      self.lists = res;
+    });
   } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -197,7 +209,7 @@ var render = function() {
       _c(
         "view",
         { staticClass: "uni-list2" },
-        _vm._l(_vm.lists, function(item, index) {
+        _vm._l(_vm.lists, function(items, index) {
           return _c("block", { key: index }, [
             _c(
               "view",
@@ -223,7 +235,7 @@ var render = function() {
                                 color: "#000000"
                               }
                             },
-                            [_vm._v(_vm._s(item.title))]
+                            [_vm._v(_vm._s(items.title))]
                           ),
                           _c("uni-icon", {
                             attrs: {
@@ -235,14 +247,14 @@ var render = function() {
                         ],
                         1
                       ),
-                      _vm._l(item.item, function(items, i) {
+                      _vm._l(items.items, function(itemss, i) {
                         return _c(
                           "view",
                           { key: i, staticClass: "uni-text-v" },
                           [
                             _c("text", {}, [
                               _vm._v(
-                                _vm._s(items.name) + ":" + _vm._s(items.text)
+                                _vm._s(itemss.name) + ":" + _vm._s(itemss.text)
                               )
                             ])
                           ]

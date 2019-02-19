@@ -8,12 +8,12 @@
 		</view>
 		<view class="HeadContente">
 			<view v-for="(row,i) in listTemp" :key="row.id" class="v_row">
-				<view :id="j" v-for="(cell,key,j) in row" :key="cell.id" class="v_row_block">
-					<view class="v_col" @click="tabonclick(cell.name,cell._path)">
+				<view :id="j" v-for="(cell,key,j) in row" :key="cell.id" class="v_row_block" :class="{v_display:cell.display}">
+					<view class="v_col" @click="tabonclick(cell.menuname,cell.pageurl)">
 						<view class="v_row_v_img">
-						<img :src="cell.url"></img>
+						<img :src="cell.imageurl"></img>
 						</view>
-						<view :id="'T_'+(i*3+j)">{{cell.name}}</view>
+						<view >{{cell.menuname}}</view>
 					</view>
 				</view>
 			</view>  
@@ -23,27 +23,41 @@
 
 <script>
 	import Global from '../../store/Global.js';
+	import service from "../../service.js";
 	export default {
 		components: {
+			Global,service
 		},
 		data() {
 			return {
 				systeam: Global.sysname,
 				list:[
-					{"url":'../../static/img/conZL.png',"name":'我的资料',_path:"../user/user"},
-					{"url":'../../static/img/conRC.png',"name":'日程',_path:"../scheduling/scheduling"},
-					{"url":'../../static/img/conZX.png',"name":'信息中心',_path:"../msgcenter/msgcenter"},
-					{"url":'../../static/img/conSP.png',"name":'审批',_path:"../record/record"},
-					{"url":'../../static/img/conTX.png',"name":'提醒',_path:"../tips/tips"},
-					{"url":'../../static/img/conGZ.png',"name":'工作',_path:"../pick/pick"},
-					{"url":'../../static/img/conYJ.png',"name":'邮件',_path:"../email/email"},
-					{"url":'../../static/img/conFJ.png',"name":'附件',_path:"../file/file"},
-					{"url":'../../static/img/conQT.png',"name":'其他',_path:"../other/other"},
+// 					{"imageurl":'../../static/img/conZL.png',"menuname":'我的资料',pageurl:"../user/user"},
+// 					{"imageurl":'../../static/img/conRC.png',"menuname":'日程',pageurl:"../scheduling/scheduling"},
+// 					{"imageurl":'../../static/img/conZX.png',"menuname":'信息中心',pageurl:"../msgcenter/msgcenter?BarTitle=待办箱"},
+// 					{"imageurl":'../../static/img/conSP.png',"menuname":'审批',pageurl:"../record/record"},
+// 					{"imageurl":'../../static/img/conTX.png',"menuname":'提醒',pageurl:"../tips/tips"},
+// 					{"imageurl":'../../static/img/conGZ.png',"menuname":'工作',pageurl:"../pick/pick"},
+// 					{"imageurl":'../../static/img/conYJ.png',"menuname":'邮件',pageurl:"../email/email"},
+// 					{"imageurl":'../../static/img/conFJ.png',"menuname":'附件',pageurl:"../file/file"},
+// 					{"imageurl":'../../static/img/conQT.png',"menuname":'其他',pageurl:"../other/other"},
 				]
 			};
 		},
 		created:function () {
-			//this.getContents();
+			var self = this;
+			var result = service.getContents(function(res) {				
+					self.list = res;
+					for(let i=0;i<res.length;i++)
+					{
+						self.list[i].imageurl = Global.serviceUrl+self.list[i].imageurl;
+					}
+					if((res.length%3)==2)
+					{
+						self.list.push({"imageurl":'../../static/img/conQT.png',"menuname":'其他',pageurl:"../other/other",display:true})
+					}
+					console.log(self.list);
+				});	
 		},
 		computed: {
 			//计算函数
@@ -96,6 +110,10 @@
 </script>
 
 <style>
+	.v_margin
+	{
+		margin-right: 25rpx;
+	}
 	.v_row_v_img {
 		width: 100%;
 		height: 80upx;
@@ -121,7 +139,8 @@
 	.v_row {
 		color:black;
 		display: flex;
-		justify-content:space-between;
+		/* flex-flow:row wrap; */
+		justify-content: space-between;
 		padding: 20upx;
 	}
 	.v_col {
@@ -159,5 +178,20 @@
 	.HeadContente {
 		margin-top: 20upx;
 		padding: 65rpx;
+		overflow-y: scroll;
+		
+	}
+	::-webkit-scrollbar {
+		width: 0px;
+		height: 1px;
+	}
+	::-webkit-scrollbar-thumb {
+		border-radius: 5px;
+		-webkit-box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.2);
+		background: rgba(0, 0, 0, 0.2);
+	}
+	.v_display
+	{
+		opacity: 0;
 	}
 </style>

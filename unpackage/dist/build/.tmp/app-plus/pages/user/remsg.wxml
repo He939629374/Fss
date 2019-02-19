@@ -1,0 +1,2 @@
+<import src="./remsg.vue.wxml" />
+    <template is="acdcbbd2" data="{{ ...$root['0'], $root }}"/>

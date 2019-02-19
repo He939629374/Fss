@@ -259,12 +259,11 @@ var render = function() {
           on: { click: _vm.tabS }
         },
         [
-          _c("cover-image", {
+          _c("image", {
             staticClass: "controls-play img",
-            attrs: { src: "../../static/img//fdj.png", mpcomid: "6ea5fdc2-0" }
+            attrs: { src: "../../static/img/fdj.png" }
           })
-        ],
-        1
+        ]
       ),
       _c(
         "view",
@@ -308,7 +307,7 @@ var render = function() {
         _vm._l(_vm.tabItems, function(itemList, index) {
           return _c(
             "swiper-item",
-            { key: index, attrs: { mpcomid: "6ea5fdc2-2-" + index } },
+            { key: index, attrs: { mpcomid: "6ea5fdc2-1-" + index } },
             [
               _c(
                 "scroll-view",
@@ -324,7 +323,7 @@ var render = function() {
                         "http://img-cdn-qiniu.dcloud.net.cn/new-page/uni.png",
                       note: "点击打开",
                       eventid: "6ea5fdc2-2-" + index + "-" + index1,
-                      mpcomid: "6ea5fdc2-1-" + index + "-" + index1
+                      mpcomid: "6ea5fdc2-0-" + index + "-" + index1
                     },
                     on: {
                       click: function($event) {

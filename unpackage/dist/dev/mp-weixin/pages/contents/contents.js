@@ -137,28 +137,42 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
+var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));
+var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
-  components: {},
+  components: {
+    Global: _Global.default, service: _service.default },
 
   data: function data() {
     return {
       systeam: _Global.default.sysname,
       list: [
-      { "url": '../../static/img/conZL.png', "name": '我的资料', _path: "../user/user" },
-      { "url": '../../static/img/conRC.png', "name": '日程', _path: "../scheduling/scheduling" },
-      { "url": '../../static/img/conZX.png', "name": '信息中心', _path: "../msgcenter/msgcenter" },
-      { "url": '../../static/img/conSP.png', "name": '审批', _path: "../record/record" },
-      { "url": '../../static/img/conTX.png', "name": '提醒', _path: "../tips/tips" },
-      { "url": '../../static/img/conGZ.png', "name": '工作', _path: "../pick/pick" },
-      { "url": '../../static/img/conYJ.png', "name": '邮件', _path: "../email/email" },
-      { "url": '../../static/img/conFJ.png', "name": '附件', _path: "../file/file" },
-      { "url": '../../static/img/conQT.png', "name": '其他', _path: "../other/other" }] };
-
+        // 					{"imageurl":'../../static/img/conZL.png',"menuname":'我的资料',pageurl:"../user/user"},
+        // 					{"imageurl":'../../static/img/conRC.png',"menuname":'日程',pageurl:"../scheduling/scheduling"},
+        // 					{"imageurl":'../../static/img/conZX.png',"menuname":'信息中心',pageurl:"../msgcenter/msgcenter?BarTitle=待办箱"},
+        // 					{"imageurl":'../../static/img/conSP.png',"menuname":'审批',pageurl:"../record/record"},
+        // 					{"imageurl":'../../static/img/conTX.png',"menuname":'提醒',pageurl:"../tips/tips"},
+        // 					{"imageurl":'../../static/img/conGZ.png',"menuname":'工作',pageurl:"../pick/pick"},
+        // 					{"imageurl":'../../static/img/conYJ.png',"menuname":'邮件',pageurl:"../email/email"},
+        // 					{"imageurl":'../../static/img/conFJ.png',"menuname":'附件',pageurl:"../file/file"},
+        // 					{"imageurl":'../../static/img/conQT.png',"menuname":'其他',pageurl:"../other/other"},
+      ] };
 
   },
   created: function created() {
-    //this.getContents();
+    var self = this;
+    var result = _service.default.getContents(function (res) {
+      self.list = res;
+      for (var i = 0; i < res.length; i++)
+      {
+        self.list[i].imageurl = _Global.default.serviceUrl + self.list[i].imageurl;
+      }
+      if (res.length % 3 == 2)
+      {
+        self.list.push({ "imageurl": '../../static/img/conQT.png', "menuname": '其他', pageurl: "../other/other", display: true });
+      }
+      console.log(self.list);
+    });
   },
   computed: {
     //计算函数
@@ -183,7 +197,7 @@ var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.
       uni.showLoading({
         title: '正在获取' });
 
-      var result = service.getContents(1, 1, function () {
+      var result = _service.default.getContents(1, 1, function () {
         // 					uni.showToast({
         // 						icon: 'none',
         // 						title: '登录成功'
@@ -256,7 +270,12 @@ var render = function() {
           _vm._l(row, function(cell, key, j) {
             return _c(
               "view",
-              { key: cell.id, staticClass: "v_row_block", attrs: { id: j } },
+              {
+                key: cell.id,
+                staticClass: "v_row_block",
+                class: { v_display: cell.display },
+                attrs: { id: j }
+              },
               [
                 _c(
                   "view",
@@ -265,17 +284,15 @@ var render = function() {
                     attrs: { eventid: "f8e5c63c-0-" + i + "-" + key },
                     on: {
                       click: function($event) {
-                        _vm.tabonclick(cell.name, cell._path)
+                        _vm.tabonclick(cell.menuname, cell.pageurl)
                       }
                     }
                   },
                   [
                     _c("view", { staticClass: "v_row_v_img" }, [
-                      _c("img", { attrs: { src: cell.url } })
+                      _c("img", { attrs: { src: cell.imageurl } })
                     ]),
-                    _c("view", { attrs: { id: "T_" + (i * 3 + j) } }, [
-                      _vm._v(_vm._s(cell.name))
-                    ])
+                    _c("view", [_vm._v(_vm._s(cell.menuname))])
                   ]
                 )
               ]

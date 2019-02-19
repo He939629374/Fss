@@ -505,7 +505,7 @@ var loginFromNet = function loginFromNet(username, password, callback) {
 
     success: function success(res) {
       console.log(res.data.userInfo);
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         addUser(res.data.userInfo);
         callback();
       } else {
@@ -532,7 +532,7 @@ var getWorkFlowList = function getWorkFlowList(userid, type, callback) {
 
     success: function success(res) {
       uni.hideLoading();
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -557,7 +557,7 @@ var downLoadFileByWorkFlow = function downLoadFileByWorkFlow(fileid) {
 
     success: function success(res) {
       uni.hideLoading();
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         //callback(res.data.filePath);
         uni.downloadFile({
           url: _Global.default.fileHost + res.data.filePath,
@@ -590,20 +590,46 @@ var downLoadFileByWorkFlow = function downLoadFileByWorkFlow(fileid) {
 };
 
 //目录面板信息
-var getContents = function getContents(username, password, callback) {
-  console.log(_Global.default.serviceUrl + 'User/Login');
+var getContents = function getContents(callback) {
+  console.log(_Global.default.serviceUrl + 'User/MENU');
   uni.request({
-    url: _Global.default.serviceUrl + 'User/Login',
+    url: _Global.default.serviceUrl + 'User/MENU',
     method: 'POST',
-    data: {
-      username: username,
-      password: password },
+    data: {},
 
     success: function success(res) {
-      console.log(res.data.userInfo);
-      if (res.data.code == 0) {
+      console.log(res.data.rs);
+      if (res.data.code == _Global.default.ReturnCode.success) {
         uni.hideLoading();
-        callback();
+        callback(res.data.rs);
+      } else {
+        uni.showToast({
+          icon: 'none',
+          title: res.data.msg });
+
+      }
+    },
+    fail: function fail() {
+      uni.hideLoading();
+    } });
+
+};
+//信息中心通用卡片信息
+var getMsgContent = function getMsgContent(callback) {
+  uni.showLoading();
+  console.log(_Global.default.serviceUrl + 'User/MsgContent');
+  uni.request({
+    url: _Global.default.serviceUrl + 'User/MsgContent',
+    method: 'POST',
+    data: {
+      GRIDID: 'Grid20181205093110',
+      USERID: 'admin' },
+
+    success: function success(res) {
+      console.log(res.data.rs);
+      if (res.data.code == _Global.default.ReturnCode.success) {
+        uni.hideLoading();
+        callback(res.data.rs);
       } else {
         uni.showToast({
           icon: 'none',
@@ -628,7 +654,7 @@ var getTxl = function getTxl(userid, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -654,7 +680,7 @@ var getTxlRy = function getTxlRy(DEPARTMENTBH, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -682,7 +708,7 @@ var getTxlRyMessage = function getTxlRyMessage(departmentid, userid, _type, call
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -710,7 +736,7 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
     success: function success(res) {
       uni.hideLoading();
       console.log(res);
-      if (res.data.code == 0) {
+      if (res.data.code == _Global.default.ReturnCode.success) {
         callback(res.data.rs);
       } else {
         uni.showToast({
@@ -731,6 +757,7 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
   getWorkFlowList: getWorkFlowList,
   downLoadFileByWorkFlow: downLoadFileByWorkFlow,
   getContents: getContents, //目录面板信息
+  getMsgContent: getMsgContent, //信息中心卡片信息
   getTxlRy: getTxlRy, //通讯录人员目录
   getTxl: getTxl, //通讯录目录
   getTxlRyMessage: getTxlRyMessage //通讯录人员信息页
@@ -747,7 +774,8 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
+var serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
 var fileHost = 'http://172.16.5.94/MisFileDisk';
 var ReturnCode = {
   success: 0,
@@ -7078,7 +7106,7 @@ var _mIcon = _interopRequireDefault(__webpack_require__(/*! ./m-icon/m-icon.vue 
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;var _default =
+Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -7098,7 +7126,10 @@ Object.defineProperty(exports, "__esModule", { value: true });exports.default = 
 
 
 
+
+var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
 {
+  components: { uniIcon: _uniIcon.default },
   props: {
     mode: {
       value: Number,
@@ -7448,7 +7479,9 @@ var render = function() {
           "view",
           { staticClass: "content-box", class: { center: _vm.mode === 2 } },
           [
-            _c("text", { staticClass: "icon icon-serach" }, [_vm._v("")]),
+            _c("uni-icon", {
+              attrs: { type: "search", size: "20", mpcomid: "6b39f8d8-0" }
+            }),
             _c("input", {
               directives: [
                 {
@@ -7488,7 +7521,8 @@ var render = function() {
                   [_vm._v("")]
                 )
               : _vm._e()
-          ]
+          ],
+          1
         ),
         _c(
           "view",

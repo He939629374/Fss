@@ -1,0 +1,2 @@
+<import src="./repwd.vue.wxml" />
+    <template is="acdca45a" data="{{ ...$root['0'], $root }}"/>
