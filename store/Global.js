@@ -1,5 +1,5 @@
 //const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
-const serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
+const serviceUrl = 'http://172.16.5.169/FSSGMIS_Mobile_alpha/';
 const fileHost='http://172.16.5.94/MisFileDisk';
 const ReturnCode={
 	success:0,

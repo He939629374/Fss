@@ -775,7 +775,7 @@ var resMsg = function resMsg(userid, opsd, npsd, callback) {
 
 "use strict";
 /* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0; //const serviceUrl = 'http://172.16.5.94/FSSGMIS_Mobile_alpha/';
-var serviceUrl = 'http://localhost/FSSGMIS_Mobile_alpha/';
+var serviceUrl = 'http://172.16.5.169/FSSGMIS_Mobile_alpha/';
 var fileHost = 'http://172.16.5.94/MisFileDisk';
 var ReturnCode = {
   success: 0,

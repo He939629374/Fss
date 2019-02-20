@@ -1,6 +1,6 @@
 <template>
 	<view class="content">
-		<web-view :src="formsrc" @message="handleMessage"></web-view> -->
+		<web-view :src="formsrc"></web-view>
 	</view>
 </template>
 
@@ -10,21 +10,20 @@
 // 		components: {
 // 			uniSegmentedControl
 // 		},
+        onLoad(option) {
+        	this.formsrc+=option.insid;
+        },
 		data() {
 			return {
 				items: ['表单', '流程', '附件'],
 				current: 0,
 				insid: '',
 				caseid: '',
-				formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain'
+				formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain?InsId='
 			}
 		},
 		methods: {
-			handleMessage(evt){
-				//console.log( JSON.stringify(evt.detail.data));
-				//var fileid=evt.detail.data[0].action;
-				
-			}
+		
 		}
 	}
 </script>

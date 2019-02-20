@@ -208,9 +208,9 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
     },
     ToDetail: function ToDetail(insid) {
       uni.navigateTo({
-        //url:"../wfengine/wftaskmain?insid="+insid,
-        url: "../pick/pickRY?insid=" + insid });
-
+        url: "../wfengine/wftaskmain?insid=" + insid
+        //url:"../pick/pickRY?insid="+insid
+      });
     },
     tabS: function tabS(insid) {
       uni.navigateTo({

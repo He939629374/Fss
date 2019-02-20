@@ -93,8 +93,8 @@
 			},
 			ToDetail(insid){
 				uni.navigateTo({
-					//url:"../wfengine/wftaskmain?insid="+insid,
-					url:"../pick/pickRY?insid="+insid
+					url:"../wfengine/wftaskmain?insid="+insid,
+					//url:"../pick/pickRY?insid="+insid
 				})
 			},
 			tabS(insid){

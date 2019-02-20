@@ -125,21 +125,19 @@ var _default = {
   // 		components: {
   // 			uniSegmentedControl
   // 		},
+  onLoad: function onLoad(option) {
+    this.formsrc += option.insid;
+  },
   data: function data() {
     return {
       items: ['表单', '流程', '附件'],
       current: 0,
       insid: '',
       caseid: '',
-      formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain' };
+      formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain?InsId=' };
 
   },
-  methods: {
-    handleMessage: function handleMessage(evt) {
-      //console.log( JSON.stringify(evt.detail.data));
-      //var fileid=evt.detail.data[0].action;
-
-    } } };exports.default = _default;
+  methods: {} };exports.default = _default;
 
 /***/ }),
 
@@ -172,17 +170,7 @@ var render = function() {
   return _c(
     "view",
     { staticClass: "content" },
-    [
-      _c("web-view", {
-        attrs: {
-          src: _vm.formsrc,
-          eventid: "c34edd84-0",
-          mpcomid: "c34edd84-0"
-        },
-        on: { message: _vm.handleMessage }
-      }),
-      _vm._v("-->")
-    ],
+    [_c("web-view", { attrs: { src: _vm.formsrc, mpcomid: "c34edd84-0" } })],
     1
   )
 }
