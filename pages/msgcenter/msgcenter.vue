@@ -3,7 +3,7 @@
         <page-head :title="title"></page-head>
         <view class="uni-list2">
             <block v-for="(items,index) in lists" :key="index">
-                <view class="v-block"  hover-class="uni-list-cell-hover">
+                <view class="v-block"  hover-class="uni-list-cell-hover" @click="goto(items.gotourl)">
                     <view class="uni-triplex-row">
                         <view style="width: 100%;">
 							<view class="uni-title uni-ellipsis title">
@@ -12,12 +12,8 @@
 							</view>
 							<view v-for="(itemss,i) in items.items" :key="i" class="uni-text-v">
 								<text class="">{{itemss.name}}:{{itemss.text}}</text>
-							</view>
-                            
+							</view>                            
                         </view>
-<!-- 						<view class="uni-triplex-right">
-							
-						</view> -->
                     </view>
                 </view>
             </block>
@@ -37,10 +33,13 @@
                 title: 'list-triplex-row',
                 lists: [
 // 					{title:'1',
+//					 gotourl:'',
 // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
 // 					{title:'2',
+//					 gotourl:'',
 // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
 // 					{title:'3',
+//					 gotourl:'',
 // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]}
 					]
             }
@@ -48,14 +47,35 @@
         onLoad(option) {
 			var self = this;
 			console.log(option);
-			uni.setNavigationBarTitle({
-				title: option.BarTitle
-			});
-			var result = service.getMsgContent(function(res) {									
+			var userInfo = service.getUsers();	
+			var USERID = userInfo.userid;
+			console.log(userInfo);
+			var result = service.getMsgContent(option.GRIDID,USERID,function(res) {									
 					console.log(res);
-					self.lists = res;
+					self.lists = res.rs;
+					uni.setNavigationBarTitle({
+						title: res.rs2
+					});
 				});	
-        }
+        },
+		methods: {
+			goto(gotourl){
+				console.log(gotourl.indexOf('http'));
+				if(gotourl.indexOf('http')>=0)
+				{
+					uni.navigateTo({
+						url: '../webview/webview?url=' + gotourl
+					});	
+				}else
+				{
+					uni.navigateTo({
+						url: gotourl
+					});	
+				}
+
+			}
+
+		}
     }
 </script>
 

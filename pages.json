@@ -4,7 +4,8 @@
         {
             "path" : "pages/contents/contents",
             "style" : {
-                "navigationBarTitleText" : ""
+                "navigationBarTitleText" : "",
+				"enablePullDownRefresh": false
             }
         },
 		{
@@ -19,7 +20,12 @@
 		        "navigationBarTitleText" : "我的待办"
 		    }
 		},
-
+        {
+            "path" : "pages/webview/webview",
+            "style" : {
+                "navigationBarTitleText" : ""
+            }
+        },
         {
             "path" : "pages/main/main",
             "style" : {

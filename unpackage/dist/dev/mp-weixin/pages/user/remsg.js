@@ -113,7 +113,7 @@ __webpack_require__.r(__webpack_exports__);
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
+/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, "__esModule", { value: true });exports.default = void 0;
 
 
 
@@ -164,6 +164,7 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
         self.list.push({ 'name': '姓名', 'text': "" });
         self.list.push({ 'name': '单位', 'text': "" });
         self.list.push({ 'name': '电话', 'text': "" });
+        self.list.push({ 'name': '手机号码', 'text': "" });
         self.list.push({ 'name': '邮箱', 'text': "" });
 
       } else
@@ -172,12 +173,33 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
         self.list.push({ 'name': '姓名', 'text': list.USERNAME });
         self.list.push({ 'name': '单位', 'text': list.DEPTUSERBH });
         self.list.push({ 'name': '电话', 'text': list.PHONE });
+        self.list.push({ 'name': '手机号码', 'text': list.MPHONE });
         self.list.push({ 'name': '邮箱', 'text': list.EMAIL });
       }
 
     });
   },
   methods: {
+    onPhone: function onPhone(name, Phone)
+    {
+      if (name == '手机号码' || name == '电话')
+      {
+        uni.showActionSheet({
+          itemList: ['拨打电话', '拨打手机号码'],
+          success: function success(res) {
+            if (res.tapIndex == 0)
+            {
+              uni.makePhoneCall({
+                phoneNumber: Phone });
+
+            }
+          },
+          fail: function fail(res) {
+            console.log(res.errMsg);
+          } });
+
+      }
+    },
     onKeyInputO: function onKeyInputO(event) {
       this.opwd = event.target.value;
     },
@@ -190,6 +212,7 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
     submitPwd: function submitPwd() {
 
     } } };exports.default = _default;
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
 
@@ -243,7 +266,19 @@ var render = function() {
                   staticClass: "text",
                   attrs: { value: item.text }
                 })
-              : _c("view", { staticClass: "text" }, [_vm._v(_vm._s(item.text))])
+              : _c(
+                  "view",
+                  {
+                    staticClass: "text",
+                    attrs: { eventid: "acdcbbd2-0-" + index },
+                    on: {
+                      click: function($event) {
+                        _vm.onPhone(item.name, item.text)
+                      }
+                    }
+                  },
+                  [_vm._v(_vm._s(item.text))]
+                )
           ]
         )
       }),
@@ -256,7 +291,7 @@ var render = function() {
                 "button",
                 {
                   staticClass: "primary",
-                  attrs: { type: "primary", eventid: "acdcbbd2-0" },
+                  attrs: { type: "primary", eventid: "acdcbbd2-1" },
                   on: { tap: _vm.submitPwd }
                 },
                 [_vm._v("保存")]

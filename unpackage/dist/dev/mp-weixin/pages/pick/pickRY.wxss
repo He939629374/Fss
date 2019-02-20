@@ -158,6 +158,7 @@ image, .image
 	-webkit-align-items:center;
 	    -ms-flex-align:center;
 	        align-items:center;
+	margin-left:20rpx;
 }
 .pick_vfor_vfor_l_title
 {

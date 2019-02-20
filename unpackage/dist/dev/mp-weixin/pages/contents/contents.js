@@ -137,9 +137,14 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+var _vuex = __webpack_require__(/*! vuex */ "./node_modules/vuex/dist/vuex.esm.js");
+
+
+
 var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));
-var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =
-{
+var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js"));var _computed$components$;function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}function _defineProperty(obj, key, value) {if (key in obj) {Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true });} else {obj[key] = value;}return obj;}var _default = (_computed$components$ = {
+
+  computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']),
   components: {
     Global: _Global.default, service: _service.default },
 
@@ -161,6 +166,10 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
   },
   created: function created() {
     var self = this;
+    this.userInfo = _service.default.getUsers(function () {
+    });
+    _Global.default.checkLogin(self.userInfo, self.forcedLogin, function () {
+    });
     var result = _service.default.getContents(function (res) {
       self.list = res;
       for (var i = 0; i < res.length; i++)
@@ -171,55 +180,69 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
       {
         self.list.push({ "imageurl": '../../static/img/conQT.png', "menuname": '其他', pageurl: "../other/other", display: true });
       }
+      uni.stopPullDownRefresh();
       console.log(self.list);
+
+    });
+  } }, _defineProperty(_computed$components$, "computed",
+{
+  //计算函数
+  listTemp: function listTemp() {//数据分组
+    var list = this.list;
+    var arrTemp = [];
+    var index = 0;
+    var sectionCount = 3; //一行显示多少个
+    for (var i = 0; i < list.length; i++) {
+      index = parseInt(i / sectionCount); //取余数
+      if (arrTemp.length <= index) {//每隔 sectionCount 个数据添加一行
+        arrTemp.push([]);
+      }
+      arrTemp[index].push(list[i]); //每行添加 sectionCount 个数据
+    }
+    return arrTemp;
+  } }), _defineProperty(_computed$components$, "methods",
+
+{
+  upper: function upper() {
+    console.log('refresh');
+    var self = this;
+    var result = _service.default.getContents(function (res) {
+      self.list = res;
+      for (var i = 0; i < res.length; i++)
+      {
+        self.list[i].imageurl = _Global.default.serviceUrl + self.list[i].imageurl;
+      }
+      if (res.length % 3 == 2)
+      {
+        self.list.push({ "imageurl": '../../static/img/conQT.png', "menuname": '其他', pageurl: "../other/other", display: true });
+      }
+      uni.stopPullDownRefresh();
     });
   },
-  computed: {
-    //计算函数
-    listTemp: function listTemp() {//数据分组
-      var list = this.list;
-      var arrTemp = [];
-      var index = 0;
-      var sectionCount = 3; //一行显示多少个
-      for (var i = 0; i < list.length; i++) {
-        index = parseInt(i / sectionCount); //取余数
-        if (arrTemp.length <= index) {//每隔 sectionCount 个数据添加一行
-          arrTemp.push([]);
-        }
-        arrTemp[index].push(list[i]); //每行添加 sectionCount 个数据
-      }
-      return arrTemp;
-    } },
+  tabonclick: function tabonclick(_name, _path) {//点击跳转
+    console.log(_path);
+    var self = this;
+    if (_name == "我的资料")
+    {
+      uni.reLaunch({
+        url: '../user/user' });
 
-  methods: {
-    getContents: function getContents() {//获取目录面板数据
-      var self = this;
-      uni.showLoading({
-        title: '正在获取' });
-
-      var result = _service.default.getContents(1, 1, function () {
-        // 					uni.showToast({
-        // 						icon: 'none',
-        // 						title: '登录成功'
-        // 					});
-      });
-    },
-    tabonclick: function tabonclick(_name, _path) {//点击跳转
-      console.log(_path);
-      var self = this;
-      if (_name == "我的资料")
+    } else {
+      if (_path.indexOf('http') >= 0)
       {
-        uni.reLaunch({
-          url: '../user/user' });
+        uni.navigateTo({
+          url: '../webview/webview?url=' + _path });
 
-      } else {
+      } else
+      {
         uni.navigateTo({
           url: _path });
 
       }
+    }
 
 
-    } } };exports.default = _default;
+  } }), _computed$components$);exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
@@ -250,58 +273,67 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("view", { staticClass: "content" }, [
-    _c("view", { staticClass: "HeadTitle" }, [
-      _c("view", { staticClass: "LogoView" }, [
-        _c("image", {
-          staticClass: "LOGO",
-          attrs: { src: "../../static/img/loginLOGO.png" }
-        }),
-        _c("view", [_c("text", [_vm._v(_vm._s(_vm.systeam))])])
-      ])
-    ]),
-    _c(
-      "view",
-      { staticClass: "HeadContente" },
-      _vm._l(_vm.listTemp, function(row, i) {
-        return _c(
-          "view",
-          { key: row.id, staticClass: "v_row" },
-          _vm._l(row, function(cell, key, j) {
-            return _c(
-              "view",
-              {
-                key: cell.id,
-                staticClass: "v_row_block",
-                class: { v_display: cell.display },
-                attrs: { id: j }
-              },
-              [
-                _c(
-                  "view",
-                  {
-                    staticClass: "v_col",
-                    attrs: { eventid: "f8e5c63c-0-" + i + "-" + key },
-                    on: {
-                      click: function($event) {
-                        _vm.tabonclick(cell.menuname, cell.pageurl)
+  return _c(
+    "view",
+    { staticClass: "content" },
+    [
+      _c("view", { staticClass: "HeadTitle" }, [
+        _c("view", { staticClass: "LogoView" }, [
+          _c("image", {
+            staticClass: "LOGO",
+            attrs: { src: "../../static/img/loginLOGO.png" }
+          }),
+          _c("view", [_c("text", [_vm._v(_vm._s(_vm.systeam))])])
+        ])
+      ]),
+      _c(
+        "scroll-view",
+        {
+          staticClass: "HeadContente",
+          attrs: { "scroll-y": "true", eventid: "f8e5c63c-1" },
+          on: { scrolltoupper: _vm.upper }
+        },
+        _vm._l(_vm.listTemp, function(row, i) {
+          return _c(
+            "view",
+            { key: row.id, staticClass: "v_row" },
+            _vm._l(row, function(cell, key, j) {
+              return _c(
+                "view",
+                {
+                  key: cell.id,
+                  staticClass: "v_row_block",
+                  class: { v_display: cell.display },
+                  attrs: { id: j }
+                },
+                [
+                  _c(
+                    "view",
+                    {
+                      staticClass: "v_col",
+                      attrs: { eventid: "f8e5c63c-0-" + i + "-" + key },
+                      on: {
+                        click: function($event) {
+                          _vm.tabonclick(cell.menuname, cell.pageurl)
+                        }
                       }
-                    }
-                  },
-                  [
-                    _c("view", { staticClass: "v_row_v_img" }, [
-                      _c("img", { attrs: { src: cell.imageurl } })
-                    ]),
-                    _c("view", [_vm._v(_vm._s(cell.menuname))])
-                  ]
-                )
-              ]
-            )
-          })
-        )
-      })
-    )
-  ])
+                    },
+                    [
+                      _c("view", { staticClass: "v_row_v_img" }, [
+                        _c("img", { attrs: { src: cell.imageurl } })
+                      ]),
+                      _c("view", [_vm._v(_vm._s(cell.menuname))])
+                    ]
+                  )
+                ]
+              )
+            })
+          )
+        })
+      )
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true

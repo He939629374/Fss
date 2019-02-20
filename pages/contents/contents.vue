@@ -6,7 +6,7 @@
 				<view><text>{{systeam}}</text></view>
 			</view>
 		</view>
-		<view class="HeadContente">
+		<scroll-view class="HeadContente" scroll-y="true" @scrolltoupper="upper">
 			<view v-for="(row,i) in listTemp" :key="row.id" class="v_row">
 				<view :id="j" v-for="(cell,key,j) in row" :key="cell.id" class="v_row_block" :class="{v_display:cell.display}">
 					<view class="v_col" @click="tabonclick(cell.menuname,cell.pageurl)">
@@ -17,14 +17,19 @@
 					</view>
 				</view>
 			</view>  
-		</view>
+		</scroll-view>
 	</view>
 </template>
 
 <script>
+	import {
+		mapState,
+		mapMutations
+	} from 'vuex';
 	import Global from '../../store/Global.js';
 	import service from "../../service.js";
 	export default {
+		computed: mapState(['forcedLogin', 'hasLogin', 'userName']),
 		components: {
 			Global,service
 		},
@@ -46,6 +51,10 @@
 		},
 		created:function () {
 			var self = this;
+			this.userInfo = service.getUsers(function() {
+			});
+			Global.checkLogin(self.userInfo, self.forcedLogin, function() {
+			});
 			var result = service.getContents(function(res) {				
 					self.list = res;
 					for(let i=0;i<res.length;i++)
@@ -56,7 +65,9 @@
 					{
 						self.list.push({"imageurl":'../../static/img/conQT.png',"menuname":'其他',pageurl:"../other/other",display:true})
 					}
+					uni.stopPullDownRefresh();
 					console.log(self.list);
+					
 				});	
 		},
 		computed: {
@@ -77,17 +88,21 @@
 			}
 		},
 		methods: {
-			getContents() {//获取目录面板数据
+			upper() {
+				console.log('refresh');
 				var self = this;
-				uni.showLoading({
-					title: '正在获取'
-				});
-				const result = service.getContents(1, 1, function() {
-// 					uni.showToast({
-// 						icon: 'none',
-// 						title: '登录成功'
-// 					});
-				});
+				var result = service.getContents(function(res) {				
+						self.list = res;
+						for(let i=0;i<res.length;i++)
+						{
+							self.list[i].imageurl = Global.serviceUrl+self.list[i].imageurl;
+						}
+						if((res.length%3)==2)
+						{
+							self.list.push({"imageurl":'../../static/img/conQT.png',"menuname":'其他',pageurl:"../other/other",display:true})
+						}
+						uni.stopPullDownRefresh();				
+					});	
 			},
 			tabonclick(_name,_path) {//点击跳转
 			console.log(_path);
@@ -98,9 +113,17 @@
 						url: '../user/user'
 					});
 				}else{
-					uni.navigateTo({
-						url: _path
-					});
+					if(_path.indexOf('http')>=0)
+					{
+						uni.navigateTo({
+							url: '../webview/webview?url=' + _path
+						});	
+					}else
+					{
+						uni.navigateTo({
+							url: _path
+						});	
+					}
 				}
 
 
@@ -178,8 +201,9 @@
 	.HeadContente {
 		margin-top: 20upx;
 		padding: 65rpx;
-		overflow-y: scroll;
-		
+		/* overflow-y: scroll; */
+		height:65vh;
+		width:625rpx;
 	}
 	::-webkit-scrollbar {
 		width: 0px;

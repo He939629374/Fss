@@ -274,6 +274,7 @@ export default {
 		justify-content:center;
 		flex-direction:row;
 		align-items:center;
+		margin-left:20rpx;
 	}
 	.pick_vfor_vfor_l_title
 	{

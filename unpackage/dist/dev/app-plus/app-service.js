@@ -1293,6 +1293,11 @@ Z([3,'index'])
 Z([3,'items'])
 Z([[7],[3,'lists']])
 Z(z[1])
+Z([3,'handleProxy'])
+Z([3,'_view 4e64e5e0 v-block'])
+Z([[7],[3,'$k']])
+Z([[2,'+'],[1,'4e64e5e0-0-'],[[7],[3,'index']]])
+Z([3,'uni-list-cell-hover'])
 Z([[9],[[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[10],[[6],[[7],[3,'$root']],[[2,'+'],[[2,'+'],[[7],[3,'$kk']],[1,'4e64e5e0-1-']],[[7],[3,'index']]]]]],[[8],'$root',[[7],[3,'$root']]]])
 Z([3,'12a945f8'])
 Z([3,'24'])
@@ -1557,7 +1562,7 @@ function gz$gwx_38(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_38)return __WXML_GLOBAL__.ops_cached.$gwx_38
 __WXML_GLOBAL__.ops_cached.$gwx_38=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'60c9a275'])
+Z([3,'5c5e8b16'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_38);return __WXML_GLOBAL__.ops_cached.$gwx_38
 }
 function gz$gwx_39(){
@@ -1565,14 +1570,14 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_39)return __WXML_GLOBAL__.ops_cached.$gwx_39
 __WXML_GLOBAL__.ops_cached.$gwx_39=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[8],'$root',[[7],[3,'$root']]]])
-Z([3,'60c9a275'])
+Z([3,'5c5e8b16'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_39);return __WXML_GLOBAL__.ops_cached.$gwx_39
 }
 function gz$gwx_40(){
 if( __WXML_GLOBAL__.ops_cached.$gwx_40)return __WXML_GLOBAL__.ops_cached.$gwx_40
 __WXML_GLOBAL__.ops_cached.$gwx_40=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
-Z([3,'c34edd84'])
+Z([3,'60c9a275'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_40);return __WXML_GLOBAL__.ops_cached.$gwx_40
 }
 function gz$gwx_41(){
@@ -1580,14 +1585,29 @@ if( __WXML_GLOBAL__.ops_cached.$gwx_41)return __WXML_GLOBAL__.ops_cached.$gwx_41
 __WXML_GLOBAL__.ops_cached.$gwx_41=[];
 (function(z){var a=11;function Z(ops){z.push(ops)}
 Z([[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[8],'$root',[[7],[3,'$root']]]])
-Z([3,'c34edd84'])
+Z([3,'60c9a275'])
 })(__WXML_GLOBAL__.ops_cached.$gwx_41);return __WXML_GLOBAL__.ops_cached.$gwx_41
+}
+function gz$gwx_42(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_42)return __WXML_GLOBAL__.ops_cached.$gwx_42
+__WXML_GLOBAL__.ops_cached.$gwx_42=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([3,'c34edd84'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_42);return __WXML_GLOBAL__.ops_cached.$gwx_42
+}
+function gz$gwx_43(){
+if( __WXML_GLOBAL__.ops_cached.$gwx_43)return __WXML_GLOBAL__.ops_cached.$gwx_43
+__WXML_GLOBAL__.ops_cached.$gwx_43=[];
+(function(z){var a=11;function Z(ops){z.push(ops)}
+Z([[9],[[10],[[6],[[7],[3,'$root']],[1,'0']]],[[8],'$root',[[7],[3,'$root']]]])
+Z([3,'c34edd84'])
+})(__WXML_GLOBAL__.ops_cached.$gwx_43);return __WXML_GLOBAL__.ops_cached.$gwx_43
 }
 __WXML_GLOBAL__.ops_set.$gwx=z;
 __WXML_GLOBAL__.ops_init.$gwx=true;
 var nv_require=function(){var nnm={};var nom={};return function(n){return function(){if(!nnm[n]) return undefined;try{if(!nom[n])nom[n]=nnm[n]();return nom[n];}catch(e){e.message=e.message.replace(/nv_/g,'');var tmp = e.stack.substring(0,e.stack.lastIndexOf(n));e.stack = tmp.substring(0,tmp.lastIndexOf('\n'));e.stack = e.stack.replace(/\snv_/g,' ');e.stack = $gstack(e.stack);e.stack += '\n    at ' + n.substring(2);console.error(e);}
 }}}()
-var x=['./common/slots.wxml','/components/uni-list/uni-list.vue.wxml','/components/uni-list-item/uni-list-item.vue.wxml','/components/uni-card/uni-card.vue.wxml','/components/uni-icon/uni-icon.vue.wxml','/components/m-input.vue.wxml','/components/mehaotian-search/mehaotian-search.vue.wxml','/components/uni-badge/uni-badge.vue.wxml','/common/slots.wxml','/components/m-icon/m-icon.vue.wxml','./components/m-icon/m-icon.vue.wxml','./components/m-input.vue.wxml','./components/mehaotian-search/mehaotian-search.vue.wxml','./components/uni-badge/uni-badge.vue.wxml','./components/uni-card/uni-card.vue.wxml','./components/uni-icon/uni-icon.vue.wxml','./components/uni-list-item/uni-list-item.vue.wxml','./components/uni-list/uni-list.vue.wxml','./pages/contents/contents.vue.wxml','./pages/contents/contents.wxml','./contents.vue.wxml','./pages/login/login.vue.wxml','./pages/login/login.wxml','./login.vue.wxml','./pages/main/main.vue.wxml','./pages/main/main.wxml','./main.vue.wxml','./pages/msgcenter/msgcenter.vue.wxml','./pages/msgcenter/msgcenter.wxml','./msgcenter.vue.wxml','./pages/pick/pick.vue.wxml','./pages/pick/pick.wxml','./pick.vue.wxml','./pages/pick/pickRY.vue.wxml','./pages/pick/pickRY.wxml','./pickRY.vue.wxml','./pages/pwd/pwd.vue.wxml','./pages/pwd/pwd.wxml','./pwd.vue.wxml','./pages/reg/reg.vue.wxml','./pages/reg/reg.wxml','./reg.vue.wxml','./pages/search/search.vue.wxml','./pages/search/search.wxml','./search.vue.wxml','./pages/txl/txl.vue.wxml','./pages/txl/txl.wxml','./txl.vue.wxml','./pages/txl/txlRY.vue.wxml','./pages/txl/txlRY.wxml','./txlRY.vue.wxml','./pages/user/remsg.vue.wxml','./pages/user/remsg.wxml','./remsg.vue.wxml','./pages/user/repwd.vue.wxml','./pages/user/repwd.wxml','./repwd.vue.wxml','./pages/user/user.vue.wxml','./pages/user/user.wxml','./user.vue.wxml','./pages/wfengine/downloadfile.vue.wxml','./pages/wfengine/downloadfile.wxml','./downloadfile.vue.wxml','./pages/wfengine/wftaskmain.vue.wxml','./pages/wfengine/wftaskmain.wxml','./wftaskmain.vue.wxml'];d_[x[0]]={}
+var x=['./common/slots.wxml','/components/uni-list/uni-list.vue.wxml','/components/uni-list-item/uni-list-item.vue.wxml','/components/uni-icon/uni-icon.vue.wxml','./components/m-icon/m-icon.vue.wxml','./components/m-input.vue.wxml','/components/m-icon/m-icon.vue.wxml','./components/mehaotian-search/mehaotian-search.vue.wxml','./components/uni-badge/uni-badge.vue.wxml','./components/uni-card/uni-card.vue.wxml','./components/uni-icon/uni-icon.vue.wxml','./components/uni-list-item/uni-list-item.vue.wxml','/components/uni-badge/uni-badge.vue.wxml','./components/uni-list/uni-list.vue.wxml','/common/slots.wxml','./pages/contents/contents.vue.wxml','./pages/contents/contents.wxml','./contents.vue.wxml','./pages/login/login.vue.wxml','/components/m-input.vue.wxml','./pages/login/login.wxml','./login.vue.wxml','./pages/main/main.vue.wxml','/components/uni-card/uni-card.vue.wxml','./pages/main/main.wxml','./main.vue.wxml','./pages/msgcenter/msgcenter.vue.wxml','./pages/msgcenter/msgcenter.wxml','./msgcenter.vue.wxml','./pages/pick/pick.vue.wxml','./pages/pick/pick.wxml','./pick.vue.wxml','./pages/pick/pickRY.vue.wxml','./pages/pick/pickRY.wxml','./pickRY.vue.wxml','./pages/pwd/pwd.vue.wxml','./pages/pwd/pwd.wxml','./pwd.vue.wxml','./pages/reg/reg.vue.wxml','./pages/reg/reg.wxml','./reg.vue.wxml','./pages/search/search.vue.wxml','/components/mehaotian-search/mehaotian-search.vue.wxml','./pages/search/search.wxml','./search.vue.wxml','./pages/txl/txl.vue.wxml','./pages/txl/txl.wxml','./txl.vue.wxml','./pages/txl/txlRY.vue.wxml','./pages/txl/txlRY.wxml','./txlRY.vue.wxml','./pages/user/remsg.vue.wxml','./pages/user/remsg.wxml','./remsg.vue.wxml','./pages/user/repwd.vue.wxml','./pages/user/repwd.wxml','./repwd.vue.wxml','./pages/user/user.vue.wxml','./pages/user/user.wxml','./user.vue.wxml','./pages/webview/webview.vue.wxml','./pages/webview/webview.wxml','./webview.vue.wxml','./pages/wfengine/downloadfile.vue.wxml','./pages/wfengine/downloadfile.wxml','./downloadfile.vue.wxml','./pages/wfengine/wftaskmain.vue.wxml','./pages/wfengine/wftaskmain.wxml','./wftaskmain.vue.wxml'];d_[x[0]]={}
 d_[x[0]]["dc460dfc-default-dc460dfc-3"]=function(e,s,r,gg){
 var z=gz$gwx_1()
 var b=x[0]+':dc460dfc-default-dc460dfc-3'
@@ -1598,7 +1618,7 @@ p_[b]=true
 try{
 var oB=_v()
 _(r,oB)
-cs.push("./common/slots.wxml:template:11:47")
+cs.push("./common/slots.wxml:template:5:47")
 var xC=_oz(z,5,e,s,gg)
 var oD=_gd(x[0],xC,e_,d_)
 if(oD){
@@ -1608,11 +1628,11 @@ oB.wxXCkey=3
 oD(fE,fE,oB,gg)
 gg.f=cur_globalf
 }
-else _w(xC,x[0],11,214)
+else _w(xC,x[0],5,214)
 cs.pop()
 var cF=_v()
 _(r,cF)
-cs.push("./common/slots.wxml:template:11:237")
+cs.push("./common/slots.wxml:template:5:237")
 var hG=_oz(z,11,e,s,gg)
 var oH=_gd(x[0],hG,e_,d_)
 if(oH){
@@ -1622,11 +1642,11 @@ cF.wxXCkey=3
 oH(cI,cI,cF,gg)
 gg.f=cur_globalf
 }
-else _w(hG,x[0],11,404)
+else _w(hG,x[0],5,404)
 cs.pop()
 var oJ=_v()
 _(r,oJ)
-cs.push("./common/slots.wxml:template:11:427")
+cs.push("./common/slots.wxml:template:5:427")
 var lK=_oz(z,17,e,s,gg)
 var aL=_gd(x[0],lK,e_,d_)
 if(aL){
@@ -1636,7 +1656,7 @@ oJ.wxXCkey=3
 aL(tM,tM,oJ,gg)
 gg.f=cur_globalf
 }
-else _w(lK,x[0],11,594)
+else _w(lK,x[0],5,594)
 cs.pop()
 }catch(err){
 p_[b]=false
@@ -1651,31 +1671,19 @@ var oB=e_[x[0]].i
 _ai(oB,x[1],e_,x[0],1,1)
 _ai(oB,x[2],e_,x[0],2,2)
 _ai(oB,x[3],e_,x[0],3,2)
-_ai(oB,x[4],e_,x[0],4,2)
-_ai(oB,x[5],e_,x[0],5,2)
-_ai(oB,x[6],e_,x[0],6,2)
-_ai(oB,x[7],e_,x[0],7,2)
-_ai(oB,x[8],e_,x[0],8,2)
-_ai(oB,x[9],e_,x[0],9,2)
-oB.pop()
-oB.pop()
-oB.pop()
-oB.pop()
-oB.pop()
-oB.pop()
 oB.pop()
 oB.pop()
 oB.pop()
 return r
 }
-e_[x[0]]={f:m0,j:[],i:[],ti:[x[1],x[2],x[3],x[4],x[5],x[6],x[7],x[8],x[9]],ic:[]}
-d_[x[10]]={}
-d_[x[10]]["ce294150"]=function(e,s,r,gg){
+e_[x[0]]={f:m0,j:[],i:[],ti:[x[1],x[2],x[3]],ic:[]}
+d_[x[4]]={}
+d_[x[4]]["ce294150"]=function(e,s,r,gg){
 var z=gz$gwx_2()
-var b=x[10]+':ce294150'
+var b=x[4]+':ce294150'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/m-icon/m-icon.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[10]);return}
+if(p_[b]){_wl(b,x[4]);return}
 p_[b]=true
 try{
 }catch(err){
@@ -1689,14 +1697,14 @@ var m1=function(e,s,r,gg){
 var z=gz$gwx_2()
 return r
 }
-e_[x[10]]={f:m1,j:[],i:[],ti:[],ic:[]}
-d_[x[11]]={}
-d_[x[11]]["62ea95b3"]=function(e,s,r,gg){
+e_[x[4]]={f:m1,j:[],i:[],ti:[],ic:[]}
+d_[x[5]]={}
+d_[x[5]]["62ea95b3"]=function(e,s,r,gg){
 var z=gz$gwx_3()
-var b=x[11]+':62ea95b3'
+var b=x[5]+':62ea95b3'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/m-input.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[11]);return}
+if(p_[b]){_wl(b,x[5]);return}
 p_[b]=true
 try{
 cs.push("./components/m-input.vue.wxml:view:1:78")
@@ -1710,7 +1718,7 @@ var fE=_v()
 _(xC,fE)
 cs.push("./components/m-input.vue.wxml:template:1:521")
 var cF=_oz(z,8,e,s,gg)
-var hG=_gd(x[11],cF,e_,d_)
+var hG=_gd(x[5],cF,e_,d_)
 if(hG){
 var oH=_1z(z,5,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1718,7 +1726,7 @@ fE.wxXCkey=3
 hG(oH,oH,fE,gg)
 gg.f=cur_globalf
 }
-else _w(cF,x[11],1,706)
+else _w(cF,x[5],1,706)
 cs.pop()
 cs.pop()
 }
@@ -1730,7 +1738,7 @@ var cI=_v()
 _(oD,cI)
 cs.push("./components/m-input.vue.wxml:template:1:803")
 var oJ=_oz(z,16,e,s,gg)
-var lK=_gd(x[11],oJ,e_,d_)
+var lK=_gd(x[5],oJ,e_,d_)
 if(lK){
 var aL=_1z(z,13,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1738,7 +1746,7 @@ cI.wxXCkey=3
 lK(aL,aL,cI,gg)
 gg.f=cur_globalf
 }
-else _w(oJ,x[11],1,970)
+else _w(oJ,x[5],1,970)
 cs.pop()
 cs.pop()
 }
@@ -1755,19 +1763,19 @@ return r
 }
 var m2=function(e,s,r,gg){
 var z=gz$gwx_3()
-var fE=e_[x[11]].i
-_ai(fE,x[9],e_,x[11],1,1)
+var fE=e_[x[5]].i
+_ai(fE,x[6],e_,x[5],1,1)
 fE.pop()
 return r
 }
-e_[x[11]]={f:m2,j:[],i:[],ti:[x[9]],ic:[]}
-d_[x[12]]={}
-d_[x[12]]["6b39f8d8"]=function(e,s,r,gg){
+e_[x[5]]={f:m2,j:[],i:[],ti:[x[6]],ic:[]}
+d_[x[7]]={}
+d_[x[7]]["6b39f8d8"]=function(e,s,r,gg){
 var z=gz$gwx_4()
-var b=x[12]+':6b39f8d8'
+var b=x[7]+':6b39f8d8'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/mehaotian-search/mehaotian-search.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[12]);return}
+if(p_[b]){_wl(b,x[7]);return}
 p_[b]=true
 try{
 cs.push("./components/mehaotian-search/mehaotian-search.vue.wxml:view:1:82")
@@ -1780,7 +1788,7 @@ var cF=_v()
 _(oD,cF)
 cs.push("./components/mehaotian-search/mehaotian-search.vue.wxml:template:1:306")
 var hG=_oz(z,4,e,s,gg)
-var oH=_gd(x[12],hG,e_,d_)
+var oH=_gd(x[7],hG,e_,d_)
 if(oH){
 var cI=_1z(z,3,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1788,7 +1796,7 @@ cF.wxXCkey=3
 oH(cI,cI,cF,gg)
 gg.f=cur_globalf
 }
-else _w(hG,x[12],1,401)
+else _w(hG,x[7],1,401)
 cs.pop()
 var fE=_v()
 _(oD,fE)
@@ -1817,19 +1825,19 @@ return r
 }
 var m3=function(e,s,r,gg){
 var z=gz$gwx_4()
-var hG=e_[x[12]].i
-_ai(hG,x[4],e_,x[12],1,1)
+var hG=e_[x[7]].i
+_ai(hG,x[3],e_,x[7],1,1)
 hG.pop()
 return r
 }
-e_[x[12]]={f:m3,j:[],i:[],ti:[x[4]],ic:[]}
-d_[x[13]]={}
-d_[x[13]]["1023a006"]=function(e,s,r,gg){
+e_[x[7]]={f:m3,j:[],i:[],ti:[x[3]],ic:[]}
+d_[x[8]]={}
+d_[x[8]]["1023a006"]=function(e,s,r,gg){
 var z=gz$gwx_5()
-var b=x[13]+':1023a006'
+var b=x[8]+':1023a006'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-badge/uni-badge.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[13]);return}
+if(p_[b]){_wl(b,x[8]);return}
 p_[b]=true
 try{
 var oB=_v()
@@ -1850,14 +1858,14 @@ var m4=function(e,s,r,gg){
 var z=gz$gwx_5()
 return r
 }
-e_[x[13]]={f:m4,j:[],i:[],ti:[],ic:[]}
-d_[x[14]]={}
-d_[x[14]]["bffe8050"]=function(e,s,r,gg){
+e_[x[8]]={f:m4,j:[],i:[],ti:[],ic:[]}
+d_[x[9]]={}
+d_[x[9]]["bffe8050"]=function(e,s,r,gg){
 var z=gz$gwx_6()
-var b=x[14]+':bffe8050'
+var b=x[9]+':bffe8050'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-card/uni-card.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[14]);return}
+if(p_[b]){_wl(b,x[9]);return}
 p_[b]=true
 try{
 cs.push("./components/uni-card/uni-card.vue.wxml:view:1:27")
@@ -1908,14 +1916,14 @@ var m5=function(e,s,r,gg){
 var z=gz$gwx_6()
 return r
 }
-e_[x[14]]={f:m5,j:[],i:[],ti:[],ic:[]}
-d_[x[15]]={}
-d_[x[15]]["12a945f8"]=function(e,s,r,gg){
+e_[x[9]]={f:m5,j:[],i:[],ti:[],ic:[]}
+d_[x[10]]={}
+d_[x[10]]["12a945f8"]=function(e,s,r,gg){
 var z=gz$gwx_7()
-var b=x[15]+':12a945f8'
+var b=x[10]+':12a945f8'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-icon/uni-icon.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[15]);return}
+if(p_[b]){_wl(b,x[10]);return}
 p_[b]=true
 try{
 }catch(err){
@@ -1929,14 +1937,14 @@ var m6=function(e,s,r,gg){
 var z=gz$gwx_7()
 return r
 }
-e_[x[15]]={f:m6,j:[],i:[],ti:[],ic:[]}
-d_[x[16]]={}
-d_[x[16]]["6b684cc4"]=function(e,s,r,gg){
+e_[x[10]]={f:m6,j:[],i:[],ti:[],ic:[]}
+d_[x[11]]={}
+d_[x[11]]["6b684cc4"]=function(e,s,r,gg){
 var z=gz$gwx_8()
-var b=x[16]+':6b684cc4'
+var b=x[11]+':6b684cc4'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-list-item/uni-list-item.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[16]);return}
+if(p_[b]){_wl(b,x[11]);return}
 p_[b]=true
 try{
 cs.push("./components/uni-list-item/uni-list-item.vue.wxml:view:1:139")
@@ -1956,7 +1964,7 @@ var hG=_v()
 _(oD,hG)
 cs.push("./components/uni-list-item/uni-list-item.vue.wxml:template:1:795")
 var oH=_oz(z,10,e,s,gg)
-var cI=_gd(x[16],oH,e_,d_)
+var cI=_gd(x[11],oH,e_,d_)
 if(cI){
 var oJ=_1z(z,9,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1964,7 +1972,7 @@ hG.wxXCkey=3
 cI(oJ,oJ,hG,gg)
 gg.f=cur_globalf
 }
-else _w(oH,x[16],1,866)
+else _w(oH,x[11],1,866)
 cs.pop()
 cs.pop()
 }
@@ -1989,7 +1997,7 @@ var bO=_v()
 _(aL,bO)
 cs.push("./components/uni-list-item/uni-list-item.vue.wxml:template:1:1315")
 var oP=_oz(z,16,e,s,gg)
-var xQ=_gd(x[16],oP,e_,d_)
+var xQ=_gd(x[11],oP,e_,d_)
 if(xQ){
 var oR=_1z(z,15,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -1997,7 +2005,7 @@ bO.wxXCkey=3
 xQ(oR,oR,bO,gg)
 gg.f=cur_globalf
 }
-else _w(oP,x[16],1,1441)
+else _w(oP,x[11],1,1441)
 cs.pop()
 cs.pop()
 }
@@ -2015,7 +2023,7 @@ var fS=_v()
 _(eN,fS)
 cs.push("./components/uni-list-item/uni-list-item.vue.wxml:template:1:1686")
 var cT=_oz(z,21,e,s,gg)
-var hU=_gd(x[16],cT,e_,d_)
+var hU=_gd(x[11],cT,e_,d_)
 if(hU){
 var oV=_1z(z,20,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2023,7 +2031,7 @@ fS.wxXCkey=3
 hU(oV,oV,fS,gg)
 gg.f=cur_globalf
 }
-else _w(cT,x[16],1,1853)
+else _w(cT,x[11],1,1853)
 cs.pop()
 cs.pop()
 }
@@ -2050,21 +2058,21 @@ return r
 }
 var m7=function(e,s,r,gg){
 var z=gz$gwx_8()
-var aL=e_[x[16]].i
-_ai(aL,x[4],e_,x[16],1,1)
-_ai(aL,x[7],e_,x[16],1,56)
+var aL=e_[x[11]].i
+_ai(aL,x[3],e_,x[11],1,1)
+_ai(aL,x[12],e_,x[11],1,56)
 aL.pop()
 aL.pop()
 return r
 }
-e_[x[16]]={f:m7,j:[],i:[],ti:[x[4],x[7]],ic:[]}
-d_[x[17]]={}
-d_[x[17]]["19a91f98"]=function(e,s,r,gg){
+e_[x[11]]={f:m7,j:[],i:[],ti:[x[3],x[12]],ic:[]}
+d_[x[13]]={}
+d_[x[13]]["19a91f98"]=function(e,s,r,gg){
 var z=gz$gwx_9()
-var b=x[17]+':19a91f98'
+var b=x[13]+':19a91f98'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-list/uni-list.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[17]);return}
+if(p_[b]){_wl(b,x[13]);return}
 p_[b]=true
 try{
 cs.push("./components/uni-list/uni-list.vue.wxml:view:1:62")
@@ -2074,7 +2082,7 @@ var xC=_v()
 _(oB,xC)
 cs.push("./components/uni-list/uni-list.vue.wxml:template:1:136")
 var oD=_oz(z,4,e,s,gg)
-var fE=_gd(x[17],oD,e_,d_)
+var fE=_gd(x[13],oD,e_,d_)
 if(fE){
 var cF=_1z(z,3,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2082,7 +2090,7 @@ xC.wxXCkey=3
 fE(cF,cF,xC,gg)
 gg.f=cur_globalf
 }
-else _w(oD,x[17],1,194)
+else _w(oD,x[13],1,194)
 cs.pop()
 cs.pop()
 _(r,oB)
@@ -2093,12 +2101,12 @@ throw err
 p_[b]=false
 return r
 }
-d_[x[17]]["default"]=function(e,s,r,gg){
+d_[x[13]]["default"]=function(e,s,r,gg){
 var z=gz$gwx_9()
-var b=x[17]+':default'
+var b=x[13]+':default'
 r.wxVkey=b
 gg.f=$gdc(f_["./components/uni-list/uni-list.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[17]);return}
+if(p_[b]){_wl(b,x[13]);return}
 p_[b]=true
 try{
 }catch(err){
@@ -2110,19 +2118,19 @@ return r
 }
 var m8=function(e,s,r,gg){
 var z=gz$gwx_9()
-var eN=e_[x[17]].i
-_ai(eN,x[8],e_,x[17],1,1)
+var eN=e_[x[13]].i
+_ai(eN,x[14],e_,x[13],1,1)
 eN.pop()
 return r
 }
-e_[x[17]]={f:m8,j:[],i:[],ti:[x[8]],ic:[]}
-d_[x[18]]={}
-d_[x[18]]["f8e5c63c"]=function(e,s,r,gg){
+e_[x[13]]={f:m8,j:[],i:[],ti:[x[14]],ic:[]}
+d_[x[15]]={}
+d_[x[15]]["f8e5c63c"]=function(e,s,r,gg){
 var z=gz$gwx_10()
-var b=x[18]+':f8e5c63c'
+var b=x[15]+':f8e5c63c'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/contents/contents.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[18]);return}
+if(p_[b]){_wl(b,x[15]);return}
 p_[b]=true
 try{
 }catch(err){
@@ -2136,17 +2144,17 @@ var m9=function(e,s,r,gg){
 var z=gz$gwx_10()
 return r
 }
-e_[x[18]]={f:m9,j:[],i:[],ti:[],ic:[]}
-d_[x[19]]={}
+e_[x[15]]={f:m9,j:[],i:[],ti:[],ic:[]}
+d_[x[16]]={}
 var m10=function(e,s,r,gg){
 var z=gz$gwx_11()
-var xQ=e_[x[19]].i
-_ai(xQ,x[20],e_,x[19],1,1)
+var xQ=e_[x[16]].i
+_ai(xQ,x[17],e_,x[16],1,1)
 var oR=_v()
 _(r,oR)
 cs.push("./pages/contents/contents.wxml:template:2:6")
 var fS=_oz(z,1,e,s,gg)
-var cT=_gd(x[19],fS,e_,d_)
+var cT=_gd(x[16],fS,e_,d_)
 if(cT){
 var hU=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2154,19 +2162,19 @@ oR.wxXCkey=3
 cT(hU,hU,oR,gg)
 gg.f=cur_globalf
 }
-else _w(fS,x[19],2,18)
+else _w(fS,x[16],2,18)
 cs.pop()
 xQ.pop()
 return r
 }
-e_[x[19]]={f:m10,j:[],i:[],ti:[x[20]],ic:[]}
-d_[x[21]]={}
-d_[x[21]]["e06fbc14"]=function(e,s,r,gg){
+e_[x[16]]={f:m10,j:[],i:[],ti:[x[17]],ic:[]}
+d_[x[18]]={}
+d_[x[18]]["e06fbc14"]=function(e,s,r,gg){
 var z=gz$gwx_12()
-var b=x[21]+':e06fbc14'
+var b=x[18]+':e06fbc14'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/login/login.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[21]);return}
+if(p_[b]){_wl(b,x[18]);return}
 p_[b]=true
 try{
 cs.push("./pages/login/login.vue.wxml:view:1:484")
@@ -2179,7 +2187,7 @@ var fE=_v()
 _(oD,fE)
 cs.push("./pages/login/login.vue.wxml:template:1:743")
 var cF=_oz(z,7,e,s,gg)
-var hG=_gd(x[21],cF,e_,d_)
+var hG=_gd(x[18],cF,e_,d_)
 if(hG){
 var oH=_1z(z,4,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2187,13 +2195,13 @@ fE.wxXCkey=3
 hG(oH,oH,fE,gg)
 gg.f=cur_globalf
 }
-else _w(cF,x[21],1,970)
+else _w(cF,x[18],1,970)
 cs.pop()
 var cI=_v()
 _(oD,cI)
 cs.push("./pages/login/login.vue.wxml:template:1:1164")
 var oJ=_oz(z,15,e,s,gg)
-var lK=_gd(x[21],oJ,e_,d_)
+var lK=_gd(x[18],oJ,e_,d_)
 if(lK){
 var aL=_1z(z,12,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2201,7 +2209,7 @@ cI.wxXCkey=3
 lK(aL,aL,cI,gg)
 gg.f=cur_globalf
 }
-else _w(oJ,x[21],1,1392)
+else _w(oJ,x[18],1,1392)
 cs.pop()
 cs.pop()
 _(oB,oD)
@@ -2223,22 +2231,22 @@ return r
 }
 var m11=function(e,s,r,gg){
 var z=gz$gwx_12()
-var cW=e_[x[21]].i
-_ai(cW,x[5],e_,x[21],1,1)
+var cW=e_[x[18]].i
+_ai(cW,x[19],e_,x[18],1,1)
 cW.pop()
 return r
 }
-e_[x[21]]={f:m11,j:[],i:[],ti:[x[5]],ic:[]}
-d_[x[22]]={}
+e_[x[18]]={f:m11,j:[],i:[],ti:[x[19]],ic:[]}
+d_[x[20]]={}
 var m12=function(e,s,r,gg){
 var z=gz$gwx_13()
-var lY=e_[x[22]].i
-_ai(lY,x[23],e_,x[22],1,1)
+var lY=e_[x[20]].i
+_ai(lY,x[21],e_,x[20],1,1)
 var aZ=_v()
 _(r,aZ)
 cs.push("./pages/login/login.wxml:template:2:6")
 var t1=_oz(z,1,e,s,gg)
-var e2=_gd(x[22],t1,e_,d_)
+var e2=_gd(x[20],t1,e_,d_)
 if(e2){
 var b3=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2246,19 +2254,19 @@ aZ.wxXCkey=3
 e2(b3,b3,aZ,gg)
 gg.f=cur_globalf
 }
-else _w(t1,x[22],2,18)
+else _w(t1,x[20],2,18)
 cs.pop()
 lY.pop()
 return r
 }
-e_[x[22]]={f:m12,j:[],i:[],ti:[x[23]],ic:[]}
-d_[x[24]]={}
-d_[x[24]]["6ea5fdc2"]=function(e,s,r,gg){
+e_[x[20]]={f:m12,j:[],i:[],ti:[x[21]],ic:[]}
+d_[x[22]]={}
+d_[x[22]]["6ea5fdc2"]=function(e,s,r,gg){
 var z=gz$gwx_14()
-var b=x[24]+':6ea5fdc2'
+var b=x[22]+':6ea5fdc2'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/main/main.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[24]);return}
+if(p_[b]){_wl(b,x[22]);return}
 p_[b]=true
 try{
 cs.push("./pages/main/main.vue.wxml:swiper:1:725")
@@ -2275,7 +2283,7 @@ var bO=_v()
 _(tM,bO)
 cs.push("./pages/main/main.vue.wxml:template:1:1089")
 var oP=_oz(z,19,aL,lK,gg)
-var xQ=_gd(x[24],oP,e_,d_)
+var xQ=_gd(x[22],oP,e_,d_)
 if(xQ){
 var oR=_1z(z,16,aL,lK,gg) || {}
 var cur_globalf=gg.f
@@ -2283,7 +2291,7 @@ bO.wxXCkey=3
 xQ(oR,oR,bO,gg)
 gg.f=cur_globalf
 }
-else _w(oP,x[24],1,1386)
+else _w(oP,x[22],1,1386)
 cs.pop()
 return tM
 }
@@ -2306,22 +2314,22 @@ return r
 }
 var m13=function(e,s,r,gg){
 var z=gz$gwx_14()
-var x5=e_[x[24]].i
-_ai(x5,x[3],e_,x[24],1,1)
+var x5=e_[x[22]].i
+_ai(x5,x[23],e_,x[22],1,1)
 x5.pop()
 return r
 }
-e_[x[24]]={f:m13,j:[],i:[],ti:[x[3]],ic:[]}
-d_[x[25]]={}
+e_[x[22]]={f:m13,j:[],i:[],ti:[x[23]],ic:[]}
+d_[x[24]]={}
 var m14=function(e,s,r,gg){
 var z=gz$gwx_15()
-var f7=e_[x[25]].i
-_ai(f7,x[26],e_,x[25],1,1)
+var f7=e_[x[24]].i
+_ai(f7,x[25],e_,x[24],1,1)
 var c8=_v()
 _(r,c8)
 cs.push("./pages/main/main.wxml:template:2:6")
 var h9=_oz(z,1,e,s,gg)
-var o0=_gd(x[25],h9,e_,d_)
+var o0=_gd(x[24],h9,e_,d_)
 if(o0){
 var cAB=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2329,39 +2337,43 @@ c8.wxXCkey=3
 o0(cAB,cAB,c8,gg)
 gg.f=cur_globalf
 }
-else _w(h9,x[25],2,18)
+else _w(h9,x[24],2,18)
 cs.pop()
 f7.pop()
 return r
 }
-e_[x[25]]={f:m14,j:[],i:[],ti:[x[26]],ic:[]}
-d_[x[27]]={}
-d_[x[27]]["4e64e5e0"]=function(e,s,r,gg){
+e_[x[24]]={f:m14,j:[],i:[],ti:[x[25]],ic:[]}
+d_[x[26]]={}
+d_[x[26]]["4e64e5e0"]=function(e,s,r,gg){
 var z=gz$gwx_16()
-var b=x[27]+':4e64e5e0'
+var b=x[26]+':4e64e5e0'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/msgcenter/msgcenter.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[27]);return}
+if(p_[b]){_wl(b,x[26]);return}
 p_[b]=true
 try{
 var oB=_v()
 _(r,oB)
 cs.push("./pages/msgcenter/msgcenter.vue.wxml:block:1:224")
 var xC=function(fE,oD,cF,gg){
-var oH=_v()
-_(cF,oH)
-cs.push("./pages/msgcenter/msgcenter.vue.wxml:template:1:638")
-var cI=_oz(z,6,fE,oD,gg)
-var oJ=_gd(x[27],cI,e_,d_)
-if(oJ){
-var lK=_1z(z,5,fE,oD,gg) || {}
+cs.push("./pages/msgcenter/msgcenter.vue.wxml:view:1:322")
+var oH=_mz(z,'view',['bindtap',5,'class',1,'data-comkey',2,'data-eventid',3,'hoverClass',4],[],fE,oD,gg)
+var cI=_v()
+_(oH,cI)
+cs.push("./pages/msgcenter/msgcenter.vue.wxml:template:1:720")
+var oJ=_oz(z,11,fE,oD,gg)
+var lK=_gd(x[26],oJ,e_,d_)
+if(lK){
+var aL=_1z(z,10,fE,oD,gg) || {}
 var cur_globalf=gg.f
-oH.wxXCkey=3
-oJ(lK,lK,oH,gg)
+cI.wxXCkey=3
+lK(aL,aL,cI,gg)
 gg.f=cur_globalf
 }
-else _w(cI,x[27],1,744)
+else _w(oJ,x[26],1,826)
 cs.pop()
+cs.pop()
+_(cF,oH)
 return cF
 }
 oB.wxXCkey=2
@@ -2376,22 +2388,22 @@ return r
 }
 var m15=function(e,s,r,gg){
 var z=gz$gwx_16()
-var lCB=e_[x[27]].i
-_ai(lCB,x[4],e_,x[27],1,1)
+var lCB=e_[x[26]].i
+_ai(lCB,x[3],e_,x[26],1,1)
 lCB.pop()
 return r
 }
-e_[x[27]]={f:m15,j:[],i:[],ti:[x[4]],ic:[]}
-d_[x[28]]={}
+e_[x[26]]={f:m15,j:[],i:[],ti:[x[3]],ic:[]}
+d_[x[27]]={}
 var m16=function(e,s,r,gg){
 var z=gz$gwx_17()
-var tEB=e_[x[28]].i
-_ai(tEB,x[29],e_,x[28],1,1)
+var tEB=e_[x[27]].i
+_ai(tEB,x[28],e_,x[27],1,1)
 var eFB=_v()
 _(r,eFB)
 cs.push("./pages/msgcenter/msgcenter.wxml:template:2:6")
 var bGB=_oz(z,1,e,s,gg)
-var oHB=_gd(x[28],bGB,e_,d_)
+var oHB=_gd(x[27],bGB,e_,d_)
 if(oHB){
 var xIB=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2399,19 +2411,19 @@ eFB.wxXCkey=3
 oHB(xIB,xIB,eFB,gg)
 gg.f=cur_globalf
 }
-else _w(bGB,x[28],2,18)
+else _w(bGB,x[27],2,18)
 cs.pop()
 tEB.pop()
 return r
 }
-e_[x[28]]={f:m16,j:[],i:[],ti:[x[29]],ic:[]}
-d_[x[30]]={}
-d_[x[30]]["27fa3ec2"]=function(e,s,r,gg){
+e_[x[27]]={f:m16,j:[],i:[],ti:[x[28]],ic:[]}
+d_[x[29]]={}
+d_[x[29]]["27fa3ec2"]=function(e,s,r,gg){
 var z=gz$gwx_18()
-var b=x[30]+':27fa3ec2'
+var b=x[29]+':27fa3ec2'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/pick/pick.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[30]);return}
+if(p_[b]){_wl(b,x[29]);return}
 p_[b]=true
 try{
 var oB=_v()
@@ -2424,7 +2436,7 @@ var cI=_v()
 _(oH,cI)
 cs.push("./pages/pick/pick.vue.wxml:template:1:864")
 var oJ=_oz(z,10,fE,oD,gg)
-var lK=_gd(x[30],oJ,e_,d_)
+var lK=_gd(x[29],oJ,e_,d_)
 if(lK){
 var aL=_1z(z,9,fE,oD,gg) || {}
 var cur_globalf=gg.f
@@ -2432,7 +2444,7 @@ cI.wxXCkey=3
 lK(aL,aL,cI,gg)
 gg.f=cur_globalf
 }
-else _w(oJ,x[30],1,964)
+else _w(oJ,x[29],1,964)
 cs.pop()
 cs.pop()
 _(cF,oH)
@@ -2450,22 +2462,22 @@ return r
 }
 var m17=function(e,s,r,gg){
 var z=gz$gwx_18()
-var fKB=e_[x[30]].i
-_ai(fKB,x[4],e_,x[30],1,1)
+var fKB=e_[x[29]].i
+_ai(fKB,x[3],e_,x[29],1,1)
 fKB.pop()
 return r
 }
-e_[x[30]]={f:m17,j:[],i:[],ti:[x[4]],ic:[]}
-d_[x[31]]={}
+e_[x[29]]={f:m17,j:[],i:[],ti:[x[3]],ic:[]}
+d_[x[30]]={}
 var m18=function(e,s,r,gg){
 var z=gz$gwx_19()
-var hMB=e_[x[31]].i
-_ai(hMB,x[32],e_,x[31],1,1)
+var hMB=e_[x[30]].i
+_ai(hMB,x[31],e_,x[30],1,1)
 var oNB=_v()
 _(r,oNB)
 cs.push("./pages/pick/pick.wxml:template:2:6")
 var cOB=_oz(z,1,e,s,gg)
-var oPB=_gd(x[31],cOB,e_,d_)
+var oPB=_gd(x[30],cOB,e_,d_)
 if(oPB){
 var lQB=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2473,19 +2485,19 @@ oNB.wxXCkey=3
 oPB(lQB,lQB,oNB,gg)
 gg.f=cur_globalf
 }
-else _w(cOB,x[31],2,18)
+else _w(cOB,x[30],2,18)
 cs.pop()
 hMB.pop()
 return r
 }
-e_[x[31]]={f:m18,j:[],i:[],ti:[x[32]],ic:[]}
-d_[x[33]]={}
-d_[x[33]]["1265a089"]=function(e,s,r,gg){
+e_[x[30]]={f:m18,j:[],i:[],ti:[x[31]],ic:[]}
+d_[x[32]]={}
+d_[x[32]]["1265a089"]=function(e,s,r,gg){
 var z=gz$gwx_20()
-var b=x[33]+':1265a089'
+var b=x[32]+':1265a089'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/pick/pickRY.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[33]);return}
+if(p_[b]){_wl(b,x[32]);return}
 p_[b]=true
 try{
 var oB=_v()
@@ -2507,7 +2519,7 @@ var tM=_v()
 _(aL,tM)
 cs.push("./pages/pick/pickRY.vue.wxml:template:1:522")
 var eN=_oz(z,14,fE,oD,gg)
-var bO=_gd(x[33],eN,e_,d_)
+var bO=_gd(x[32],eN,e_,d_)
 if(bO){
 var oP=_1z(z,13,fE,oD,gg) || {}
 var cur_globalf=gg.f
@@ -2515,7 +2527,7 @@ tM.wxXCkey=3
 bO(oP,oP,tM,gg)
 gg.f=cur_globalf
 }
-else _w(eN,x[33],1,654)
+else _w(eN,x[32],1,654)
 cs.pop()
 cs.pop()
 }
@@ -2525,7 +2537,7 @@ var xQ=_v()
 _(aL,xQ)
 cs.push("./pages/pick/pickRY.vue.wxml:template:1:677")
 var oR=_oz(z,18,fE,oD,gg)
-var fS=_gd(x[33],oR,e_,d_)
+var fS=_gd(x[32],oR,e_,d_)
 if(fS){
 var cT=_1z(z,17,fE,oD,gg) || {}
 var cur_globalf=gg.f
@@ -2533,7 +2545,7 @@ xQ.wxXCkey=3
 fS(cT,cT,xQ,gg)
 gg.f=cur_globalf
 }
-else _w(oR,x[33],1,790)
+else _w(oR,x[32],1,790)
 cs.pop()
 cs.pop()
 }
@@ -2565,22 +2577,22 @@ return r
 }
 var m19=function(e,s,r,gg){
 var z=gz$gwx_20()
-var tSB=e_[x[33]].i
-_ai(tSB,x[4],e_,x[33],1,1)
+var tSB=e_[x[32]].i
+_ai(tSB,x[3],e_,x[32],1,1)
 tSB.pop()
 return r
 }
-e_[x[33]]={f:m19,j:[],i:[],ti:[x[4]],ic:[]}
-d_[x[34]]={}
+e_[x[32]]={f:m19,j:[],i:[],ti:[x[3]],ic:[]}
+d_[x[33]]={}
 var m20=function(e,s,r,gg){
 var z=gz$gwx_21()
-var bUB=e_[x[34]].i
-_ai(bUB,x[35],e_,x[34],1,1)
+var bUB=e_[x[33]].i
+_ai(bUB,x[34],e_,x[33],1,1)
 var oVB=_v()
 _(r,oVB)
 cs.push("./pages/pick/pickRY.wxml:template:2:6")
 var xWB=_oz(z,1,e,s,gg)
-var oXB=_gd(x[34],xWB,e_,d_)
+var oXB=_gd(x[33],xWB,e_,d_)
 if(oXB){
 var fYB=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2588,26 +2600,26 @@ oVB.wxXCkey=3
 oXB(fYB,fYB,oVB,gg)
 gg.f=cur_globalf
 }
-else _w(xWB,x[34],2,18)
+else _w(xWB,x[33],2,18)
 cs.pop()
 bUB.pop()
 return r
 }
-e_[x[34]]={f:m20,j:[],i:[],ti:[x[35]],ic:[]}
-d_[x[36]]={}
-d_[x[36]]["5ce2c0c4"]=function(e,s,r,gg){
+e_[x[33]]={f:m20,j:[],i:[],ti:[x[34]],ic:[]}
+d_[x[35]]={}
+d_[x[35]]["5ce2c0c4"]=function(e,s,r,gg){
 var z=gz$gwx_22()
-var b=x[36]+':5ce2c0c4'
+var b=x[35]+':5ce2c0c4'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/pwd/pwd.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[36]);return}
+if(p_[b]){_wl(b,x[35]);return}
 p_[b]=true
 try{
 var oB=_v()
 _(r,oB)
 cs.push("./pages/pwd/pwd.vue.wxml:template:1:240")
 var xC=_oz(z,5,e,s,gg)
-var oD=_gd(x[36],xC,e_,d_)
+var oD=_gd(x[35],xC,e_,d_)
 if(oD){
 var fE=_1z(z,2,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2615,7 +2627,7 @@ oB.wxXCkey=3
 oD(fE,fE,oB,gg)
 gg.f=cur_globalf
 }
-else _w(xC,x[36],1,465)
+else _w(xC,x[35],1,465)
 cs.pop()
 }catch(err){
 p_[b]=false
@@ -2626,22 +2638,22 @@ return r
 }
 var m21=function(e,s,r,gg){
 var z=gz$gwx_22()
-var h1B=e_[x[36]].i
-_ai(h1B,x[5],e_,x[36],1,1)
+var h1B=e_[x[35]].i
+_ai(h1B,x[19],e_,x[35],1,1)
 h1B.pop()
 return r
 }
-e_[x[36]]={f:m21,j:[],i:[],ti:[x[5]],ic:[]}
-d_[x[37]]={}
+e_[x[35]]={f:m21,j:[],i:[],ti:[x[19]],ic:[]}
+d_[x[36]]={}
 var m22=function(e,s,r,gg){
 var z=gz$gwx_23()
-var c3B=e_[x[37]].i
-_ai(c3B,x[38],e_,x[37],1,1)
+var c3B=e_[x[36]].i
+_ai(c3B,x[37],e_,x[36],1,1)
 var o4B=_v()
 _(r,o4B)
 cs.push("./pages/pwd/pwd.wxml:template:2:6")
 var l5B=_oz(z,1,e,s,gg)
-var a6B=_gd(x[37],l5B,e_,d_)
+var a6B=_gd(x[36],l5B,e_,d_)
 if(a6B){
 var t7B=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2649,19 +2661,19 @@ o4B.wxXCkey=3
 a6B(t7B,t7B,o4B,gg)
 gg.f=cur_globalf
 }
-else _w(l5B,x[37],2,18)
+else _w(l5B,x[36],2,18)
 cs.pop()
 c3B.pop()
 return r
 }
-e_[x[37]]={f:m22,j:[],i:[],ti:[x[38]],ic:[]}
-d_[x[39]]={}
-d_[x[39]]["1cce26cc"]=function(e,s,r,gg){
+e_[x[36]]={f:m22,j:[],i:[],ti:[x[37]],ic:[]}
+d_[x[38]]={}
+d_[x[38]]["1cce26cc"]=function(e,s,r,gg){
 var z=gz$gwx_24()
-var b=x[39]+':1cce26cc'
+var b=x[38]+':1cce26cc'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/reg/reg.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[39]);return}
+if(p_[b]){_wl(b,x[38]);return}
 p_[b]=true
 try{
 cs.push("./pages/reg/reg.vue.wxml:view:1:109")
@@ -2671,7 +2683,7 @@ var xC=_v()
 _(oB,xC)
 cs.push("./pages/reg/reg.vue.wxml:template:1:247")
 var oD=_oz(z,6,e,s,gg)
-var fE=_gd(x[39],oD,e_,d_)
+var fE=_gd(x[38],oD,e_,d_)
 if(fE){
 var cF=_1z(z,3,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2679,13 +2691,13 @@ xC.wxXCkey=3
 fE(cF,cF,xC,gg)
 gg.f=cur_globalf
 }
-else _w(oD,x[39],1,474)
+else _w(oD,x[38],1,474)
 cs.pop()
 var hG=_v()
 _(oB,hG)
 cs.push("./pages/reg/reg.vue.wxml:template:1:601")
 var oH=_oz(z,14,e,s,gg)
-var cI=_gd(x[39],oH,e_,d_)
+var cI=_gd(x[38],oH,e_,d_)
 if(cI){
 var oJ=_1z(z,11,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2693,13 +2705,13 @@ hG.wxXCkey=3
 cI(oJ,oJ,hG,gg)
 gg.f=cur_globalf
 }
-else _w(oH,x[39],1,829)
+else _w(oH,x[38],1,829)
 cs.pop()
 var lK=_v()
 _(oB,lK)
 cs.push("./pages/reg/reg.vue.wxml:template:1:949")
 var aL=_oz(z,22,e,s,gg)
-var tM=_gd(x[39],aL,e_,d_)
+var tM=_gd(x[38],aL,e_,d_)
 if(tM){
 var eN=_1z(z,19,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2707,7 +2719,7 @@ lK.wxXCkey=3
 tM(eN,eN,lK,gg)
 gg.f=cur_globalf
 }
-else _w(aL,x[39],1,1168)
+else _w(aL,x[38],1,1168)
 cs.pop()
 cs.pop()
 _(r,oB)
@@ -2720,22 +2732,22 @@ return r
 }
 var m23=function(e,s,r,gg){
 var z=gz$gwx_24()
-var b9B=e_[x[39]].i
-_ai(b9B,x[5],e_,x[39],1,1)
+var b9B=e_[x[38]].i
+_ai(b9B,x[19],e_,x[38],1,1)
 b9B.pop()
 return r
 }
-e_[x[39]]={f:m23,j:[],i:[],ti:[x[5]],ic:[]}
-d_[x[40]]={}
+e_[x[38]]={f:m23,j:[],i:[],ti:[x[19]],ic:[]}
+d_[x[39]]={}
 var m24=function(e,s,r,gg){
 var z=gz$gwx_25()
-var xAC=e_[x[40]].i
-_ai(xAC,x[41],e_,x[40],1,1)
+var xAC=e_[x[39]].i
+_ai(xAC,x[40],e_,x[39],1,1)
 var oBC=_v()
 _(r,oBC)
 cs.push("./pages/reg/reg.wxml:template:2:6")
 var fCC=_oz(z,1,e,s,gg)
-var cDC=_gd(x[40],fCC,e_,d_)
+var cDC=_gd(x[39],fCC,e_,d_)
 if(cDC){
 var hEC=_1z(z,0,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2743,19 +2755,19 @@ oBC.wxXCkey=3
 cDC(hEC,hEC,oBC,gg)
 gg.f=cur_globalf
 }
-else _w(fCC,x[40],2,18)
+else _w(fCC,x[39],2,18)
 cs.pop()
 xAC.pop()
 return r
 }
-e_[x[40]]={f:m24,j:[],i:[],ti:[x[41]],ic:[]}
-d_[x[42]]={}
-d_[x[42]]["3e2ec3e2"]=function(e,s,r,gg){
+e_[x[39]]={f:m24,j:[],i:[],ti:[x[40]],ic:[]}
+d_[x[41]]={}
+d_[x[41]]["3e2ec3e2"]=function(e,s,r,gg){
 var z=gz$gwx_26()
-var b=x[42]+':3e2ec3e2'
+var b=x[41]+':3e2ec3e2'
 r.wxVkey=b
 gg.f=$gdc(f_["./pages/search/search.vue.wxml"],"",1)
-if(p_[b]){_wl(b,x[42]);return}
+if(p_[b]){_wl(b,x[41]);return}
 p_[b]=true
 try{
 cs.push("./pages/search/search.vue.wxml:view:1:98")
@@ -2765,7 +2777,7 @@ var xC=_v()
 _(oB,xC)
 cs.push("./pages/search/search.vue.wxml:template:1:135")
 var oD=_oz(z,6,e,s,gg)
-var fE=_gd(x[42],oD,e_,d_)
+var fE=_gd(x[41],oD,e_,d_)
 if(fE){
 var cF=_1z(z,3,e,s,gg) || {}
 var cur_globalf=gg.f
@@ -2773,7 +2785,7 @@ xC.wxXCkey=3
 fE(cF,cF,xC,gg)
 gg.f=cur_globalf
 }
-else _w(oD,x[42],1,284)
+else _w(oD,x[41],1,284)
 cs.pop()
 var hG=_v()
 _(oB,hG)
@@ -2811,12 +2823,12 @@ return r
 }
 var m25=function(e,s,r,gg){
 var z=gz$gwx_26()
-var cGC=e_[x[42]].i
-_ai(cGC,x[6],e_,x[42],1,1)
+var cGC=e_[x[41]].i
+_ai(cGC,x[42],e_,x[41],1,1)
 cGC.pop()
 return r
 }
-e_[x[42]]={f:m25,j:[],i:[],ti:[x[6]],ic:[]}
+e_[x[41]]={f:m25,j:[],i:[],ti:[x[42]],ic:[]}
 d_[x[43]]={}
 var m26=function(e,s,r,gg){
 var z=gz$gwx_27()
@@ -2873,11 +2885,11 @@ return r
 var m27=function(e,s,r,gg){
 var z=gz$gwx_28()
 var xOC=e_[x[45]].i
-_ai(xOC,x[6],e_,x[45],1,1)
+_ai(xOC,x[42],e_,x[45],1,1)
 xOC.pop()
 return r
 }
-e_[x[45]]={f:m27,j:[],i:[],ti:[x[6]],ic:[]}
+e_[x[45]]={f:m27,j:[],i:[],ti:[x[42]],ic:[]}
 d_[x[46]]={}
 var m28=function(e,s,r,gg){
 var z=gz$gwx_29()
@@ -2957,7 +2969,7 @@ try{
 var oB=_v()
 _(r,oB)
 if(_oz(z,1,e,s,gg)){oB.wxVkey=1
-cs.push("./pages/user/remsg.vue.wxml:view:1:637")
+cs.push("./pages/user/remsg.vue.wxml:view:1:719")
 cs.pop()
 }
 oB.wxXCkey=1
@@ -3120,11 +3132,11 @@ return r
 }
 e_[x[58]]={f:m36,j:[],i:[],ti:[x[59]],ic:[]}
 d_[x[60]]={}
-d_[x[60]]["60c9a275"]=function(e,s,r,gg){
+d_[x[60]]["5c5e8b16"]=function(e,s,r,gg){
 var z=gz$gwx_38()
-var b=x[60]+':60c9a275'
+var b=x[60]+':5c5e8b16'
 r.wxVkey=b
-gg.f=$gdc(f_["./pages/wfengine/downloadfile.vue.wxml"],"",1)
+gg.f=$gdc(f_["./pages/webview/webview.vue.wxml"],"",1)
 if(p_[b]){_wl(b,x[60]);return}
 p_[b]=true
 try{
@@ -3147,7 +3159,7 @@ var tQD=e_[x[61]].i
 _ai(tQD,x[62],e_,x[61],1,1)
 var eRD=_v()
 _(r,eRD)
-cs.push("./pages/wfengine/downloadfile.wxml:template:2:6")
+cs.push("./pages/webview/webview.wxml:template:2:6")
 var bSD=_oz(z,1,e,s,gg)
 var oTD=_gd(x[61],bSD,e_,d_)
 if(oTD){
@@ -3164,11 +3176,11 @@ return r
 }
 e_[x[61]]={f:m38,j:[],i:[],ti:[x[62]],ic:[]}
 d_[x[63]]={}
-d_[x[63]]["c34edd84"]=function(e,s,r,gg){
+d_[x[63]]["60c9a275"]=function(e,s,r,gg){
 var z=gz$gwx_40()
-var b=x[63]+':c34edd84'
+var b=x[63]+':60c9a275'
 r.wxVkey=b
-gg.f=$gdc(f_["./pages/wfengine/wftaskmain.vue.wxml"],"",1)
+gg.f=$gdc(f_["./pages/wfengine/downloadfile.vue.wxml"],"",1)
 if(p_[b]){_wl(b,x[63]);return}
 p_[b]=true
 try{
@@ -3191,7 +3203,7 @@ var cXD=e_[x[64]].i
 _ai(cXD,x[65],e_,x[64],1,1)
 var hYD=_v()
 _(r,hYD)
-cs.push("./pages/wfengine/wftaskmain.wxml:template:2:6")
+cs.push("./pages/wfengine/downloadfile.wxml:template:2:6")
 var oZD=_oz(z,1,e,s,gg)
 var c1D=_gd(x[64],oZD,e_,d_)
 if(c1D){
@@ -3207,6 +3219,50 @@ cXD.pop()
 return r
 }
 e_[x[64]]={f:m40,j:[],i:[],ti:[x[65]],ic:[]}
+d_[x[66]]={}
+d_[x[66]]["c34edd84"]=function(e,s,r,gg){
+var z=gz$gwx_42()
+var b=x[66]+':c34edd84'
+r.wxVkey=b
+gg.f=$gdc(f_["./pages/wfengine/wftaskmain.vue.wxml"],"",1)
+if(p_[b]){_wl(b,x[66]);return}
+p_[b]=true
+try{
+}catch(err){
+p_[b]=false
+throw err
+}
+p_[b]=false
+return r
+}
+var m41=function(e,s,r,gg){
+var z=gz$gwx_42()
+return r
+}
+e_[x[66]]={f:m41,j:[],i:[],ti:[],ic:[]}
+d_[x[67]]={}
+var m42=function(e,s,r,gg){
+var z=gz$gwx_43()
+var t5D=e_[x[67]].i
+_ai(t5D,x[68],e_,x[67],1,1)
+var e6D=_v()
+_(r,e6D)
+cs.push("./pages/wfengine/wftaskmain.wxml:template:2:6")
+var b7D=_oz(z,1,e,s,gg)
+var o8D=_gd(x[67],b7D,e_,d_)
+if(o8D){
+var x9D=_1z(z,0,e,s,gg) || {}
+var cur_globalf=gg.f
+e6D.wxXCkey=3
+o8D(x9D,x9D,e6D,gg)
+gg.f=cur_globalf
+}
+else _w(b7D,x[67],2,18)
+cs.pop()
+t5D.pop()
+return r
+}
+e_[x[67]]={f:m42,j:[],i:[],ti:[x[68]],ic:[]}
 if(path&&e_[path]){
 return function(env,dd,global){$gwxc=0;var root={"tag":"wx-page"};root.children=[]
 var main=e_[path].f
@@ -3738,7 +3794,7 @@ eval("\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages.json")
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _Global = _interopRequireDefault(__webpack_require__(/*! ./store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\n\n// 管理账号信息\nvar USERS_KEY = 'USERS_KEY';\nvar STATE_KEY = 'STATE_KEY';\n\nvar getUsers = function getUsers(callback) {\n  var ret = '';\n  console.log(uni.getStorageSync(USERS_KEY));\n  ret = uni.getStorageSync(USERS_KEY);\n  if (!ret) {\n    ret = JSON.stringify({\n      username: '',\n      userid: '' });\n\n  }\n  return JSON.parse(ret);\n};\n\nvar addUser = function addUser(userInfo) {\n  uni.setStorageSync(USERS_KEY, JSON.stringify(userInfo));\n};\n\n//登陆请求\nvar loginFromNet = function loginFromNet(username, password, callback) {\n  console.log(_Global.default.serviceUrl + 'User/Login');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/Login',\n    method: 'POST',\n    data: {\n      username: username,\n      password: password },\n\n    success: function success(res) {\n      console.log(res.data.userInfo);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        addUser(res.data.userInfo);\n        callback();\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\nvar getWorkFlowList = function getWorkFlowList(userid, type, callback) {\n  console.log(_Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList');\n  uni.request({\n    url: _Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList',\n    method: 'POST',\n    data: {\n      userid: userid,\n      type: type },\n\n    success: function success(res) {\n      uni.hideLoading();\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\nvar downLoadFileByWorkFlow = function downLoadFileByWorkFlow(fileid) {\n  console.log(_Global.default.serviceUrl + 'MobileWorkFlow/DownloadFile');\n  uni.request({\n    url: _Global.default.serviceUrl + 'MobileWorkFlow/DownloadFile',\n    method: 'POST',\n    data: {\n      fileid: fileid },\n\n    success: function success(res) {\n      uni.hideLoading();\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        //callback(res.data.filePath);\n        uni.downloadFile({\n          url: _Global.default.fileHost + res.data.filePath,\n          success: function success(res) {\n            // \t\t\t\t\t\tuni.showToast({\n            // \t\t\t\t\t\t\ttitle:'下载成功'\n            // \t\t\t\t\t\t})\n            console.log(res);\n            uni.showModal({\n              title: res.tempFilePath });\n\n          },\n          fail: function fail(res) {\n            uni.showToast({\n              title: '下载失败' });\n\n          } });\n\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\n//目录面板信息\nvar getContents = function getContents(callback) {\n  console.log(_Global.default.serviceUrl + 'User/MENU');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/MENU',\n    method: 'POST',\n    data: {},\n\n    success: function success(res) {\n      console.log(res.data.rs);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        uni.hideLoading();\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//信息中心通用卡片信息\nvar getMsgContent = function getMsgContent(callback) {\n  uni.showLoading();\n  console.log(_Global.default.serviceUrl + 'User/MsgContent');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/MsgContent',\n    method: 'POST',\n    data: {\n      GRIDID: 'Grid20181205093110',\n      USERID: 'admin' },\n\n    success: function success(res) {\n      console.log(res.data.rs);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        uni.hideLoading();\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录目录\nvar getTxl = function getTxl(userid, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/TXL',\n    method: 'POST',\n    data: {\n      userid: userid },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录人员目录\nvar getTxlRy = function getTxlRy(DEPARTMENTBH, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/TXLRY',\n    method: 'POST',\n    data: {\n      DEPARTMENTBH: DEPARTMENTBH },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录人员信息页\nvar getTxlRyMessage = function getTxlRyMessage(departmentid, userid, _type, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/RYMessage',\n    method: 'POST',\n    data: {\n      departmentid: departmentid,\n      userid: userid,\n      _type: _type },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//修改密码\nvar resMsg = function resMsg(userid, opsd, npsd, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/resMsg',\n    method: 'POST',\n    data: {\n      userid: userid,\n      opsd: opsd,\n      npsd: npsd },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};var _default =\n{\n  getUsers: getUsers,\n  addUser: addUser,\n  loginFromNet: loginFromNet,\n  getWorkFlowList: getWorkFlowList,\n  downLoadFileByWorkFlow: downLoadFileByWorkFlow,\n  getContents: getContents, //目录面板信息\n  getMsgContent: getMsgContent, //信息中心卡片信息\n  getTxlRy: getTxlRy, //通讯录人员目录\n  getTxl: getTxl, //通讯录目录\n  getTxlRyMessage: getTxlRyMessage //通讯录人员信息页\n};exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///service.js?279e");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;var _Global = _interopRequireDefault(__webpack_require__(/*! ./store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\n\n// 管理账号信息\nvar USERS_KEY = 'USERS_KEY';\nvar STATE_KEY = 'STATE_KEY';\n\nvar getUsers = function getUsers(callback) {\n  var ret = '';\n  console.log(uni.getStorageSync(USERS_KEY));\n  ret = uni.getStorageSync(USERS_KEY);\n  if (!ret) {\n    ret = JSON.stringify({\n      username: '',\n      userid: '' });\n\n  }\n  return JSON.parse(ret);\n};\n\nvar addUser = function addUser(userInfo) {\n  uni.setStorageSync(USERS_KEY, JSON.stringify(userInfo));\n};\n\n//登陆请求\nvar loginFromNet = function loginFromNet(username, password, callback) {\n  console.log(_Global.default.serviceUrl + 'User/Login');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/Login',\n    method: 'POST',\n    data: {\n      username: username,\n      password: password },\n\n    success: function success(res) {\n      console.log(res.data.userInfo);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        addUser(res.data.userInfo);\n        callback();\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\nvar getWorkFlowList = function getWorkFlowList(userid, type, callback) {\n  console.log(_Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList');\n  uni.request({\n    url: _Global.default.serviceUrl + 'MobileWorkFlow/GetWorkFlowList',\n    method: 'POST',\n    data: {\n      userid: userid,\n      type: type },\n\n    success: function success(res) {\n      uni.hideLoading();\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\nvar downLoadFileByWorkFlow = function downLoadFileByWorkFlow(fileid) {\n  console.log(_Global.default.serviceUrl + 'MobileWorkFlow/DownloadFile');\n  uni.request({\n    url: _Global.default.serviceUrl + 'MobileWorkFlow/DownloadFile',\n    method: 'POST',\n    data: {\n      fileid: fileid },\n\n    success: function success(res) {\n      uni.hideLoading();\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        //callback(res.data.filePath);\n        uni.downloadFile({\n          url: _Global.default.fileHost + res.data.filePath,\n          success: function success(res) {\n            // \t\t\t\t\t\tuni.showToast({\n            // \t\t\t\t\t\t\ttitle:'下载成功'\n            // \t\t\t\t\t\t})\n            console.log(res);\n            uni.showModal({\n              title: res.tempFilePath });\n\n          },\n          fail: function fail(res) {\n            uni.showToast({\n              title: '下载失败' });\n\n          } });\n\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n\n//目录面板信息\nvar getContents = function getContents(callback) {\n  uni.showLoading();\n  console.log(_Global.default.serviceUrl + 'User/MENU');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/MENU',\n    method: 'POST',\n    data: {},\n\n    success: function success(res) {\n      console.log(res.data.rs);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        uni.hideLoading();\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//信息中心通用卡片信息\nvar getMsgContent = function getMsgContent(GRIDID, USERID, callback) {\n  uni.showLoading();\n  console.log(_Global.default.serviceUrl + 'User/MsgContent');\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/MsgContent',\n    method: 'POST',\n    data: {\n      GRIDID: GRIDID, //'Grid20181205093110',\n      USERID: USERID //'admin'\n    },\n    success: function success(res) {\n      console.log(res.data.rs);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        uni.hideLoading();\n        callback(res.data);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录目录\nvar getTxl = function getTxl(userid, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/TXL',\n    method: 'POST',\n    data: {\n      userid: userid },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录人员目录\nvar getTxlRy = function getTxlRy(DEPARTMENTBH, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/TXLRY',\n    method: 'POST',\n    data: {\n      DEPARTMENTBH: DEPARTMENTBH },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//通讯录人员信息页\nvar getTxlRyMessage = function getTxlRyMessage(departmentid, userid, _type, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/RYMessage',\n    method: 'POST',\n    data: {\n      departmentid: departmentid,\n      userid: userid,\n      _type: _type },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};\n//修改密码\nvar resMsg = function resMsg(userid, opsd, npsd, callback) {\n  uni.showLoading();\n  uni.request({\n    url: _Global.default.serviceUrl + 'User/resMsg',\n    method: 'POST',\n    data: {\n      userid: userid,\n      opsd: opsd,\n      npsd: npsd },\n\n    success: function success(res) {\n      uni.hideLoading();\n      console.log(res);\n      if (res.data.code == _Global.default.ReturnCode.success) {\n        callback(res.data.rs);\n      } else {\n        uni.showToast({\n          icon: 'none',\n          title: res.data.msg });\n\n      }\n    },\n    fail: function fail() {\n      uni.hideLoading();\n    } });\n\n};var _default =\n{\n  getUsers: getUsers,\n  addUser: addUser,\n  loginFromNet: loginFromNet,\n  getWorkFlowList: getWorkFlowList,\n  downLoadFileByWorkFlow: downLoadFileByWorkFlow,\n  getContents: getContents, //目录面板信息\n  getMsgContent: getMsgContent, //信息中心卡片信息\n  getTxlRy: getTxlRy, //通讯录人员目录\n  getTxl: getTxl, //通讯录目录\n  getTxlRyMessage: getTxlRyMessage //通讯录人员信息页\n};exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///service.js?279e");
 
 /***/ }),
 
@@ -4083,7 +4139,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: {\n    Global: _Global.default, service: _service.default },\n\n  data: function data() {\n    return {\n      systeam: _Global.default.sysname,\n      list: [\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conZL.png',\"menuname\":'我的资料',pageurl:\"../user/user\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conRC.png',\"menuname\":'日程',pageurl:\"../scheduling/scheduling\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conZX.png',\"menuname\":'信息中心',pageurl:\"../msgcenter/msgcenter?BarTitle=待办箱\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conSP.png',\"menuname\":'审批',pageurl:\"../record/record\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conTX.png',\"menuname\":'提醒',pageurl:\"../tips/tips\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conGZ.png',\"menuname\":'工作',pageurl:\"../pick/pick\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conYJ.png',\"menuname\":'邮件',pageurl:\"../email/email\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conFJ.png',\"menuname\":'附件',pageurl:\"../file/file\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conQT.png',\"menuname\":'其他',pageurl:\"../other/other\"},\n      ] };\n\n  },\n  created: function created() {\n    var self = this;\n    var result = _service.default.getContents(function (res) {\n      self.list = res;\n      for (var i = 0; i < res.length; i++)\n      {\n        self.list[i].imageurl = _Global.default.serviceUrl + self.list[i].imageurl;\n      }\n      if (res.length % 3 == 2)\n      {\n        self.list.push({ \"imageurl\": '../../static/img/conQT.png', \"menuname\": '其他', pageurl: \"../other/other\", display: true });\n      }\n      console.log(self.list);\n    });\n  },\n  computed: {\n    //计算函数\n    listTemp: function listTemp() {//数据分组\n      var list = this.list;\n      var arrTemp = [];\n      var index = 0;\n      var sectionCount = 3; //一行显示多少个\n      for (var i = 0; i < list.length; i++) {\n        index = parseInt(i / sectionCount); //取余数\n        if (arrTemp.length <= index) {//每隔 sectionCount 个数据添加一行\n          arrTemp.push([]);\n        }\n        arrTemp[index].push(list[i]); //每行添加 sectionCount 个数据\n      }\n      return arrTemp;\n    } },\n\n  methods: {\n    getContents: function getContents() {//获取目录面板数据\n      var self = this;\n      uni.showLoading({\n        title: '正在获取' });\n\n      var result = _service.default.getContents(1, 1, function () {\n        // \t\t\t\t\tuni.showToast({\n        // \t\t\t\t\t\ticon: 'none',\n        // \t\t\t\t\t\ttitle: '登录成功'\n        // \t\t\t\t\t});\n      });\n    },\n    tabonclick: function tabonclick(_name, _path) {//点击跳转\n      console.log(_path);\n      var self = this;\n      if (_name == \"我的资料\")\n      {\n        uni.reLaunch({\n          url: '../user/user' });\n\n      } else {\n        uni.navigateTo({\n          url: _path });\n\n      }\n\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/contents/contents.vue?vue&type=script&lang=js&?f602");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: {\n    Global: _Global.default, service: _service.default },\n\n  data: function data() {\n    return {\n      systeam: _Global.default.sysname,\n      list: [\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conZL.png',\"menuname\":'我的资料',pageurl:\"../user/user\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conRC.png',\"menuname\":'日程',pageurl:\"../scheduling/scheduling\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conZX.png',\"menuname\":'信息中心',pageurl:\"../msgcenter/msgcenter?BarTitle=待办箱\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conSP.png',\"menuname\":'审批',pageurl:\"../record/record\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conTX.png',\"menuname\":'提醒',pageurl:\"../tips/tips\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conGZ.png',\"menuname\":'工作',pageurl:\"../pick/pick\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conYJ.png',\"menuname\":'邮件',pageurl:\"../email/email\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conFJ.png',\"menuname\":'附件',pageurl:\"../file/file\"},\n        // \t\t\t\t\t{\"imageurl\":'../../static/img/conQT.png',\"menuname\":'其他',pageurl:\"../other/other\"},\n      ] };\n\n  },\n  created: function created() {\n    var self = this;\n    var result = _service.default.getContents(function (res) {\n      self.list = res;\n      for (var i = 0; i < res.length; i++)\n      {\n        self.list[i].imageurl = _Global.default.serviceUrl + self.list[i].imageurl;\n      }\n      if (res.length % 3 == 2)\n      {\n        self.list.push({ \"imageurl\": '../../static/img/conQT.png', \"menuname\": '其他', pageurl: \"../other/other\", display: true });\n      }\n      uni.stopPullDownRefresh();\n      console.log(self.list);\n\n    });\n  },\n  computed: {\n    //计算函数\n    listTemp: function listTemp() {//数据分组\n      var list = this.list;\n      var arrTemp = [];\n      var index = 0;\n      var sectionCount = 3; //一行显示多少个\n      for (var i = 0; i < list.length; i++) {\n        index = parseInt(i / sectionCount); //取余数\n        if (arrTemp.length <= index) {//每隔 sectionCount 个数据添加一行\n          arrTemp.push([]);\n        }\n        arrTemp[index].push(list[i]); //每行添加 sectionCount 个数据\n      }\n      return arrTemp;\n    } },\n\n  methods: {\n    upper: function upper() {\n      console.log('refresh');\n      var self = this;\n      var result = _service.default.getContents(function (res) {\n        self.list = res;\n        for (var i = 0; i < res.length; i++)\n        {\n          self.list[i].imageurl = _Global.default.serviceUrl + self.list[i].imageurl;\n        }\n        if (res.length % 3 == 2)\n        {\n          self.list.push({ \"imageurl\": '../../static/img/conQT.png', \"menuname\": '其他', pageurl: \"../other/other\", display: true });\n        }\n        uni.stopPullDownRefresh();\n      });\n    },\n    tabonclick: function tabonclick(_name, _path) {//点击跳转\n      console.log(_path);\n      var self = this;\n      if (_name == \"我的资料\")\n      {\n        uni.reLaunch({\n          url: '../user/user' });\n\n      } else {\n        if (_path.indexOf('http') >= 0)\n        {\n          uni.navigateTo({\n            url: '../webview/webview?url=' + _path });\n\n        } else\n        {\n          uni.navigateTo({\n            url: _path });\n\n        }\n      }\n\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/contents/contents.vue?vue&type=script&lang=js&?f602");
 
 /***/ }),
 
@@ -4106,7 +4162,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=D:/Users/sxs/Docu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\"view\", { staticClass: \"content\" }, [\n    _c(\"view\", { staticClass: \"HeadTitle\" }, [\n      _c(\"view\", { staticClass: \"LogoView\" }, [\n        _c(\"image\", {\n          staticClass: \"LOGO\",\n          attrs: { src: \"../../static/img/loginLOGO.png\" }\n        }),\n        _c(\"view\", [_c(\"text\", [_vm._v(_vm._s(_vm.systeam))])])\n      ])\n    ]),\n    _c(\n      \"view\",\n      { staticClass: \"HeadContente\" },\n      _vm._l(_vm.listTemp, function(row, i) {\n        return _c(\n          \"view\",\n          { key: row.id, staticClass: \"v_row\" },\n          _vm._l(row, function(cell, key, j) {\n            return _c(\n              \"view\",\n              {\n                key: cell.id,\n                staticClass: \"v_row_block\",\n                class: { v_display: cell.display },\n                attrs: { id: j }\n              },\n              [\n                _c(\n                  \"view\",\n                  {\n                    staticClass: \"v_col\",\n                    attrs: { eventid: \"f8e5c63c-0-\" + i + \"-\" + key },\n                    on: {\n                      click: function($event) {\n                        _vm.tabonclick(cell.menuname, cell.pageurl)\n                      }\n                    }\n                  },\n                  [\n                    _c(\"view\", { staticClass: \"v_row_v_img\" }, [\n                      _c(\"img\", { attrs: { src: cell.imageurl } })\n                    ]),\n                    _c(\"view\", [_vm._v(_vm._s(cell.menuname))])\n                  ]\n                )\n              ]\n            )\n          })\n        )\n      })\n    )\n  ])\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/contents/contents.vue?vue&type=template&id=728ed266&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\" },\n    [\n      _c(\"view\", { staticClass: \"HeadTitle\" }, [\n        _c(\"view\", { staticClass: \"LogoView\" }, [\n          _c(\"image\", {\n            staticClass: \"LOGO\",\n            attrs: { src: \"../../static/img/loginLOGO.png\" }\n          }),\n          _c(\"view\", [_c(\"text\", [_vm._v(_vm._s(_vm.systeam))])])\n        ])\n      ]),\n      _c(\n        \"scroll-view\",\n        {\n          staticClass: \"HeadContente\",\n          attrs: { \"scroll-y\": \"true\", eventid: \"f8e5c63c-1\" },\n          on: { scrolltoupper: _vm.upper }\n        },\n        _vm._l(_vm.listTemp, function(row, i) {\n          return _c(\n            \"view\",\n            { key: row.id, staticClass: \"v_row\" },\n            _vm._l(row, function(cell, key, j) {\n              return _c(\n                \"view\",\n                {\n                  key: cell.id,\n                  staticClass: \"v_row_block\",\n                  class: { v_display: cell.display },\n                  attrs: { id: j }\n                },\n                [\n                  _c(\n                    \"view\",\n                    {\n                      staticClass: \"v_col\",\n                      attrs: { eventid: \"f8e5c63c-0-\" + i + \"-\" + key },\n                      on: {\n                        click: function($event) {\n                          _vm.tabonclick(cell.menuname, cell.pageurl)\n                        }\n                      }\n                    },\n                    [\n                      _c(\"view\", { staticClass: \"v_row_v_img\" }, [\n                        _c(\"img\", { attrs: { src: cell.imageurl } })\n                      ]),\n                      _c(\"view\", [_vm._v(_vm._s(cell.menuname))])\n                    ]\n                  )\n                ]\n              )\n            })\n          )\n        })\n      )\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/contents/contents.vue?vue&type=template&id=728ed266&");
 
 /***/ })
 
@@ -4319,6 +4375,86 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) *
 },[["../../../../Users/sxs/Documents/HBuilderProjects/Fss/main.js?{\"page\":\"pages%2Fpick%2FpickRY\"}","common/runtime","common/vendor"]]]);
 });
 require('pages/pick/pickRY.js');
+__wxRoute = 'pages/webview/webview';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/webview/webview.js';
+
+define('pages/webview/webview.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
+(global["webpackJsonp"] = global["webpackJsonp"] || []).push([["pages/webview/webview"],{
+
+/***/ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/main.js?{\"page\":\"pages%2Fwebview%2Fwebview\"}":
+/*!************************************************************************************************!*\
+  !*** D:/Users/sxs/Documents/HBuilderProjects/Fss/main.js?{"page":"pages%2Fwebview%2Fwebview"} ***!
+  \************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__(/*! uni-pages */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages.json\");\nvar _mpvuePageFactory = _interopRequireDefault(__webpack_require__(/*! mpvue-page-factory */ \"./node_modules/@dcloudio/vue-cli-plugin-uni/packages/mpvue-page-factory/index.js\"));\nvar _webview = _interopRequireDefault(__webpack_require__(/*! ./pages/webview/webview.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}\nPage((0, _mpvuePageFactory.default)(_webview.default));\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/main.js?%7B%22page%22:%22pages%252Fwebview%252Fwebview%22%7D");
+
+/***/ }),
+
+/***/ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue":
+/*!*****************************************************************************!*\
+  !*** D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue ***!
+  \*****************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./webview.vue?vue&type=template&id=4aa3dccc& */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&\");\n/* harmony import */ var _webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./webview.vue?vue&type=script&lang=js& */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js&\");\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n/* harmony import */ var _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/runtime/componentNormalizer.js */ \"./node_modules/vue-loader/lib/runtime/componentNormalizer.js\");\n\n\n\n\n\n/* normalize component */\n\nvar component = Object(_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_runtime_componentNormalizer_js__WEBPACK_IMPORTED_MODULE_2__[\"default\"])(\n  _webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_1__[\"default\"],\n  _webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__[\"render\"],\n  _webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"],\n  false,\n  null,\n  null,\n  null\n  \n)\n\n/* hot reload */\nif (false) { var api; }\ncomponent.options.__file = \"Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue\"\n/* harmony default export */ __webpack_exports__[\"default\"] = (component.exports);\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue");
+
+/***/ }),
+
+/***/ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js&":
+/*!******************************************************************************************************!*\
+  !*** D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js& ***!
+  \******************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/babel-loader/lib!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./webview.vue?vue&type=script&lang=js& */ \"./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js&\");\n/* harmony import */ var _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__);\n/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));\n /* harmony default export */ __webpack_exports__[\"default\"] = (_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_babel_loader_lib_index_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_12_1_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_18_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_script_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_script_lang_js___WEBPACK_IMPORTED_MODULE_0___default.a); \n\n//# sourceURL=uni-app:///pages/webview/webview.vue?vue&type=script&lang=js&?8b2e");
+
+/***/ }),
+
+/***/ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&":
+/*!************************************************************************************************************!*\
+  !*** D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc& ***!
+  \************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! -!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!../../../../../../../HBuilderX.1.5.4.20190127.full/HBuilderX/plugins/uniapp-cli/node_modules/vue-loader/lib??vue-loader-options!./webview.vue?vue&type=template&id=4aa3dccc& */ \"./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&\");\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__[\"render\"]; });\n\n/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return _HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_loaders_templateLoader_js_vue_loader_options_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_vue_cli_plugin_uni_packages_webpack_preprocess_loader_index_js_ref_17_0_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_dcloudio_webpack_uni_mp_loader_lib_template_js_HBuilderX_1_5_4_20190127_full_HBuilderX_plugins_uniapp_cli_node_modules_vue_loader_lib_index_js_vue_loader_options_webview_vue_vue_type_template_id_4aa3dccc___WEBPACK_IMPORTED_MODULE_0__[\"staticRenderFns\"]; });\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&");
+
+/***/ }),
+
+/***/ "./node_modules/babel-loader/lib/index.js!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib/index.js?!../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js&":
+/*!*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/babel-loader/lib!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--12-1!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--18-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/script.js!./node_modules/vue-loader/lib??vue-loader-options!D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=script&lang=js& ***!
+  \*****************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: { Global: _Global.default, service: _service.default },\n  data: function data() {\n    return {\n      thisurl: 'list-triplex-row' };\n\n  },\n  onLoad: function onLoad(option) {\n    var self = this;\n    this.thisurl = option.url;\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/webview/webview.vue?vue&type=script&lang=js&?c528");
+
+/***/ }),
+
+/***/ "./node_modules/vue-loader/lib/loaders/templateLoader.js?!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader/index.js?!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib/index.js?!../../../../Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&":
+/*!***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************!*\
+  !*** ./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/@dcloudio/vue-cli-plugin-uni/packages/webpack-preprocess-loader??ref--17-0!./node_modules/@dcloudio/webpack-uni-mp-loader/lib/template.js!./node_modules/vue-loader/lib??vue-loader-options!D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc& ***!
+  \***************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************************/
+/*! exports provided: render, staticRenderFns */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    [_c(\"web-view\", { attrs: { src: _vm.thisurl, mpcomid: \"5c5e8b16-0\" } })],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/webview/webview.vue?vue&type=template&id=4aa3dccc&");
+
+/***/ })
+
+},[["../../../../Users/sxs/Documents/HBuilderProjects/Fss/main.js?{\"page\":\"pages%2Fwebview%2Fwebview\"}","common/runtime","common/vendor"]]]);
+});
+require('pages/webview/webview.js');
 __wxRoute = 'pages/main/main';__wxRouteBegin = true;__wxAppCurrentFile__ = 'pages/main/main.js';
 
 define('pages/main/main.js',function(require, module, exports, window, document, frames, self, location, navigator, localStorage, history, Caches, screen, alert, confirm, prompt, fetch, XMLHttpRequest, WebSocket, webkit, WeixinJSCore, Reporter, print, WeixinJSBridge){
@@ -4392,7 +4528,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _vuex = __webpack_require__(/*! vuex */ \"./node_modules/vuex/dist/vuex.esm.js\");\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _uniCard = _interopRequireDefault(__webpack_require__(/*! ../../components/uni-card/uni-card.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n\n{\n  components: {\n    uniCard: _uniCard.default },\n\n  data: function data() {\n    return {\n      tabIndex: 0,\n      tabBars: [{\n        name: '待办箱',\n        id: '1' },\n\n      {\n        name: '已办箱',\n        id: '2' },\n\n      {\n        name: '办结箱',\n        id: '3' }],\n\n\n      tabItems: [\n      [],\n      [],\n      []],\n\n      userInfo: {} };\n\n  },\n  computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']),\n  onLoad: function onLoad() {\n    var self = this;\n    this.userInfo = _service.default.getUsers(function () {\n    });\n    _Global.default.checkLogin(self.userInfo, self.forcedLogin, function () {\n      self.getData(0);\n    });\n\n\n  },\n  methods: {\n    tapTab: function tapTab(index) {\n      this.tabIndex = index;\n      this.getData(index);\n    },\n    changeTab: function changeTab(event) {\n      this.tabIndex = event.detail.current;\n      this.getData(this.tabIndex);\n    },\n    getData: function getData(type) {\n      uni.showLoading({\n        title: '正在加载数据' });\n\n      var self = this;\n      _service.default.getWorkFlowList(self.userInfo.userid, type, function (res) {\n        self.tabItems[type] = res;\n        console.log(self.tabItems);\n        //swiper组件的bug，要切换一下页面才能渲染到数据\n        self.tabIndex = type + 1;\n        self.tabIndex = type;\n        console.log(self.tabIndex);\n      });\n    },\n    ToDetail: function ToDetail(insid) {\n      uni.navigateTo({\n        //url:\"../wfengine/wftaskmain?insid=\"+insid,\n        url: \"../pick/pickRY?insid=\" + insid });\n\n    },\n    tabS: function tabS(insid) {\n      uni.navigateTo({\n        url: \"../search/search\" });\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/main/main.vue?vue&type=script&lang=js&?4668");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _vuex = __webpack_require__(/*! vuex */ \"./node_modules/vuex/dist/vuex.esm.js\");\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _uniCard = _interopRequireDefault(__webpack_require__(/*! ../../components/uni-card/uni-card.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n\n{\n  components: {\n    uniCard: _uniCard.default },\n\n  data: function data() {\n    return {\n      tabIndex: 0,\n      tabBars: [{\n        name: '待办箱',\n        id: '1' },\n\n      {\n        name: '已办箱',\n        id: '2' },\n\n      {\n        name: '办结箱',\n        id: '3' }],\n\n\n      tabItems: [\n      [],\n      [],\n      []],\n\n      userInfo: {} };\n\n  },\n  computed: (0, _vuex.mapState)(['forcedLogin', 'hasLogin', 'userName']),\n  onLoad: function onLoad() {\n    var self = this;\n    this.userInfo = _service.default.getUsers(function () {\n    });\n    _Global.default.checkLogin(self.userInfo, self.forcedLogin, function () {\n      self.getData(0);\n    });\n\n\n  },\n  methods: {\n    tapTab: function tapTab(index) {\n      this.tabIndex = index;\n      this.getData(index);\n    },\n    changeTab: function changeTab(event) {\n      this.tabIndex = event.detail.current;\n      this.getData(this.tabIndex);\n    },\n    getData: function getData(type) {\n      uni.showLoading({\n        title: '正在加载数据' });\n\n      var self = this;\n      _service.default.getWorkFlowList(self.userInfo.userid, type, function (res) {\n        self.tabItems[type] = res;\n        console.log(self.tabItems);\n        //swiper组件的bug，要切换一下页面才能渲染到数据\n        self.tabIndex = type + 1;\n        self.tabIndex = type;\n        console.log(self.tabIndex);\n      });\n    },\n    ToDetail: function ToDetail(insid) {\n      uni.navigateTo({\n        url: \"../wfengine/wftaskmain?insid=\" + insid\n        //url:\"../pick/pickRY?insid=\"+insid\n      });\n    },\n    tabS: function tabS(insid) {\n      uni.navigateTo({\n        url: \"../search/search\" });\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/main/main.vue?vue&type=script&lang=js&?4668");
 
 /***/ }),
 
@@ -5110,7 +5246,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n//import uniSegmentedControl from \"@/components/uni-segmented-control/uni-segmented-control.vue\"\nvar _default = {\n  // \t\tcomponents: {\n  // \t\t\tuniSegmentedControl\n  // \t\t},\n  data: function data() {\n    return {\n      items: ['表单', '流程', '附件'],\n      current: 0,\n      insid: '',\n      caseid: '',\n      formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain' };\n\n  },\n  methods: {\n    handleMessage: function handleMessage(evt) {\n      //console.log( JSON.stringify(evt.detail.data));\n      //var fileid=evt.detail.data[0].action;\n\n    } } };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/wfengine/wftaskmain.vue?vue&type=script&lang=js&?a03c");
+eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n//import uniSegmentedControl from \"@/components/uni-segmented-control/uni-segmented-control.vue\"\nvar _default = {\n  // \t\tcomponents: {\n  // \t\t\tuniSegmentedControl\n  // \t\t},\n  onLoad: function onLoad(option) {\n    this.formsrc += option.insid;\n  },\n  data: function data() {\n    return {\n      items: ['表单', '流程', '附件'],\n      current: 0,\n      insid: '',\n      caseid: '',\n      formsrc: 'http://172.16.5.94/FSSGMIS_Mobile_alpha/MobileWorkFlow/WFTaskMain?InsId=' };\n\n  },\n  methods: {} };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/wfengine/wftaskmain.vue?vue&type=script&lang=js&?a03c");
 
 /***/ }),
 
@@ -5133,7 +5269,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=D:/Users/sxs/Docu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\" },\n    [\n      _c(\"web-view\", {\n        attrs: {\n          src: _vm.formsrc,\n          eventid: \"c34edd84-0\",\n          mpcomid: \"c34edd84-0\"\n        },\n        on: { message: _vm.handleMessage }\n      }),\n      _vm._v(\"-->\")\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/wfengine/wftaskmain.vue?vue&type=template&id=c2e1247c&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\" },\n    [_c(\"web-view\", { attrs: { src: _vm.formsrc, mpcomid: \"c34edd84-0\" } })],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/wfengine/wftaskmain.vue?vue&type=template&id=c2e1247c&");
 
 /***/ })
 
@@ -5396,7 +5532,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: { Global: _Global.default, service: _service.default },\n  data: function data() {\n    return {\n      read: 0,\n      res: '',\n      list: [],\n      list_by: [{ 'name': '姓名', 'text': '陈姗姗' },\n      { 'name': '单位', 'text': '佛山市测绘地理信息研究院' },\n      { 'name': '电话', 'text': '0757-66861234' },\n      { 'name': '手机', 'text': '13768971234' },\n      { 'name': '邮箱', 'text': '123456789@163.com' }],\n\n      avatarUrl: _Global.default.avatarUrl };\n\n  },\n  onLoad: function onLoad(option) {//option为object类型，会序列化上个页面传递的参数\n    var self = this;\n    console.log(\"打印出上个页面传递的参数\"); //打印出上个页面传递的参数。\n    console.log(option);\n    this.read = option.read;\n    //根据传过来的部门ID和用户ID查询个人信息\n    var result = _service.default.getTxlRyMessage(option.departmentid, option.userid, 0, function (res) {\n      console.log(res[0]);\n      if (res[0] == \"\" || res[0] == undefined)\n      {\n        self.list.push({ 'name': '姓名', 'text': \"\" });\n        self.list.push({ 'name': '单位', 'text': \"\" });\n        self.list.push({ 'name': '电话', 'text': \"\" });\n        self.list.push({ 'name': '邮箱', 'text': \"\" });\n\n      } else\n      {\n        var list = res[0];\n        self.list.push({ 'name': '姓名', 'text': list.USERNAME });\n        self.list.push({ 'name': '单位', 'text': list.DEPTUSERBH });\n        self.list.push({ 'name': '电话', 'text': list.PHONE });\n        self.list.push({ 'name': '邮箱', 'text': list.EMAIL });\n      }\n\n    });\n  },\n  methods: {\n    onKeyInputO: function onKeyInputO(event) {\n      this.opwd = event.target.value;\n    },\n    onKeyInputN: function onKeyInputN(event) {\n      this.npwd = event.target.value;\n    },\n    onKeyInputNA: function onKeyInputNA(event) {\n      this.napwd = event.target.value;\n    },\n    submitPwd: function submitPwd() {\n\n    } } };exports.default = _default;\n\n//# sourceURL=uni-app:///pages/user/remsg.vue?vue&type=script&lang=js&?c9fd");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: { Global: _Global.default, service: _service.default },\n  data: function data() {\n    return {\n      read: 0,\n      res: '',\n      list: [],\n      list_by: [{ 'name': '姓名', 'text': '陈姗姗' },\n      { 'name': '单位', 'text': '佛山市测绘地理信息研究院' },\n      { 'name': '电话', 'text': '0757-66861234' },\n      { 'name': '手机', 'text': '13768971234' },\n      { 'name': '邮箱', 'text': '123456789@163.com' }],\n\n      avatarUrl: _Global.default.avatarUrl };\n\n  },\n  onLoad: function onLoad(option) {//option为object类型，会序列化上个页面传递的参数\n    var self = this;\n    console.log(\"打印出上个页面传递的参数\"); //打印出上个页面传递的参数。\n    console.log(option);\n    this.read = option.read;\n    //根据传过来的部门ID和用户ID查询个人信息\n    var result = _service.default.getTxlRyMessage(option.departmentid, option.userid, 0, function (res) {\n      console.log(res[0]);\n      if (res[0] == \"\" || res[0] == undefined)\n      {\n        self.list.push({ 'name': '姓名', 'text': \"\" });\n        self.list.push({ 'name': '单位', 'text': \"\" });\n        self.list.push({ 'name': '电话', 'text': \"\" });\n        self.list.push({ 'name': '手机号码', 'text': \"\" });\n        self.list.push({ 'name': '邮箱', 'text': \"\" });\n\n      } else\n      {\n        var list = res[0];\n        self.list.push({ 'name': '姓名', 'text': list.USERNAME });\n        self.list.push({ 'name': '单位', 'text': list.DEPTUSERBH });\n        self.list.push({ 'name': '电话', 'text': list.PHONE });\n        self.list.push({ 'name': '手机号码', 'text': list.MPHONE });\n        self.list.push({ 'name': '邮箱', 'text': list.EMAIL });\n      }\n\n    });\n  },\n  methods: {\n    onPhone: function onPhone(name, Phone)\n    {\n      if (name == '手机号码' || name == '电话')\n      {\n        uni.showActionSheet({\n          itemList: ['拨打电话', '拨打手机号码'],\n          success: function success(res) {\n            if (res.tapIndex == 0)\n            {\n              uni.makePhoneCall({\n                phoneNumber: Phone });\n\n            }\n          },\n          fail: function fail(res) {\n            console.log(res.errMsg);\n          } });\n\n      }\n    },\n    onKeyInputO: function onKeyInputO(event) {\n      this.opwd = event.target.value;\n    },\n    onKeyInputN: function onKeyInputN(event) {\n      this.npwd = event.target.value;\n    },\n    onKeyInputNA: function onKeyInputNA(event) {\n      this.napwd = event.target.value;\n    },\n    submitPwd: function submitPwd() {\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/user/remsg.vue?vue&type=script&lang=js&?c9fd");
 
 /***/ }),
 
@@ -5419,7 +5555,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=D:/Users/sxs/Docu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\" },\n    [\n      _c(\"view\", { staticClass: \"HeadTitle\" }, [\n        _c(\"view\", { staticClass: \"LogoView\" }, [\n          _c(\"image\", {\n            staticClass: \"LOGO\",\n            attrs: { src: _vm.login ? _vm.avatarUrl : _vm.avatarUrl }\n          })\n        ])\n      ]),\n      _vm._l(_vm.list, function(item, index) {\n        return _c(\n          \"view\",\n          { key: item.name, staticClass: \"uni-form-item uni-column v_view\" },\n          [\n            _c(\"view\", { staticClass: \"title\" }, [_vm._v(_vm._s(item.name))]),\n            _c(\"text\", {}, [_vm._v(\"|\")]),\n            _vm.read != 1\n              ? _c(\"input\", {\n                  staticClass: \"text\",\n                  attrs: { value: item.text }\n                })\n              : _c(\"view\", { staticClass: \"text\" }, [_vm._v(_vm._s(item.text))])\n          ]\n        )\n      }),\n      _vm.read != 1\n        ? _c(\n            \"view\",\n            { staticClass: \"btn-row\" },\n            [\n              _c(\n                \"button\",\n                {\n                  staticClass: \"primary\",\n                  attrs: { type: \"primary\", eventid: \"acdcbbd2-0\" },\n                  on: { tap: _vm.submitPwd }\n                },\n                [_vm._v(\"保存\")]\n              )\n            ],\n            1\n          )\n        : _vm._e()\n    ],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/user/remsg.vue?vue&type=template&id=508f027a&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"content\" },\n    [\n      _c(\"view\", { staticClass: \"HeadTitle\" }, [\n        _c(\"view\", { staticClass: \"LogoView\" }, [\n          _c(\"image\", {\n            staticClass: \"LOGO\",\n            attrs: { src: _vm.login ? _vm.avatarUrl : _vm.avatarUrl }\n          })\n        ])\n      ]),\n      _vm._l(_vm.list, function(item, index) {\n        return _c(\n          \"view\",\n          { key: item.name, staticClass: \"uni-form-item uni-column v_view\" },\n          [\n            _c(\"view\", { staticClass: \"title\" }, [_vm._v(_vm._s(item.name))]),\n            _c(\"text\", {}, [_vm._v(\"|\")]),\n            _vm.read != 1\n              ? _c(\"input\", {\n                  staticClass: \"text\",\n                  attrs: { value: item.text }\n                })\n              : _c(\n                  \"view\",\n                  {\n                    staticClass: \"text\",\n                    attrs: { eventid: \"acdcbbd2-0-\" + index },\n                    on: {\n                      click: function($event) {\n                        _vm.onPhone(item.name, item.text)\n                      }\n                    }\n                  },\n                  [_vm._v(_vm._s(item.text))]\n                )\n          ]\n        )\n      }),\n      _vm.read != 1\n        ? _c(\n            \"view\",\n            { staticClass: \"btn-row\" },\n            [\n              _c(\n                \"button\",\n                {\n                  staticClass: \"primary\",\n                  attrs: { type: \"primary\", eventid: \"acdcbbd2-1\" },\n                  on: { tap: _vm.submitPwd }\n                },\n                [_vm._v(\"保存\")]\n              )\n            ],\n            1\n          )\n        : _vm._e()\n    ],\n    2\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/user/remsg.vue?vue&type=template&id=508f027a&");
 
 /***/ })
 
@@ -5705,7 +5841,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var _HBu
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue\"));\nvar _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue\"));\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: { uniCard: _uniCard.default, uniIcon: _uniIcon.default, Global: _Global.default, service: _service.default },\n  data: function data() {\n    return {\n      title: 'list-triplex-row',\n      lists: [\n        // \t\t\t\t\t{title:'1',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},\n        // \t\t\t\t\t{title:'2',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},\n        // \t\t\t\t\t{title:'3',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]}\n      ] };\n\n  },\n  onLoad: function onLoad(option) {\n    var self = this;\n    console.log(option);\n    uni.setNavigationBarTitle({\n      title: option.BarTitle });\n\n    var result = _service.default.getMsgContent(function (res) {\n      console.log(res);\n      self.lists = res;\n    });\n  } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/msgcenter/msgcenter.vue?vue&type=script&lang=js&?0c01");
+eval("/* WEBPACK VAR INJECTION */(function(uni) {Object.defineProperty(exports, \"__esModule\", { value: true });exports.default = void 0;\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nvar _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue\"));\nvar _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue\"));\nvar _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js\"));\nvar _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js */ \"../../../../Users/sxs/Documents/HBuilderProjects/Fss/service.js\"));function _interopRequireDefault(obj) {return obj && obj.__esModule ? obj : { default: obj };}var _default =\n{\n  components: { uniCard: _uniCard.default, uniIcon: _uniIcon.default, Global: _Global.default, service: _service.default },\n  data: function data() {\n    return {\n      title: 'list-triplex-row',\n      lists: [\n        // \t\t\t\t\t{title:'1',\n        //\t\t\t\t\t gotourl:'',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},\n        // \t\t\t\t\t{title:'2',\n        //\t\t\t\t\t gotourl:'',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},\n        // \t\t\t\t\t{title:'3',\n        //\t\t\t\t\t gotourl:'',\n        // \t\t\t\t\titems:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]}\n      ] };\n\n  },\n  onLoad: function onLoad(option) {\n    var self = this;\n    console.log(option);\n    var userInfo = _service.default.getUsers();\n    var USERID = userInfo.userid;\n    console.log(userInfo);\n    var result = _service.default.getMsgContent(option.GRIDID, USERID, function (res) {\n      console.log(res);\n      self.lists = res.rs;\n      uni.setNavigationBarTitle({\n        title: res.rs2 });\n\n    });\n  },\n  methods: {\n    goto: function goto(gotourl) {\n      console.log(gotourl.indexOf('http'));\n      if (gotourl.indexOf('http') >= 0)\n      {\n        uni.navigateTo({\n          url: '../webview/webview?url=' + gotourl });\n\n      } else\n      {\n        uni.navigateTo({\n          url: gotourl });\n\n      }\n\n    } } };exports.default = _default;\n/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js */ \"./node_modules/@dcloudio/vue-cli-plugin-hbuilderx/packages/uni-app-plus/dist/index.js\")[\"default\"]))\n\n//# sourceURL=uni-app:///pages/msgcenter/msgcenter.vue?vue&type=script&lang=js&?0c01");
 
 /***/ }),
 
@@ -5728,7 +5864,7 @@ eval("// extracted by mini-css-extract-plugin\n\n//# sourceURL=D:/Users/sxs/Docu
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"page\" },\n    [\n      _c(\"page-head\", { attrs: { title: _vm.title, mpcomid: \"4e64e5e0-0\" } }),\n      _c(\n        \"view\",\n        { staticClass: \"uni-list2\" },\n        _vm._l(_vm.lists, function(items, index) {\n          return _c(\"block\", { key: index }, [\n            _c(\n              \"view\",\n              {\n                staticClass: \"v-block\",\n                attrs: { \"hover-class\": \"uni-list-cell-hover\" }\n              },\n              [\n                _c(\"view\", { staticClass: \"uni-triplex-row\" }, [\n                  _c(\n                    \"view\",\n                    { staticStyle: { width: \"100%\" } },\n                    [\n                      _c(\n                        \"view\",\n                        { staticClass: \"uni-title uni-ellipsis title\" },\n                        [\n                          _c(\n                            \"text\",\n                            {\n                              staticStyle: {\n                                \"font-size\": \"34rpx\",\n                                color: \"#000000\"\n                              }\n                            },\n                            [_vm._v(_vm._s(items.title))]\n                          ),\n                          _c(\"uni-icon\", {\n                            attrs: {\n                              type: \"arrowright\",\n                              size: \"24\",\n                              mpcomid: \"4e64e5e0-1-\" + index\n                            }\n                          })\n                        ],\n                        1\n                      ),\n                      _vm._l(items.items, function(itemss, i) {\n                        return _c(\n                          \"view\",\n                          { key: i, staticClass: \"uni-text-v\" },\n                          [\n                            _c(\"text\", {}, [\n                              _vm._v(\n                                _vm._s(itemss.name) + \":\" + _vm._s(itemss.text)\n                              )\n                            ])\n                          ]\n                        )\n                      })\n                    ],\n                    2\n                  )\n                ])\n              ]\n            )\n          ])\n        })\n      )\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/msgcenter/msgcenter.vue?vue&type=template&id=5b9e3094&");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"render\", function() { return render; });\n/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, \"staticRenderFns\", function() { return staticRenderFns; });\nvar render = function() {\n  var _vm = this\n  var _h = _vm.$createElement\n  var _c = _vm._self._c || _h\n  return _c(\n    \"view\",\n    { staticClass: \"page\" },\n    [\n      _c(\"page-head\", { attrs: { title: _vm.title, mpcomid: \"4e64e5e0-0\" } }),\n      _c(\n        \"view\",\n        { staticClass: \"uni-list2\" },\n        _vm._l(_vm.lists, function(items, index) {\n          return _c(\"block\", { key: index }, [\n            _c(\n              \"view\",\n              {\n                staticClass: \"v-block\",\n                attrs: {\n                  \"hover-class\": \"uni-list-cell-hover\",\n                  eventid: \"4e64e5e0-0-\" + index\n                },\n                on: {\n                  click: function($event) {\n                    _vm.goto(items.gotourl)\n                  }\n                }\n              },\n              [\n                _c(\"view\", { staticClass: \"uni-triplex-row\" }, [\n                  _c(\n                    \"view\",\n                    { staticStyle: { width: \"100%\" } },\n                    [\n                      _c(\n                        \"view\",\n                        { staticClass: \"uni-title uni-ellipsis title\" },\n                        [\n                          _c(\n                            \"text\",\n                            {\n                              staticStyle: {\n                                \"font-size\": \"34rpx\",\n                                color: \"#000000\"\n                              }\n                            },\n                            [_vm._v(_vm._s(items.title))]\n                          ),\n                          _c(\"uni-icon\", {\n                            attrs: {\n                              type: \"arrowright\",\n                              size: \"24\",\n                              mpcomid: \"4e64e5e0-1-\" + index\n                            }\n                          })\n                        ],\n                        1\n                      ),\n                      _vm._l(items.items, function(itemss, i) {\n                        return _c(\n                          \"view\",\n                          { key: i, staticClass: \"uni-text-v\" },\n                          [\n                            _c(\"text\", {}, [\n                              _vm._v(\n                                _vm._s(itemss.name) + \":\" + _vm._s(itemss.text)\n                              )\n                            ])\n                          ]\n                        )\n                      })\n                    ],\n                    2\n                  )\n                ])\n              ]\n            )\n          ])\n        })\n      )\n    ],\n    1\n  )\n}\nvar staticRenderFns = []\nrender._withStripped = true\n\n\n\n//# sourceURL=D:/Users/sxs/Documents/HBuilderProjects/Fss/pages/msgcenter/msgcenter.vue?vue&type=template&id=5b9e3094&");
 
 /***/ })
 

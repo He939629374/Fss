@@ -3,6 +3,7 @@
     "pages/contents/contents",
     "pages/pick/pick",
     "pages/pick/pickRY",
+    "pages/webview/webview",
     "pages/main/main",
     "pages/login/login",
     "pages/reg/reg",

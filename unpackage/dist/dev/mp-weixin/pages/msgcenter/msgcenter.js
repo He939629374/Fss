@@ -137,10 +137,6 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-
-
-
-
 var _uniIcon = _interopRequireDefault(__webpack_require__(/*! @/components/uni-icon/uni-icon.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-icon/uni-icon.vue"));
 var _uniCard = _interopRequireDefault(__webpack_require__(/*! @/components/uni-card/uni-card.vue */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/components/uni-card/uni-card.vue"));
 var _Global = _interopRequireDefault(__webpack_require__(/*! ../../store/Global.js */ "../../../../Users/sxs/Documents/HBuilderProjects/Fss/store/Global.js"));
@@ -152,10 +148,13 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
       title: 'list-triplex-row',
       lists: [
         // 					{title:'1',
+        //					 gotourl:'',
         // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
         // 					{title:'2',
+        //					 gotourl:'',
         // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]},
         // 					{title:'3',
+        //					 gotourl:'',
         // 					items:[{name:'编号',text:'4406'},{name:'时间',text:'4406'},{name:'单位',text:'4406'}]}
       ] };
 
@@ -163,14 +162,33 @@ var _service = _interopRequireDefault(__webpack_require__(/*! ../../service.js *
   onLoad: function onLoad(option) {
     var self = this;
     console.log(option);
-    uni.setNavigationBarTitle({
-      title: option.BarTitle });
-
-    var result = _service.default.getMsgContent(function (res) {
+    var userInfo = _service.default.getUsers();
+    var USERID = userInfo.userid;
+    console.log(userInfo);
+    var result = _service.default.getMsgContent(option.GRIDID, USERID, function (res) {
       console.log(res);
-      self.lists = res;
+      self.lists = res.rs;
+      uni.setNavigationBarTitle({
+        title: res.rs2 });
+
     });
-  } };exports.default = _default;
+  },
+  methods: {
+    goto: function goto(gotourl) {
+      console.log(gotourl.indexOf('http'));
+      if (gotourl.indexOf('http') >= 0)
+      {
+        uni.navigateTo({
+          url: '../webview/webview?url=' + gotourl });
+
+      } else
+      {
+        uni.navigateTo({
+          url: gotourl });
+
+      }
+
+    } } };exports.default = _default;
 /* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/@dcloudio/uni-mp-weixin/dist/index.js */ "./node_modules/@dcloudio/uni-mp-weixin/dist/index.js")["default"]))
 
 /***/ }),
@@ -215,7 +233,15 @@ var render = function() {
               "view",
               {
                 staticClass: "v-block",
-                attrs: { "hover-class": "uni-list-cell-hover" }
+                attrs: {
+                  "hover-class": "uni-list-cell-hover",
+                  eventid: "4e64e5e0-0-" + index
+                },
+                on: {
+                  click: function($event) {
+                    _vm.goto(items.gotourl)
+                  }
+                }
               },
               [
                 _c("view", { staticClass: "uni-triplex-row" }, [

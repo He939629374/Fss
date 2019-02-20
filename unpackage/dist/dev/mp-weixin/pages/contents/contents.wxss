@@ -103,7 +103,9 @@
 .HeadContente {
 	margin-top: 20rpx;
 	padding: 65rpx;
-	overflow-y: scroll;
+	/* overflow-y: scroll; */
+	height:65vh;
+	width:625rpx;
 }
 ::-webkit-scrollbar {
 	width: 0rpx;

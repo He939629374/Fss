@@ -591,6 +591,7 @@ var downLoadFileByWorkFlow = function downLoadFileByWorkFlow(fileid) {
 
 //目录面板信息
 var getContents = function getContents(callback) {
+  uni.showLoading();
   console.log(_Global.default.serviceUrl + 'User/MENU');
   uni.request({
     url: _Global.default.serviceUrl + 'User/MENU',
@@ -615,21 +616,21 @@ var getContents = function getContents(callback) {
 
 };
 //信息中心通用卡片信息
-var getMsgContent = function getMsgContent(callback) {
+var getMsgContent = function getMsgContent(GRIDID, USERID, callback) {
   uni.showLoading();
   console.log(_Global.default.serviceUrl + 'User/MsgContent');
   uni.request({
     url: _Global.default.serviceUrl + 'User/MsgContent',
     method: 'POST',
     data: {
-      GRIDID: 'Grid20181205093110',
-      USERID: 'admin' },
-
+      GRIDID: GRIDID, //'Grid20181205093110',
+      USERID: USERID //'admin'
+    },
     success: function success(res) {
       console.log(res.data.rs);
       if (res.data.code == _Global.default.ReturnCode.success) {
         uni.hideLoading();
-        callback(res.data.rs);
+        callback(res.data);
       } else {
         uni.showToast({
           icon: 'none',

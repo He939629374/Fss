@@ -9,7 +9,7 @@
 				<view class="title">{{item.name}}</view>
 				<text class="">|</text>
 				<input class="text" v-if="read!=1"  :value="item.text"/>
-				<view class="text" v-else>{{item.text}}</view>
+				<view class="text" v-else @click="onPhone(item.name,item.text)">{{item.text}}</view>
 		</view>	
 		<view class="btn-row" v-if="read!=1">
 			<button type="primary" class="primary" @tap="submitPwd">保存</button>
@@ -49,6 +49,7 @@
 					self.list.push({'name':'姓名','text':""});
 					self.list.push({'name':'单位','text':""});
 					self.list.push({'name':'电话','text':""});
+					self.list.push({'name':'手机号码','text':""});
 					self.list.push({'name':'邮箱','text':""})
 					
 				}else 
@@ -57,12 +58,33 @@
 					self.list.push({'name':'姓名','text':list.USERNAME});
 					self.list.push({'name':'单位','text':list.DEPTUSERBH});
 					self.list.push({'name':'电话','text':list.PHONE});
+					self.list.push({'name':'手机号码','text':list.MPHONE});
 					self.list.push({'name':'邮箱','text':list.EMAIL})
 				}
 				
 			});	
 		},
 		methods: {
+			onPhone: function(name,Phone)
+			{
+				if(name=='手机号码' || name=='电话')
+				{
+					uni.showActionSheet({
+						itemList: ['拨打电话', '拨打手机号码'],
+						success: function (res) {							
+							if(res.tapIndex==0)
+							{
+								uni.makePhoneCall({
+									phoneNumber: Phone 
+								});
+							}
+						},
+						fail: function (res) {
+							console.log(res.errMsg);
+						}
+					});
+				}
+			},
 			onKeyInputO: function(event) {
 				this.opwd = event.target.value
 			},
@@ -83,7 +105,7 @@
 	.btn-row {	
 	}
 	.uni-form-item .title {
-		width: 100upx;
+		width: 120upx;
 		text-align: center;
 	}
 	.uni-input {
